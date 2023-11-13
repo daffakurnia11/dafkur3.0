@@ -2,6 +2,8 @@
 @import "variables";
 @import "typography";
 
+@import "components/navigation";
+
 * {
   font-family: $base-font;
 }
@@ -13,26 +15,4 @@ body {
 
 main {
   color: $light-green;
-}
-
-.nav {
-  width: 450px;
-  border: 1px solid $primary-green;
-  border-radius: 50px;
-  padding: 12px;
-  & .nav-menu {
-    & .menu-item {
-      &.active {
-        padding: 6px 15px;
-        background-color: $primary-green;
-        border-radius: 30px;
-        .menu-label {
-          display: block;
-        }
-      }
-      .menu-label {
-        display: none;
-      }
-    }
-  }
 }
