@@ -4,6 +4,8 @@
 
 @import "components/navigation";
 
+@import "pages/home";
+
 * {
   font-family: $base-font;
 }
@@ -15,4 +17,14 @@ body {
 
 main {
   color: $light-green;
+}
+
+.layout {
+  & .layout-content {
+    padding: 0;
+    @media screen and (max-width: 768px) {
+      padding-top: 160px;
+      padding-bottom: 80px;
+    }
+  }
 }

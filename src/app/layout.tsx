@@ -19,9 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <main className="layout position-relative vh-100 vw-100">
+        <main className="layout position-relative min-vh-100">
           <Header />
-          {children}
+          <div className="layout-content">{children}</div>
           <Footer />
         </main>
       </body>

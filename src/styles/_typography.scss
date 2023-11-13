@@ -45,27 +45,27 @@
 
 // Typography Classes
 h1,
-.text-heading1 {
+.text-heading-1 {
   @include heading1();
 }
 
 h2,
-.text-heading2 {
+.text-heading-2 {
   @include heading2();
 }
 
 h3,
-.text-heading3 {
+.text-heading-3 {
   @include heading3();
 }
 
 h4,
-.text-heading4 {
+.text-heading-4 {
   @include heading4();
 }
 
 h5,
-.text-heading5 {
+.text-heading-5 {
   @include heading5();
 }
 

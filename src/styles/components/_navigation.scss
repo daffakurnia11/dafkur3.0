@@ -28,13 +28,10 @@
     transition: all 0.3s ease-in-out;
     top: 50%;
     transform: translateY(-50%);
-    // @media screen and (max-width: 576px) {
-    //   display: none;
-    // }
   }
   & .nav-menu {
     padding-left: 12px;
-    gap: 24px;
+    gap: 18px;
     & .menu-item {
       padding: 6px 0;
       position: relative;
@@ -45,7 +42,7 @@
         width: calc(100% + 24px);
         position: absolute;
         z-index: -2;
-        background-color: $primary-black;
+        background-color: transparent;
         border-radius: 30px;
         top: 50%;
         left: 50%;

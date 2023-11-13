@@ -17,6 +17,7 @@
     "react-dom": "^18",
     "react-icomoon": "^2.5.7",
     "react-live-clock": "^6.1.18",
+    "react-type-animation": "^3.2.0",
     "sass": "^1.69.5",
     "use-scramble": "^2.2.12"
   },
