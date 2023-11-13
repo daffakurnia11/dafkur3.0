@@ -4,9 +4,12 @@ import React, { useEffect, useRef, useState } from "react";
 import Icon from "../Icon";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function Navigation() {
-  const [activeMenu, setActiveMenu] = useState("home");
+  const router = useRouter();
+  const pathname = usePathname();
+  const [activeMenu, setActiveMenu] = useState(pathname);
   const menuContainer = useRef<any>(null);
   const [activeProps, setActiveProps] = useState({ width: 90.5, x: 12 });
 
@@ -16,7 +19,7 @@ export default function Navigation() {
 
       const container = document.querySelector(".menu-item.active");
       if (container instanceof HTMLDivElement) {
-        if (activeMenu === "contact") {
+        if (activeMenu === "/contact") {
           setActiveProps({
             width: container.getBoundingClientRect().width + 36,
             x:
@@ -37,6 +40,7 @@ export default function Navigation() {
 
     if (activeMenu) {
       calculateWidth();
+      router.push(activeMenu);
     }
   }, [activeMenu]);
 
@@ -53,73 +57,57 @@ export default function Navigation() {
       ></div>
       <div className="nav-menu d-flex position-relative" ref={menuContainer}>
         <div
-          className={`menu-item ${activeMenu === "home" && "active"}`}
-          onClick={() => setActiveMenu("home")}
+          className={`d-flex align-items-center menu-item ${
+            activeMenu === "/" && "active"
+          }`}
+          onClick={() => setActiveMenu("/")}
+          style={{ gap: 6 }}
         >
-          <Link
-            href={"/"}
-            className="d-flex align-items-center"
-            style={{ gap: 6 }}
-          >
-            <Icon icon="home" size={24} className="menu-icon d-block" />
-            <div className="menu-label text-body text-light-green mb-0">
-              Home
-            </div>
-          </Link>
+          <Icon icon="home" size={24} className="menu-icon d-block" />
+          <div className="menu-label text-body text-light-green mb-0">Home</div>
         </div>
         <div
-          className={`menu-item ${activeMenu === "projects" && "active"}`}
-          onClick={() => setActiveMenu("projects")}
+          className={`d-flex align-items-center menu-item ${
+            activeMenu === "/project" && "active"
+          }`}
+          onClick={() => setActiveMenu("/project")}
+          style={{ gap: 6 }}
         >
-          <Link
-            href={"/"}
-            className="d-flex align-items-center"
-            style={{ gap: 6 }}
-          >
-            <Icon icon="library" size={24} className="menu-icon d-block" />
-            <div className="menu-label text-body text-light-green mb-0">
-              Projects
-            </div>
-          </Link>
+          <Icon icon="library" size={24} className="menu-icon d-block" />
+          <div className="menu-label text-body text-light-green mb-0">
+            Projects
+          </div>
         </div>
         <div
-          className={`menu-item ${activeMenu === "experiences" && "active"}`}
-          onClick={() => setActiveMenu("experiences")}
+          className={`d-flex align-items-center menu-item ${
+            activeMenu === "/experience" && "active"
+          }`}
+          onClick={() => setActiveMenu("/experience")}
+          style={{ gap: 6 }}
         >
-          <Link
-            href={"/"}
-            className="d-flex align-items-center"
-            style={{ gap: 6 }}
-          >
-            <Icon icon="rocket" size={24} className="menu-icon d-block" />
-            <div className="menu-label text-body text-light-green mb-0">
-              Experiences
-            </div>
-          </Link>
+          <Icon icon="rocket" size={24} className="menu-icon d-block" />
+          <div className="menu-label text-body text-light-green mb-0">
+            Experiences
+          </div>
         </div>
         <div
-          className={`menu-item ${activeMenu === "blogs" && "active"}`}
-          onClick={() => setActiveMenu("blogs")}
+          className={`d-flex align-items-center menu-item ${
+            activeMenu === "/blog" && "active"
+          }`}
+          onClick={() => setActiveMenu("/blog")}
+          style={{ gap: 6 }}
         >
-          <Link
-            href={"/"}
-            className="d-flex align-items-center"
-            style={{ gap: 6 }}
-          >
-            <Icon icon="book" size={24} className="menu-icon d-block" />
-            <p className="menu-label mb-0">Blogs</p>
-          </Link>
+          <Icon icon="book" size={24} className="menu-icon d-block" />
+          <p className="menu-label mb-0">Blogs</p>
         </div>
       </div>
       <div
         className={`nav-contact menu-item ${
-          activeMenu === "contact" && "active"
+          activeMenu === "/contact" && "active"
         }`}
-        onClick={() => setActiveMenu("contact")}
+        onClick={() => setActiveMenu("/contact")}
       >
-        <Link href={"/"}>
-          <p className="text-body text-light-green">Let&apos;s Talk!</p>
-        </Link>
+        <p className="text-body text-light-green">Let&apos;s Talk!</p>
       </div>
     </motion.div>
   );

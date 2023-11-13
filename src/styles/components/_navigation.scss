@@ -33,6 +33,7 @@
     padding-left: 12px;
     gap: 18px;
     & .menu-item {
+      cursor: pointer;
       padding: 6px 0;
       position: relative;
       &::before {
@@ -71,6 +72,7 @@
     }
   }
   & .nav-contact {
+    cursor: pointer;
     position: relative;
     padding: 7px 0px;
     margin-right: 18px;
