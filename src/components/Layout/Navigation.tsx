@@ -26,7 +26,7 @@ export default function Navigation() {
           });
         } else {
           setActiveProps({
-            width: container.getBoundingClientRect().width + 28,
+            width: container.getBoundingClientRect().width + 24,
             x:
               container.getBoundingClientRect().x -
               menuContainer.current?.getBoundingClientRect().x,

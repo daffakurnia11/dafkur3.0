@@ -8,7 +8,7 @@ export default function Logo() {
       height={42}
       src={"/logo.svg"}
       alt="Dafkur Logo"
-      className="position-absolute header-logo mx-4"
+      className="header-logo mx-4"
     />
   );
 }
