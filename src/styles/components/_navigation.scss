@@ -1,3 +1,11 @@
+.layout-header {
+  .header-logo {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+}
+
 .nav {
   width: 500px;
   border: 1px solid $primary-green;
@@ -35,7 +43,10 @@
       &:hover::before {
         background-color: $primary-green;
       }
-      .menu-label {
+      & .menu-icon {
+        color: $secondary-green;
+      }
+      & .menu-label {
         width: 0;
         display: none;
         transition: all 0.3s ease-in-out;
@@ -51,12 +62,12 @@
   & .nav-contact {
     position: relative;
     padding: 7px 0px;
-    margin-right: 12px;
+    margin-right: 18px;
     &::before {
       transition: all 0.3s ease-in-out;
       position: absolute;
       z-index: -2;
-      width: calc(100% + 24px);
+      width: calc(100% + 36px);
       height: 100%;
       content: "";
       top: 50%;

@@ -4,7 +4,7 @@ import Navigation from "./Navigation";
 
 export default function Header() {
   return (
-    <div className="layout-header p-4 position-relative">
+    <div className="layout-header px-4 py-3 position-relative">
       <Logo />
       <Navigation />
     </div>
