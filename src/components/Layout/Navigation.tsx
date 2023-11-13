@@ -23,7 +23,6 @@ export default function Navigation() {
         });
       }
     };
-    console.log(activeMenu);
 
     if (activeMenu) {
       calculateWidth();
