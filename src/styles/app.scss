@@ -11,6 +11,10 @@
   font-family: $base-font;
 }
 
+html {
+  scroll-snap-type: y mandatory;
+}
+
 body {
   background-color: $primary-black !important;
   color: $light-green;
