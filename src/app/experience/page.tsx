@@ -11,7 +11,7 @@ export default function Experience() {
           <WorkExp />
         </Container>
       </section>
-      <section className="mt-sm-5 experience d-flex justify-content-center align-items-center">
+      <section className="mt-sm-0 mt-5 experience d-flex justify-content-center align-items-center">
         <Container>
           <OrganizationExp />
         </Container>

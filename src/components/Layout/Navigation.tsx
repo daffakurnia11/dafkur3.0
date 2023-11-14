@@ -2,7 +2,6 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import Icon from "../Icon";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { usePathname, useRouter } from "next/navigation";
 
