@@ -1,0 +1,56 @@
+section.experience {
+  min-height: 100vh;
+  @media screen and (max-width: 768px) {
+    min-height: fit-content;
+  }
+  & .container {
+    max-width: 560px;
+    @media screen and (max-width: 576px) {
+      max-width: 320px;
+    }
+    & .experience-content {
+      width: 100%;
+      @media screen and (max-width: 576px) {
+        width: fit-content;
+      }
+    }
+    & .experience-arrow {
+      margin: auto;
+      @media screen and (max-width: 576px) {
+        margin-left: -16px;
+      }
+    }
+  }
+  & .vertical-line {
+    content: "";
+    height: calc(100% - 40px);
+    width: 1px;
+    background-color: $primary-green;
+    top: 0;
+    left: 50%;
+    @media screen and (max-width: 576px) {
+      left: 0;
+    }
+  }
+  & .dots-line {
+    content: "";
+    height: 8px;
+    width: 8px;
+    border-radius: 8px;
+    background-color: $primary-green;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    @media screen and (max-width: 576px) {
+      top: 0;
+      left: 0;
+      transform: translate(-50%, 75%);
+    }
+  }
+  & .arrow-down-line {
+    background-color: $primary-green;
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+  }
+}
