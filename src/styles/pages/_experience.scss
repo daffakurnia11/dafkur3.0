@@ -13,13 +13,18 @@ section.experience {
       min-height: fit-content;
     }
     & .container {
-      max-width: 560px;
+      max-width: 650px;
       @media screen and (max-width: 576px) {
         max-width: 320px;
       }
       & .experience-content {
         width: 100%;
-        height: 548px;
+        &.works {
+          height: 548px;
+        }
+        &.organizations {
+          height: 476px;
+        }
         @media screen and (max-width: 576px) {
           width: fit-content;
           height: 732px;

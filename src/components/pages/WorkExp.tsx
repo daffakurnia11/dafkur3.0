@@ -26,12 +26,13 @@ export default function WorkExp() {
     <div className="experience-section d-flex justify-content-center align-items-center">
       <Container>
         <TypeAnimation
-          className="text-heading-4 d-block text-light-green text-center"
+          className="text-heading-4 text-light-green text-center"
           sequence={["Work Experiences"]}
           speed={60}
           cursor={false}
+          wrapper="h1"
         />
-        <div className="position-relative experience-content mt-2 pb-3 pt-2">
+        <div className="position-relative experience-content works mt-2 pb-3 pt-2">
           <motion.div
             initial={{ height: 0 }}
             animate={
@@ -63,25 +64,29 @@ export default function WorkExp() {
                 ]}
                 speed={60}
                 cursor={false}
+                wrapper="span"
               />
               <div className="flex-sm-fill w-100">
                 <TypeAnimation
-                  className="d-block text-body text-light-green"
+                  className="text-light-green"
                   sequence={[key * 500, `${data.position}`]}
                   speed={60}
                   cursor={false}
+                  wrapper="p"
                 />
                 <TypeAnimation
                   className="d-block text-small text-secondary-green"
                   sequence={[key * 500, `${data.company}`]}
                   speed={60}
                   cursor={false}
+                  wrapper="span"
                 />
                 <TypeAnimation
                   className="d-block text-small text-secondary-green"
                   sequence={[key * 500, `${data.place}`]}
                   speed={60}
                   cursor={false}
+                  wrapper="span"
                 />
               </div>
             </div>
