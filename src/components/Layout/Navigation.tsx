@@ -8,40 +8,37 @@ import { usePathname, useRouter } from "next/navigation";
 export default function Navigation() {
   const router = useRouter();
   const pathname = usePathname();
-  const [activeMenu, setActiveMenu] = useState(pathname);
   const menuContainer = useRef<any>(null);
   const [activeProps, setActiveProps] = useState({ width: 90.5, x: 12 });
 
-  useEffect(() => {
-    const calculateWidth = async () => {
-      await new Promise((resolve) => setTimeout(resolve, 10));
+  const changePage = async (route?: string) => {
+    await new Promise((resolve) => setTimeout(resolve, 10));
 
-      const container = document.querySelector(".menu-item.active");
-      if (container instanceof HTMLDivElement) {
-        if (activeMenu === "/contact") {
-          setActiveProps({
-            width: container.getBoundingClientRect().width + 36,
-            x:
-              container.getBoundingClientRect().x -
-              menuContainer.current?.getBoundingClientRect().x -
-              6,
-          });
-        } else {
-          setActiveProps({
-            width: container.getBoundingClientRect().width + 24,
-            x:
-              container.getBoundingClientRect().x -
-              menuContainer.current?.getBoundingClientRect().x,
-          });
-        }
+    const container = document.querySelector(".menu-item.active");
+    if (container instanceof HTMLDivElement) {
+      if (route === "/contact") {
+        setActiveProps({
+          width: container.getBoundingClientRect().width + 36,
+          x:
+            container.getBoundingClientRect().x -
+            menuContainer.current?.getBoundingClientRect().x -
+            6,
+        });
+      } else {
+        setActiveProps({
+          width: container.getBoundingClientRect().width + 24,
+          x:
+            container.getBoundingClientRect().x -
+            menuContainer.current?.getBoundingClientRect().x,
+        });
       }
-    };
-
-    if (activeMenu) {
-      calculateWidth();
-      router.push(activeMenu);
     }
-  }, [activeMenu]);
+    router.push(route!);
+  };
+
+  useEffect(() => {
+    changePage(pathname);
+  }, [pathname]);
 
   return (
     <motion.div
@@ -57,9 +54,9 @@ export default function Navigation() {
       <div className="nav-menu d-flex position-relative" ref={menuContainer}>
         <div
           className={`d-flex align-items-center menu-item ${
-            activeMenu === "/" && "active"
+            pathname === "/" && "active"
           }`}
-          onClick={() => setActiveMenu("/")}
+          onClick={() => changePage("/")}
           style={{ gap: 6 }}
         >
           <Icon icon="home" size={24} className="menu-icon d-block" />
@@ -67,9 +64,9 @@ export default function Navigation() {
         </div>
         <div
           className={`d-flex align-items-center menu-item ${
-            activeMenu === "/project" && "active"
+            pathname === "/project" && "active"
           }`}
-          onClick={() => setActiveMenu("/project")}
+          onClick={() => changePage("/project")}
           style={{ gap: 6 }}
         >
           <Icon icon="library" size={24} className="menu-icon d-block" />
@@ -79,9 +76,9 @@ export default function Navigation() {
         </div>
         <div
           className={`d-flex align-items-center menu-item ${
-            activeMenu === "/experience" && "active"
+            pathname === "/experience" && "active"
           }`}
-          onClick={() => setActiveMenu("/experience")}
+          onClick={() => changePage("/experience")}
           style={{ gap: 6 }}
         >
           <Icon icon="rocket" size={24} className="menu-icon d-block" />
@@ -91,9 +88,9 @@ export default function Navigation() {
         </div>
         <div
           className={`d-flex align-items-center menu-item ${
-            activeMenu === "/blog" && "active"
+            pathname === "/blog" && "active"
           }`}
-          onClick={() => setActiveMenu("/blog")}
+          onClick={() => changePage("/blog")}
           style={{ gap: 6 }}
         >
           <Icon icon="book" size={24} className="menu-icon d-block" />
@@ -102,9 +99,9 @@ export default function Navigation() {
       </div>
       <div
         className={`nav-contact menu-item ${
-          activeMenu === "/contact" && "active"
+          pathname === "/contact" && "active"
         }`}
-        onClick={() => setActiveMenu("/contact")}
+        onClick={() => changePage("/contact")}
       >
         <p className="text-body text-light-green">Let&apos;s Talk!</p>
       </div>
