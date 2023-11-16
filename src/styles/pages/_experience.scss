@@ -11,23 +11,33 @@ section.experience {
     }
     @media screen and (max-width: 768px) {
       min-height: fit-content;
+      &:nth-of-type(2) {
+        scroll-margin-top: 100px;
+        scroll-margin-bottom: 72px;
+      }
     }
     & .container {
       max-width: 650px;
+      height: 100%;
       @media screen and (max-width: 576px) {
-        max-width: 320px;
+        max-width: 350px;
       }
       & .experience-content {
         width: 100%;
+        @media screen and (max-width: 576px) {
+          width: fit-content;
+        }
         &.works {
           height: 548px;
+          @media screen and (max-width: 576px) {
+            height: 732px;
+          }
         }
         &.organizations {
           height: 476px;
-        }
-        @media screen and (max-width: 576px) {
-          width: fit-content;
-          height: 732px;
+          @media screen and (max-width: 576px) {
+            height: 684px;
+          }
         }
       }
       & .experience-arrow {

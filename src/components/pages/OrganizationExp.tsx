@@ -17,10 +17,10 @@ export default function OrganizationExp() {
           cursor={false}
           wrapper="h1"
         />
-        <div className="position-relative experience-content organizations mx-auto mt-2 pb-3 pt-2">
+        <div className="position-relative experience-content organizations mt-2 pb-3 pt-2">
           <motion.div
             initial={{ height: 0 }}
-            whileInView={{ height: "100%" }}
+            animate={{ height: "100%" }}
             transition={{ duration: 1 }}
             className="vertical-line position-absolute translate-middle-x"
           ></motion.div>
@@ -33,7 +33,7 @@ export default function OrganizationExp() {
             >
               <motion.div
                 initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
+                animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 2.5 + key * 0.2 }}
                 className="dots-line position-absolute"
               ></motion.div>
