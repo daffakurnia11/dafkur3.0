@@ -23,23 +23,22 @@ export default function Home() {
       <Container>
         <div className="d-flex gap-3 mb-4">
           <p style={{ width: 85 }} className="d-none d-sm-block"></p>
-          <h1>
-            <TypeAnimation
-              className="text-heading-4"
-              sequence={[
-                "Hello World!",
-                1000,
-                "Hello Fellas!",
-                1000,
-                "Hello Everyone!",
-                1000,
-                "Hello Guys!",
-                1000,
-              ]}
-              speed={20}
-              repeat={Infinity}
-            />
-          </h1>
+          <TypeAnimation
+            className="text-heading-4"
+            sequence={[
+              "Hello World!",
+              1000,
+              "Hello Fellas!",
+              1000,
+              "Hello Everyone!",
+              1000,
+              "Hello Guys!",
+              1000,
+            ]}
+            speed={20}
+            repeat={Infinity}
+            wrapper="h1"
+          />
         </div>
         <div className="d-flex gap-3 mb-4">
           <div

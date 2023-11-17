@@ -52,7 +52,8 @@ export const featureList: FeatureListType[] = [
   },
   {
     number: "09.",
-    label: "Braille Games",
+    label: "Braille Quest",
+    link: "/braille",
   },
   {
     number: "10.",
