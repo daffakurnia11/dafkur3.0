@@ -41,7 +41,7 @@ export default function Navigation() {
   }, [pathname]);
 
   return (
-    <div className="layout-header position-fixed start-0 end-0 d-flex flex-column flex-md-row justify-content-center z-1 align-items-center px-sm-4 px-3 py-3">
+    <div className="layout-header position-fixed start-0 end-0 d-flex flex-column flex-md-row justify-content-center z-3 align-items-center px-sm-4 px-3 py-3">
       <motion.div
         initial={{ y: "-100%", opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}

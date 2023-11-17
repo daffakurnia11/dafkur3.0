@@ -17,7 +17,7 @@ export default function OrganizationExp() {
           cursor={false}
           wrapper="h1"
         />
-        <div className="position-relative experience-content organizations mt-2 pb-3 pt-2">
+        <div className="position-relative experience-content organizations pb-3 pt-2">
           <motion.div
             initial={{ height: 0 }}
             animate={{ height: "100%" }}
@@ -27,7 +27,7 @@ export default function OrganizationExp() {
           {organizationData.map((data: ExperienceDataType, key: number) => (
             <div
               key={key}
-              className={`d-flex flex-column flex-sm-row gap-2 gap-sm-4 align-items-sm-center ps-3 ps-sm-0 position-relative ${
+              className={`d-flex flex-column flex-sm-row gap-0 gap-sm-4 align-items-sm-center ps-3 ps-sm-0 position-relative ${
                 key !== 0 && "mt-4 mt-sm-3"
               }`}
             >
@@ -38,7 +38,7 @@ export default function OrganizationExp() {
                 className="dots-line position-absolute"
               ></motion.div>
               <TypeAnimation
-                className="flex-sm-fill w-100 text-small text-secondary-green d-block text-start text-sm-end"
+                className="flex-sm-fill w-100 text-small text-secondary-green d-block text-start text-sm-end mb-2 mb-sm-0"
                 sequence={[
                   key * 500,
                   `${data.start} - ${data.end ?? "Present"}`,
@@ -49,7 +49,7 @@ export default function OrganizationExp() {
               />
               <div className="flex-sm-fill w-100">
                 <TypeAnimation
-                  className="text-light-green"
+                  className="text-light-green mb-2 mb-sm-0"
                   sequence={[key * 500, `${data.position}`]}
                   speed={60}
                   cursor={false}

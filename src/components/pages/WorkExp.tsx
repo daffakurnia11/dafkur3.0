@@ -32,7 +32,7 @@ export default function WorkExp() {
           cursor={false}
           wrapper="h1"
         />
-        <div className="position-relative experience-content works mt-2 pb-3 pt-2">
+        <div className="position-relative experience-content works pb-3 pt-2">
           <motion.div
             initial={{ height: 0 }}
             animate={
@@ -46,7 +46,7 @@ export default function WorkExp() {
           {workData.map((data: ExperienceDataType, key: number) => (
             <div
               key={key}
-              className={`d-flex flex-column flex-sm-row gap-2 gap-sm-4 align-items-sm-center ps-3 ps-sm-0 position-relative ${
+              className={`d-flex flex-column flex-sm-row gap-0 gap-sm-4 align-items-sm-center ps-3 ps-sm-0 position-relative ${
                 key !== 0 && "mt-4 mt-sm-3"
               }`}
             >
@@ -57,7 +57,7 @@ export default function WorkExp() {
                 className="dots-line position-absolute"
               ></motion.div>
               <TypeAnimation
-                className="flex-sm-fill w-100 text-small text-secondary-green d-block text-start text-sm-end"
+                className="flex-sm-fill w-100 text-small text-secondary-green d-block text-start text-sm-end mb-2 mb-sm-0"
                 sequence={[
                   key * 500,
                   `${data.start} - ${data.end ?? "Present"}`,
@@ -68,7 +68,7 @@ export default function WorkExp() {
               />
               <div className="flex-sm-fill w-100">
                 <TypeAnimation
-                  className="text-light-green"
+                  className="text-light-green mb-2 mb-sm-0"
                   sequence={[key * 500, `${data.position}`]}
                   speed={60}
                   cursor={false}
@@ -97,10 +97,12 @@ export default function WorkExp() {
             transition={{ duration: 0.3, delay: 3 }}
             className="experience-arrow d-flex align-items-center gap-3 gap-sm-0 mt-3 flex-row flex-sm-column"
           >
-            <div className="arrow-down-line d-flex justify-content-center align-items-center z-2 position-relative">
-              <Icon icon="arrow-down-double" size={24} />
+            <div className="arrow-down-line d-flex justify-content-center align-items-center z-1 position-relative">
+              <Icon icon="arrow-down-double" size={20} />
             </div>
-            <h5 className="text-heading-5 text-center">See Others</h5>
+            <p className="text-body text-light-green text-center fw-bold">
+              See Others
+            </p>
           </motion.div>
         </div>
       </Container>

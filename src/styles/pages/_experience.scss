@@ -14,6 +14,7 @@ section.experience {
       min-height: fit-content;
       &:nth-of-type(1) {
         padding-top: unset;
+        padding-bottom: 50px;
       }
       &:nth-of-type(2) {
         scroll-margin-bottom: 100px;
@@ -26,6 +27,7 @@ section.experience {
         max-width: 350px;
       }
       & .experience-content {
+        margin-top: 28px;
         width: 100%;
         @media screen and (max-width: 576px) {
           width: fit-content;
@@ -33,7 +35,7 @@ section.experience {
         &.works {
           height: 548px;
           @media screen and (max-width: 576px) {
-            height: 732px;
+            height: 800px;
           }
         }
         &.organizations {
@@ -46,7 +48,7 @@ section.experience {
       & .experience-arrow {
         margin: auto;
         @media screen and (max-width: 576px) {
-          margin-left: -16px;
+          margin-left: -14px;
         }
       }
     }
@@ -77,8 +79,8 @@ section.experience {
     }
     & .arrow-down-line {
       background-color: $primary-green;
-      height: 32px;
-      width: 32px;
+      height: 28px;
+      width: 28px;
       border-radius: 32px;
     }
   }
