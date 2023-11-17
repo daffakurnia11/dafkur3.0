@@ -4,7 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "@/icons/style.css";
 import "@/styles/app.scss";
 import Footer from "@/components/Layout/Footer";
-import Header from "@/components/Layout/Header";
+import Logo from "@/components/Layout/Logo";
+import Navigation from "@/components/Layout/Navigation";
 
 export const metadata: Metadata = {
   title: "Home - Dafkur 3.0.0",
@@ -20,7 +21,8 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <main className="layout position-relative min-vh-100">
-          <Header />
+          <Logo />
+          <Navigation />
           <div className="layout-content">{children}</div>
           <Footer />
         </main>

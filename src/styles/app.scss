@@ -25,11 +25,19 @@ main {
 }
 
 .layout {
+  & .layout-header {
+    top: 0;
+    bottom: unset;
+    @media screen and (max-width: 768px) {
+      top: unset;
+      bottom: 0;
+    }
+  }
   & .layout-content {
     padding: 0;
     @media screen and (max-width: 768px) {
-      padding-top: 160px;
-      padding-bottom: 80px;
+      // padding-top: 160px;
+      padding-bottom: 100px;
     }
   }
 }
