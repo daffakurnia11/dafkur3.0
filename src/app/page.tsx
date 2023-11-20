@@ -1,6 +1,6 @@
 "use client";
 
-import HomeList from "@/components/pages/HomeList";
+import HomeList from "@/components/HomeList";
 import { FeatureListType, featureList } from "@/utils/menu";
 import { Col, Container, Row } from "react-bootstrap";
 import { TypeAnimation } from "react-type-animation";

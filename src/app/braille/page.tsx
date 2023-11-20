@@ -45,7 +45,7 @@ export default function Braille() {
           yet engaging game. Are you ready to decode the secrets hidden within
           words?`,
           ]}
-          speed={70}
+          speed={99}
           cursor={false}
           wrapper={"p"}
         />
