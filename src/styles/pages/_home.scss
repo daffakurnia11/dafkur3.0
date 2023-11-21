@@ -1,14 +1,4 @@
-section.home-layout {
-  min-height: 100vh;
-  @media screen and (max-width: 768px) {
-    min-height: fit-content;
-  }
-  .container {
-    max-width: 750px;
-    @media screen and (max-width: 768px) {
-      padding: 0px 24px;
-    }
-  }
+section.home {
   & .home-content {
     min-height: 140px;
     @media screen and (max-width: 576px) {

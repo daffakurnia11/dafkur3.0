@@ -1,9 +1,10 @@
 import React from "react";
+import { Container } from "react-bootstrap";
 
-export default function Experience() {
+export default function Contact() {
   return (
-    <>
-      <div>page</div>
-    </>
+    <section className="contact grid-layout">
+      <Container>page</Container>
+    </section>
   );
 }

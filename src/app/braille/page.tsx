@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Braille() {
   return (
-    <section className="home-layout d-flex justify-content-center align-items-center">
+    <section className="braille text-layout d-flex justify-content-center align-items-center">
       <Container>
         <div className="d-flex gap-3 mb-4">
           <p style={{ width: 85 }} className="d-none d-sm-block"></p>

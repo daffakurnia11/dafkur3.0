@@ -16,7 +16,7 @@ export default function BraillePlay() {
     setWord(String(wordInput));
   };
   return (
-    <section className="home-layout d-flex justify-content-center align-items-center">
+    <section className="braille text-layout d-flex justify-content-center align-items-center">
       <Container>
         <div className="braille-games w-100 d-flex flex-column align-items-center">
           <TypeAnimation
