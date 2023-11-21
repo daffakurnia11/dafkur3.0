@@ -22,7 +22,7 @@ export default function Logo() {
         setLetter("space");
         clearInterval(interval);
       }
-    }, 1000);
+    }, 750);
 
     return () => clearInterval(interval);
   }, [currentIndex, letter]);
