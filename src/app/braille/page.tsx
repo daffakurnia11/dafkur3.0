@@ -63,14 +63,17 @@ export default function Braille() {
             <TypeAnimation
               className="d-block text-body text-light-green text-decoration-underline"
               sequence={[
-                `Play now!`,
+                `Start play!`,
                 1000,
-                `Generate now!`,
+                `Start generate!`,
+                1000,
+                `Start make!`,
                 1000,
                 `Start now!`,
                 1000,
               ]}
               speed={25}
+              repeat={Infinity}
             />
           </Link>
         </div>
