@@ -19,7 +19,7 @@ export default function Home() {
   const mobileColumn2 = isMobile ? featureList.slice(6) : [];
 
   return (
-    <section className="home d-flex justify-content-center align-items-center">
+    <section className="home-layout d-flex justify-content-center align-items-center">
       <Container>
         <div className="d-flex gap-3 mb-4">
           <p style={{ width: 85 }} className="d-none d-sm-block"></p>

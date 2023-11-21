@@ -55,7 +55,10 @@ export default function Navigation() {
         <div className="nav-menu d-flex position-relative" ref={menuContainer}>
           <div
             className={`d-flex align-items-center menu-item ${
-              (pathname === "/" || pathname === "/braille") && "active"
+              (pathname === "/" ||
+                pathname === "/braille" ||
+                pathname === "/braille/play") &&
+              "active"
             }`}
             onClick={() => changePage("/")}
             style={{ gap: 6 }}

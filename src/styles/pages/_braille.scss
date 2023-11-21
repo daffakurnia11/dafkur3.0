@@ -1,7 +1,6 @@
-.braille {
-  & .braille-desc {
-    max-width: 750px;
-    min-height: 200px;
+section.home-layout {
+  & .braille-intro {
+    min-height: 135px;
   }
   & .braille-games {
     max-width: 750px;
