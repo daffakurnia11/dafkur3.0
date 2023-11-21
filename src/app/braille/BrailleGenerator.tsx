@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import BrailleDots from "./BrailleDots";
+import BrailleLetter from "./BrailleLetter";
 
 export default function BrailleGenerator({ word }: { word: string | null }) {
   const [wordInput, setWordInput] = useState<string | null>(null);
@@ -47,15 +47,15 @@ export default function BrailleGenerator({ word }: { word: string | null }) {
             {word.split("").map((letter: string, key: number) => (
               <div key={key}>
                 {letter === " " ? (
-                  <BrailleDots letter={"space"} withLabel />
+                  <BrailleLetter letter={"space"} withLabel />
                 ) : (
-                  <BrailleDots letter={letter} withLabel />
+                  <BrailleLetter letter={letter} withLabel />
                 )}
               </div>
             ))}
           </div>
         ) : (
-          <BrailleDots letter={letter} />
+          <BrailleLetter letter={letter} />
         )}
       </div>
     )

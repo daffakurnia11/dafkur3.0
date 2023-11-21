@@ -78,6 +78,8 @@ main {
   grid-template-rows: 16px 16px 16px; /* 3 rows */
   gap: 4px 8px; /* vertical and horizontal gap */
   .braille-dots {
+    width: 16px;
+    height: 16px;
     display: flex;
     align-items: center;
     justify-content: center;

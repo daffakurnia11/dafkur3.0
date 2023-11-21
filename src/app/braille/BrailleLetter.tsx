@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { brailleLetter } from "@/utils/braille";
 
-export default function BrailleDots({
+export default function BrailleLetter({
   letter,
   withLabel,
 }: {
