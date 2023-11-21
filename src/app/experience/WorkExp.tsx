@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import Icon from "../Icon";
 import { ExperienceDataType, workData } from "@/utils/experiences";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import { Container } from "react-bootstrap";
+import Icon from "@/components/Icon";
 
 export default function WorkExp() {
   const [screenWidth, setScreenWidth] = useState<number>(0);

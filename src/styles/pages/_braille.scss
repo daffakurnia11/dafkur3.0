@@ -4,5 +4,8 @@ section.home-layout {
   }
   & .braille-games {
     max-width: 750px;
+    & .games-hint {
+      width: 530px;
+    }
   }
 }

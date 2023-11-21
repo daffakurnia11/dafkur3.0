@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import BrailleDots from "./BrailleDots";
 
 export default function BrailleGenerator({ word }: { word: string | null }) {
-  const [wordInput, setWordInput] = useState<string | null>("HELLO WORLD");
+  const [wordInput, setWordInput] = useState<string | null>(null);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [letter, setLetter] = useState<string>("");
-  const [complete, setComplete] = useState<boolean>(true);
+  const [complete, setComplete] = useState<boolean>(false);
 
   useEffect(() => {
     if (word !== wordInput) {
