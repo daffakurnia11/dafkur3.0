@@ -1,7 +1,19 @@
-import React, { InputHTMLAttributes } from "react";
+import React, {
+  InputHTMLAttributes,
+  TextareaHTMLAttributes,
+  useMemo,
+} from "react";
 
-interface Props extends InputHTMLAttributes<HTMLInputElement> {}
+interface InputTextProps extends InputHTMLAttributes<HTMLInputElement> {}
 
-export default function Input(props: Props) {
+interface TextAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {}
+
+export default function Input(props: InputTextProps) {
   return <input {...props} className={`input ${props.className}`} />;
+}
+
+export function InputTextArea(props: TextAreaProps) {
+  return (
+    <textarea {...props} className={`input ${props.className}`}></textarea>
+  );
 }

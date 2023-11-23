@@ -3,10 +3,12 @@
 @import "typography";
 
 @import "components/navigation";
+@import "components/card";
 
 @import "pages/layout";
 @import "pages/home";
 @import "pages/experience";
+@import "pages/contact";
 @import "pages/braille";
 
 * {
@@ -60,14 +62,26 @@ main {
 
 .btn {
   padding: 12px 16px;
-  background-color: $primary-green;
   border-radius: 16px;
-  border: none;
-  @include small($light-green);
-  &:hover,
-  &:focus {
-    background-color: $secondary-green;
-    @include small($primary-black);
+  &.btn-primary {
+    @include small($light-green);
+    background-color: $primary-green;
+    border: 1px solid $primary-green;
+    &:hover,
+    &:focus {
+      @include small($primary-black);
+      background-color: $secondary-green;
+    }
+  }
+  &.btn-secondary {
+    @include small($secondary-green);
+    background-color: $dark-green;
+    border: 1px solid $primary-green;
+    &:hover,
+    &:focus {
+      @include small($primary-black);
+      background-color: $secondary-green;
+    }
   }
 }
 
@@ -90,5 +104,13 @@ main {
     height: 9px;
     border-radius: 50%;
     background-color: $primary-green; /* Change to desired color */
+  }
+}
+
+.popover {
+  background-color: $secondary-green;
+  .popover-arrow::after,
+  .popover .popover-arrow::before {
+    background-color: $secondary-green;
   }
 }

@@ -1,0 +1,27 @@
+$border: 1px;
+
+.gradient-card {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background: linear-gradient(to bottom, $primary-green 60%, #42687232);
+  transition: all 0.3s ease-in-out;
+  &.card-square {
+    aspect-ratio: 1/1;
+  }
+  & .gradient-card-content {
+    position: absolute;
+    height: calc(100% - $border * 2);
+    top: $border;
+    left: $border;
+    right: $border;
+    bottom: $border;
+    border-radius: 16px;
+    background-color: $primary-black;
+    z-index: 0;
+  }
+  &:hover {
+    background-color: $primary-green;
+  }
+}

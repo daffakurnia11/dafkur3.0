@@ -12,5 +12,8 @@ section.text-layout {
 }
 
 section.grid-layout {
-  padding-top: 100px;
+  min-height: 100vh;
+  @media screen and (max-width: 768px) {
+    min-height: fit-content;
+  }
 }
