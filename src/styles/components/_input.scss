@@ -1,0 +1,13 @@
+.input {
+  background-color: $primary-black;
+  border: 1px solid $primary-green;
+  padding: 12px 16px;
+  border-radius: 16px;
+  @include small($light-green);
+  &::placeholder {
+    color: $primary-green;
+  }
+  &:focus {
+    outline: solid 1px $secondary-green;
+  }
+}

@@ -4,6 +4,8 @@
 
 @import "components/navigation";
 @import "components/card";
+@import "components/input";
+@import "components/button";
 
 @import "pages/layout";
 @import "pages/home";
@@ -26,91 +28,4 @@ body {
 
 main {
   color: $light-green;
-}
-
-.layout {
-  & .layout-header {
-    top: 0;
-    bottom: unset;
-    @media screen and (max-width: 768px) {
-      top: unset;
-      bottom: 0;
-    }
-  }
-  & .layout-content {
-    padding: 0;
-    @media screen and (max-width: 768px) {
-      // padding-top: 160px;
-      padding-bottom: 100px;
-    }
-  }
-}
-
-.input {
-  background-color: $primary-black;
-  border: 1px solid $primary-green;
-  padding: 12px 16px;
-  border-radius: 16px;
-  @include small($light-green);
-  &::placeholder {
-    color: $primary-green;
-  }
-  &:focus {
-    outline: solid 1px $secondary-green;
-  }
-}
-
-.btn {
-  padding: 12px 16px;
-  border-radius: 16px;
-  &.btn-primary {
-    @include small($light-green);
-    background-color: $primary-green;
-    border: 1px solid $primary-green;
-    &:hover,
-    &:focus {
-      @include small($primary-black);
-      background-color: $secondary-green;
-    }
-  }
-  &.btn-secondary {
-    @include small($secondary-green);
-    background-color: $dark-green;
-    border: 1px solid $primary-green;
-    &:hover,
-    &:focus {
-      @include small($primary-black);
-      background-color: $secondary-green;
-    }
-  }
-}
-
-.braille-letter {
-  width: 40px;
-  background-color: $primary-black;
-  display: grid;
-  grid-template-columns: auto auto; /* 2 columns */
-  grid-template-rows: 16px 16px 16px; /* 3 rows */
-  gap: 4px 8px; /* vertical and horizontal gap */
-  .braille-dots {
-    width: 16px;
-    height: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .dots-item {
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    background-color: $primary-green; /* Change to desired color */
-  }
-}
-
-.popover {
-  background-color: $secondary-green;
-  .popover-arrow::after,
-  .popover .popover-arrow::before {
-    background-color: $secondary-green;
-  }
 }

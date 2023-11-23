@@ -1,0 +1,24 @@
+.btn {
+  padding: 12px 16px;
+  border-radius: 16px;
+  &.btn-primary {
+    @include small($light-green);
+    background-color: $primary-green;
+    border: 1px solid $primary-green;
+    &:hover,
+    &:focus {
+      @include small($primary-black);
+      background-color: $secondary-green;
+    }
+  }
+  &.btn-secondary {
+    @include small($secondary-green);
+    background-color: $dark-green;
+    border: 1px solid $primary-green;
+    &:hover,
+    &:focus {
+      @include small($primary-black);
+      background-color: $secondary-green;
+    }
+  }
+}
