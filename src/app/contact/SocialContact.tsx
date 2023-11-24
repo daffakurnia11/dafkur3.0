@@ -19,6 +19,7 @@ export default function SocialContact() {
               icon="instagram"
               title="Instagram"
               detail="@daffakurniaf11"
+              link="https://www.instagram.com/daffakurniaf11/"
             />
           </GradientCard>
         </motion.div>
@@ -32,6 +33,7 @@ export default function SocialContact() {
               icon="whatsapp"
               title="Whatsapp"
               detail="+6285156317473"
+              link="https://wa.me/6285156317473"
             />
           </GradientCard>
         </motion.div>
@@ -41,7 +43,12 @@ export default function SocialContact() {
           transition={{ type: "tween", duration: 0.5, delay: 0.4 }}
         >
           <GradientCard style={{ maxWidth: 267 }} shape="square">
-            <CardContact icon="github" title="Github" detail="daffakurniaf11" />
+            <CardContact
+              icon="github"
+              title="Github"
+              detail="daffakurniaf11"
+              link="https://github.com/daffakurnia11"
+            />
           </GradientCard>
         </motion.div>
         <motion.div
@@ -54,6 +61,7 @@ export default function SocialContact() {
               icon="linkedin"
               title="LinkedIn"
               detail="Daffa Kurnia F"
+              link="https://www.linkedin.com/in/daffakurniafatah/"
             />
           </GradientCard>
         </motion.div>
