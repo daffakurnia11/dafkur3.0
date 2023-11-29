@@ -1,0 +1,16 @@
+.project {
+  padding-top: 100px;
+  padding-bottom: 70px;
+  @media screen and (max-width: 768px) {
+    padding-top: 0;
+    padding-bottom: 0px;
+  }
+  & .project-card {
+    background-color: $primary-green;
+    border-radius: 16px;
+  }
+  & .react-grid-item.react-grid-placeholder.cssTransforms {
+    background-color: $primary-green;
+    border-radius: 16px;
+  }
+}

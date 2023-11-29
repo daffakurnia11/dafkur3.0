@@ -34,4 +34,15 @@ section.grid-layout {
   @media screen and (max-width: 768px) {
     min-height: fit-content;
   }
+  & .container {
+    & .layout {
+      width: calc(246px * 4 + 24px * 5);
+      @media screen and (max-width: 1200px) {
+        width: calc(246px * 3 + 24px * 4);
+      }
+      @media screen and (max-width: 992px) {
+        width: calc(246px * 2 + 24px * 3);
+      }
+    }
+  }
 }
