@@ -25,3 +25,35 @@ $border: 1px;
     background-color: $primary-green;
   }
 }
+
+.project-card {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 16px;
+  transition: all 0.3s ease-in-out;
+  &.card-vertical {
+    background: linear-gradient(to right, $primary-green 60%, #42687232);
+  }
+  &.card-horizontal {
+    background: linear-gradient(to bottom, $primary-green 60%, #42687232);
+  }
+  &.card-box {
+    background-color: $primary-black;
+  }
+  &:hover {
+    background-color: $primary-green;
+  }
+  & .project-card-content {
+    position: absolute;
+    overflow: hidden;
+    height: calc(100% - $border * 2);
+    top: $border;
+    left: $border;
+    right: $border;
+    bottom: $border;
+    border-radius: 16px;
+    background-color: $primary-black;
+    z-index: 0;
+  }
+}
