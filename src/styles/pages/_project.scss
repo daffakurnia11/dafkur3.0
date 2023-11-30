@@ -82,5 +82,19 @@
         gap: 14px;
       }
     }
+    &.card-box {
+      & .project-card-content {
+        padding: 0;
+        & .project-link {
+          background-color: $primary-white;
+          width: 28px;
+          height: 28px;
+          border-radius: 50%;
+          &::before {
+            background-color: unset;
+          }
+        }
+      }
+    }
   }
 }
