@@ -29,8 +29,8 @@ export function HorizontalCard(props: ProjectContentProps) {
         <Image
           src={`/project/${image}`}
           alt="Project Image"
-          width={485}
-          height={273}
+          width={1920}
+          height={1080}
         />
       </div>
     </>

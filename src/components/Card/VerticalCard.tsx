@@ -14,7 +14,7 @@ export function VerticalCard(props: ProjectContentProps) {
           </div>
           <h2 className="text-heading-5 text-light-green">{name}</h2>
           <p className="text-body text-light-green mt-2">{description}</p>
-          <div className="d-flex gap-2 mt-3">
+          <div className="d-flex flex-wrap gap-2 mt-3">
             {tech &&
               tech.map((techstack: string, key: number) => (
                 <span
@@ -30,14 +30,14 @@ export function VerticalCard(props: ProjectContentProps) {
           <Image
             src={`/project/${image}`}
             alt="Project Image"
-            width={180}
-            height={360}
+            width={400}
+            height={800}
           />
           <Image
             src={`/project/${image}`}
             alt="Project Image"
-            width={180}
-            height={360}
+            width={400}
+            height={800}
           />
         </div>
       </div>

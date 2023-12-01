@@ -11,7 +11,7 @@ export function BoxCard(props: BoxCardProps) {
 
   const textVariant = {
     hover: {
-      y: 0,
+      y: 30,
       transition: {
         type: "tween",
         duration: 0.5,
@@ -28,15 +28,15 @@ export function BoxCard(props: BoxCardProps) {
   const imageVariant = {
     hover: {
       height: 50,
-      y: 0,
+      y: -50,
       transition: {
         type: "tween",
         duration: 0.3,
       },
     },
     initial: {
-      y: 55,
-      height: 100,
+      y: 0,
+      height: 80,
       transition: {
         type: "tween",
         duration: 0.3,
@@ -59,7 +59,7 @@ export function BoxCard(props: BoxCardProps) {
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
       >
-        <div className="d-flex flex-column align-items-center px-3">
+        <div className="d-flex flex-column align-items-center justify-content-center px-3">
           <motion.div
             variants={imageVariant}
             animate={isHover ? "hover" : "initial"}
@@ -75,6 +75,7 @@ export function BoxCard(props: BoxCardProps) {
             />
           </motion.div>
           <motion.div
+            className="position-absolute"
             variants={textVariant}
             animate={isHover ? "hover" : "initial"}
             onMouseEnter={handleMouseEnterControls}

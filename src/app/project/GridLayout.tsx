@@ -12,15 +12,21 @@ interface Props extends HTMLAttributes<HTMLDivElement> {
 
 export default function GridLayout(props: Props) {
   const [layoutWidth, setLayoutWidth] = useState(0);
+  const [screenWidth, setScreenWidth] = useState(0);
   const updateDimensions = () => {
     let screen = window.innerWidth;
+    setScreenWidth(screen);
 
     if (screen >= 1200) {
       setLayoutWidth(246 * 4 + 24 * 5);
     } else if (screen < 1200 && screen >= 992) {
       setLayoutWidth(246 * 3 + 24 * 4);
-    } else {
+    } else if (screen < 992 && screen >= 768) {
       setLayoutWidth(246 * 2 + 24 * 3);
+    } else if (screen < 768 && screen >= 576) {
+      setLayoutWidth(540);
+    } else {
+      setLayoutWidth(375);
     }
   };
   useEffect(() => {
@@ -31,13 +37,13 @@ export default function GridLayout(props: Props) {
 
   return (
     <ResponsiveGridLayout
-      className="mx-auto layout"
+      className="mx-0 mx-md-auto layout"
       layouts={props.layouts}
       breakpoints={{ lg: 1200, md: 992, sm: 768, xs: 480, xxs: 0 }}
       cols={{ lg: 4, md: 4, sm: 3, xs: 2, xxs: 2 }}
       width={layoutWidth}
-      rowHeight={225}
-      margin={[24, 24]}
+      rowHeight={screenWidth > 576 ? 225 : 160}
+      margin={screenWidth > 576 ? [24, 24] : [16, 16]}
       useCSSTransforms={true}
       isResizable={false}
     >
