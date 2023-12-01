@@ -2,15 +2,9 @@ import Icon from "@/components/Icon";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import type { ContactProps } from "./type";
 
-interface ContactProps {
-  icon: string;
-  title: string;
-  detail: string;
-  link: string;
-}
-
-export default function CardContact(props: ContactProps) {
+export function CardContact(props: ContactProps) {
   return (
     <Link href={props.link} target="_blank" className="d-block contact-social">
       <div className="h-100 d-flex flex-column justify-content-between">

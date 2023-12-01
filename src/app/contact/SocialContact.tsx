@@ -1,9 +1,8 @@
 "use client";
 
-import { GradientCard } from "@/components/Card";
 import React from "react";
-import CardContact from "./CardContact";
 import { motion } from "framer-motion";
+import { CardContact, GradientCard } from "@/components/Card";
 
 export default function SocialContact() {
   return (

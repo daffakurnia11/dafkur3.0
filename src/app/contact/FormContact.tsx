@@ -1,11 +1,11 @@
 "use client";
 
 import Button from "@/components/Button";
-import { GradientCard } from "@/components/Card";
 import Icon from "@/components/Icon";
 import Input, { InputTextArea } from "@/components/Input";
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { GradientCard } from "@/components/Card";
 
 export default function FormContact() {
   const [isCopied, setIsCopied] = useState<boolean>(false);
