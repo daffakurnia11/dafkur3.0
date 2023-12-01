@@ -12,39 +12,10 @@
   & .project-card {
     & .project-card-content {
       overflow: hidden;
-      & .project-link {
-        background-color: transparent;
-        width: 28px;
-        height: 28px;
-        border-radius: 50%;
-        color: $light-green;
-        transition: all 0.3s ease-in-out;
-        position: relative;
-        overflow: hidden;
-        &::before {
-          content: "";
-          position: absolute;
-          background-color: $primary-green;
-          width: 100%;
-          aspect-ratio: 1/1;
-          top: 100%;
-          left: 0;
-          z-index: -1;
-          transition: all 0.3s ease-in-out;
-        }
-      }
       & .project-techstack {
         background-color: $dark-green;
         padding: 6px 17px;
         border-radius: 24px;
-      }
-    }
-    &:hover {
-      & .project-link {
-        &::before {
-          content: "";
-          top: 0;
-        }
       }
     }
     &.card-horizontal {
@@ -93,15 +64,6 @@
     &.card-box {
       & .project-card-content {
         padding: 0;
-        & .project-link {
-          background-color: $primary-white;
-          width: 28px;
-          height: 28px;
-          border-radius: 50%;
-          &::before {
-            background-color: unset;
-          }
-        }
       }
     }
   }

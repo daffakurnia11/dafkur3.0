@@ -1,17 +1,15 @@
 import React from "react";
-import Icon from "../Icon";
 import Image from "next/image";
 import type { ProjectContentProps } from "./type";
+import { ArrowButton } from "../Button";
 
 export function VerticalCard(props: ProjectContentProps) {
-  const { name, description, tech, image } = props;
+  const { isHover, name, description, tech, image, link } = props;
   return (
     <>
       <div className="project-content">
-        <div className="position-absolute bottom-0 start-0 mb-4 ms-4">
-          <div className="project-link d-flex justify-content-center align-items-center mb-3">
-            <Icon icon="arrow-top-right" size={16} />
-          </div>
+        <div className="position-absolute bottom-0 start-0 mb-4 mx-4">
+          {link && <ArrowButton isHover={isHover!} className="mb-2" />}
           <h2 className="text-heading-5 text-light-green">{name}</h2>
           <p className="text-body text-light-green mt-2">{description}</p>
           <div className="d-flex flex-wrap gap-2 mt-3">

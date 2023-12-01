@@ -14,6 +14,8 @@ export interface ContactProps {
 export interface ProjectContentProps {
   name: string;
   description: string;
+  link?: string | null;
+  isHover?: boolean | null;
   tech?: string[] | null;
   image?: string | null;
 }

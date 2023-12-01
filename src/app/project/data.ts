@@ -14,6 +14,7 @@ export const projectData: ProjectDataType[] = [
     logo: null,
     image: "dafkur2.png",
     background: null,
+    link: null,
   },
   {
     key: "breakpoint",
@@ -24,6 +25,7 @@ export const projectData: ProjectDataType[] = [
     logo: "breakpoint.png",
     image: null,
     background: "#0C1523",
+    link: null,
   },
   {
     key: "candlecraft",
@@ -34,6 +36,7 @@ export const projectData: ProjectDataType[] = [
     logo: "candlecraft.png",
     image: null,
     background: "#05060A",
+    link: null,
   },
   {
     key: "ifem",
@@ -44,6 +47,7 @@ export const projectData: ProjectDataType[] = [
     logo: null,
     image: "ifem.png",
     background: null,
+    link: null,
   },
   {
     key: "crawlerhub",
@@ -54,6 +58,7 @@ export const projectData: ProjectDataType[] = [
     logo: null,
     image: "crawlerhub.png",
     background: null,
+    link: null,
   },
   {
     key: "ecs",
@@ -64,6 +69,7 @@ export const projectData: ProjectDataType[] = [
     logo: "ecs.png",
     image: null,
     background: "#E0D6B6",
+    link: null,
   },
   {
     key: "spe",
@@ -74,6 +80,7 @@ export const projectData: ProjectDataType[] = [
     logo: "spe.png",
     image: null,
     background: "#111840",
+    link: null,
   },
   {
     key: "petrolida",
@@ -84,6 +91,7 @@ export const projectData: ProjectDataType[] = [
     logo: null,
     image: "petrolida.png",
     background: null,
+    link: null,
   },
   {
     key: "ukmexpo",
@@ -94,6 +102,7 @@ export const projectData: ProjectDataType[] = [
     logo: null,
     image: "ukmexpo.png",
     background: null,
+    link: null,
   },
   {
     key: "epw",
@@ -104,6 +113,7 @@ export const projectData: ProjectDataType[] = [
     logo: "epw.png",
     image: null,
     background: "#9BB56D",
+    link: null,
   },
   {
     key: "ilits",
@@ -114,5 +124,6 @@ export const projectData: ProjectDataType[] = [
     logo: "ilits.png",
     image: null,
     background: "#1C2945",
+    link: null,
   },
 ]

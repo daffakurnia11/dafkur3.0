@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import Icon from "../Icon";
 import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
 import type { BoxCardProps } from "./type";
+import { ArrowButton } from "../Button";
 
 export function BoxCard(props: BoxCardProps) {
-  const { name, description, logo, background } = props;
+  const { name, description, logo, background, link } = props;
   const [isHover, setIsHover] = useState<boolean>(false);
   const controls = useAnimation();
 
@@ -75,7 +75,7 @@ export function BoxCard(props: BoxCardProps) {
             />
           </motion.div>
           <motion.div
-            className="position-absolute"
+            className="position-absolute px-3"
             variants={textVariant}
             animate={isHover ? "hover" : "initial"}
             onMouseEnter={handleMouseEnterControls}
@@ -87,14 +87,16 @@ export function BoxCard(props: BoxCardProps) {
             <p className="text-body text-light-green mt-1 text-center">
               {description}
             </p>
-            <div className="project-link d-flex justify-content-center align-items-center mx-auto mt-2">
-              <Icon
-                icon="arrow-top-right"
-                className="social-arrow"
-                style={background ? { color: background } : {}}
-                size={16}
+            {link && (
+              <ArrowButton
+                isHover={false}
+                style={{
+                  backgroundColor: "#fcfefd",
+                  color: background || "#426872",
+                }}
+                className="mx-auto mt-2"
               />
-            </div>
+            )}
           </motion.div>
         </div>
       </div>
