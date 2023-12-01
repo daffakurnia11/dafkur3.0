@@ -33,10 +33,10 @@ $border: 1px;
   border-radius: 16px;
   transition: all 0.3s ease-in-out;
   &.card-vertical {
-    background: linear-gradient(to right, $primary-green 60%, #42687232);
+    background: linear-gradient(to bottom, $primary-green 60%, #42687232);
   }
   &.card-horizontal {
-    background: linear-gradient(to bottom, $primary-green 60%, #42687232);
+    background: linear-gradient(to right, $primary-green 60%, #42687232);
   }
   &.card-box {
     background-color: $primary-black;
