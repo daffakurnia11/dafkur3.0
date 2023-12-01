@@ -12,14 +12,15 @@ export interface ContactProps {
 }
 
 export interface ProjectContentProps {
-  name?: string;
-  description?: string;
-  tech?: string[];
-  image?: string;
+  name: string;
+  description: string;
+  tech?: string[] | null;
+  image?: string | null;
 }
 
 export interface BoxCardProps extends ProjectContentProps {
-  background?: string;
+  background?: string | null;
+  logo?: string | null;
 }
 
 export interface ProjectCardProps

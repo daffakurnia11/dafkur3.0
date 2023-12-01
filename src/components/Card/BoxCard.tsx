@@ -5,7 +5,7 @@ import { motion, useAnimation } from "framer-motion";
 import type { BoxCardProps } from "./type";
 
 export function BoxCard(props: BoxCardProps) {
-  const { name, description, image, background } = props;
+  const { name, description, logo, background } = props;
   const [isHover, setIsHover] = useState<boolean>(false);
   const controls = useAnimation();
 
@@ -55,7 +55,7 @@ export function BoxCard(props: BoxCardProps) {
     <>
       <div
         className="d-flex justify-content-center align-items-center h-100"
-        style={{ backgroundColor: background }}
+        style={background ? { backgroundColor: background } : {}}
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
       >
@@ -67,7 +67,7 @@ export function BoxCard(props: BoxCardProps) {
             onMouseLeave={handleMouseLeaveControls}
           >
             <Image
-              src={`/project/${image}`}
+              src={`/project/${logo}`}
               alt="Project Logo"
               width={200}
               height={100}
@@ -91,7 +91,7 @@ export function BoxCard(props: BoxCardProps) {
               <Icon
                 icon="arrow-top-right"
                 className="social-arrow"
-                style={{ color: background }}
+                style={background ? { color: background } : {}}
                 size={16}
               />
             </div>
