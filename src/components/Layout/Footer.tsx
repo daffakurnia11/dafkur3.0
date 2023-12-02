@@ -1,6 +1,6 @@
 import React from "react";
 import Scramble from "../Scramble";
-import LiveClock from "../LiveClock";
+import LiveClock from "./LiveClock";
 
 export default function Footer() {
   return (
