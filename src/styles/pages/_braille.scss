@@ -5,7 +5,11 @@ section.braille {
   & .braille-games {
     max-width: 750px;
     & .games-hint {
-      width: 530px;
+      max-width: 530px;
+      min-height: 25px;
+      @media screen and (max-width: 576px) {
+        min-height: 45px;
+      }
     }
   }
 }

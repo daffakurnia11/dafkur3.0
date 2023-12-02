@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from "react";
 import BrailleLetter from "./BrailleLetter";
 
-export default function BrailleGenerator({ word }: { word: string | null }) {
+export default function BrailleGenerator({
+  word,
+  timer,
+}: {
+  word: string | null;
+  timer?: number | 1000;
+}) {
   const [wordInput, setWordInput] = useState<string | null>(null);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [letter, setLetter] = useState<string>("");
@@ -33,11 +39,11 @@ export default function BrailleGenerator({ word }: { word: string | null }) {
           setLetter("");
           clearInterval(interval);
         }
-      }, 1000);
+      }, timer || 1000);
 
       return () => clearInterval(interval);
     }
-  }, [word, wordInput, currentIndex, letter]);
+  }, [word, wordInput, currentIndex, letter, timer]);
 
   return (
     word && (
