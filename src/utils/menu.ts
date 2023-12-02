@@ -52,15 +52,21 @@ export const featureList: FeatureListType[] = [
   },
   {
     number: "09.",
-    label: "Braille Quest",
-    link: "/braille",
+    label: "Download My CV",
+    link: "https://drive.google.com/file/d/1pztI2gzYTaUJgEntlI2r_XhzSK1jV5_4/view?usp=sharing",
+    newTab: true,
   },
   {
     number: "10.",
-    label: "Short Links",
+    label: "Braille Quest",
+    link: "/braille",
   },
   {
     number: "11.",
     label: "Coming Soon!",
   },
+  // {
+  //   number: "12.",
+  //   label: "Coming Soon!",
+  // },
 ]

@@ -15,15 +15,15 @@ export default function NotFound() {
         <TypeAnimation
           className="text-heading-4"
           sequence={[
-            "404 Page Not Found!",
+            "Page Not Found!",
             1000,
-            "404 Oops! Can't locate.",
+            "Oops! Can't locate.",
             1000,
-            "404 Lost. Try again.",
+            "Lost. Try again.",
             1000,
-            "404 Page Vanished!",
+            "Page Vanished!",
             1000,
-            "404 Missing Webpage. Apologies.",
+            "Missing Webpage. ",
             1000,
           ]}
           speed={20}
