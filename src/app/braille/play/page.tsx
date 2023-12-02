@@ -7,6 +7,7 @@ import BrailleGenerator from "../BrailleGenerator";
 import { Container } from "react-bootstrap";
 import { AnimatePresence, motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
+import Scramble from "@/components/Scramble";
 
 export default function BraillePlay() {
   const [word, setWord] = useState<string | null>(null);
@@ -55,7 +56,7 @@ export default function BraillePlay() {
                     className="w-100 text-center"
                     onClick={() => onSubmit()}
                   >
-                    Generate
+                    <Scramble>Generate</Scramble>
                   </Button>
                 </motion.div>
               )}

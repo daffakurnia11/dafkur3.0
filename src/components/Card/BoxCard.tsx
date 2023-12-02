@@ -3,6 +3,7 @@ import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
 import type { BoxCardProps } from "./type";
 import { ArrowButton } from "../Button";
+import Scramble from "../Scramble";
 
 export function BoxCard(props: BoxCardProps) {
   const { name, description, logo, background, link } = props;
@@ -81,11 +82,15 @@ export function BoxCard(props: BoxCardProps) {
             onMouseEnter={handleMouseEnterControls}
             onMouseLeave={handleMouseLeaveControls}
           >
-            <h2 className="text-heading-5 text-light-green mt-2 text-center">
-              {name}
+            <h2 className="mt-2 text-center">
+              <Scramble className="text-heading-5 text-light-green">
+                {name}
+              </Scramble>
             </h2>
-            <p className="text-body text-light-green mt-1 text-center">
-              {description}
+            <p className="mt-1 text-center">
+              <Scramble className="text-body text-light-green">
+                {description}
+              </Scramble>
             </p>
             {link && (
               <ArrowButton

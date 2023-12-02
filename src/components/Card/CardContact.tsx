@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import type { ContactProps } from "./type";
+import Scramble from "../Scramble";
 
 export function CardContact(props: ContactProps) {
   return (
@@ -12,14 +13,14 @@ export function CardContact(props: ContactProps) {
           <Icon icon={props.icon} className="text-secondary-green" />
         </div>
         <div>
-          <p className="social-name">{props.title}</p>
+          <Scramble className="social-name">{props.title}</Scramble>
           <div className="social-detail d-flex gap-1 gap-md-2 align-items-center mt-1 mt-md-2">
             <Icon
               icon="arrow-right"
               size={16}
               className="text-secondary-green"
             />
-            <small className="text-small">{props.detail}</small>
+            <Scramble className="text-small">{props.detail}</Scramble>
           </div>
         </div>
       </div>

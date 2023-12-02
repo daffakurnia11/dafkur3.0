@@ -6,6 +6,7 @@ import Input, { InputTextArea } from "@/components/Input";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { GradientCard } from "@/components/Card";
+import Scramble from "@/components/Scramble";
 
 export default function FormContact() {
   const [isCopied, setIsCopied] = useState<boolean>(false);
@@ -29,7 +30,11 @@ export default function FormContact() {
         <div className="contact-form h-100">
           <div className="d-flex flex-column h-100 justify-content-between">
             <div>
-              <p className="text-light-green mb-3">Drop me a message:</p>
+              <div className="mb-3">
+                <Scramble className="text-body text-light-green">
+                  Drop me a message:
+                </Scramble>
+              </div>
               <div className="d-flex flex-column flex-md-row justify-content-between gap-3 mb-3">
                 <Input className="w-100" placeholder="Name" />
                 <Input className="w-100" placeholder="Email" />
@@ -41,11 +46,15 @@ export default function FormContact() {
                 placeholder="Your message.."
               />
               <Button buttonType="primary" className="w-100">
-                Submit
+                <Scramble>Submit</Scramble>
               </Button>
             </div>
             <div className="mt-4">
-              <small className="d-block mb-2">Or email me at:</small>
+              <div className="mb-2">
+                <Scramble className="text-small text-light-green">
+                  Or email me at:
+                </Scramble>
+              </div>
               <Button
                 buttonType="secondary"
                 className="d-flex w-100 justify-content-center align-items-center gap-2"
@@ -56,7 +65,9 @@ export default function FormContact() {
                 ) : (
                   <>
                     <Icon icon="copy" size={16} />
-                    daffakurniaf11@gmail.com
+                    <Scramble className="text-small">
+                      daffakurniaf11@gmail.com
+                    </Scramble>
                   </>
                 )}
               </Button>
