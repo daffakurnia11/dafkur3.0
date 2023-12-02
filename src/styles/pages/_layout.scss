@@ -18,7 +18,7 @@
 section.text-layout {
   min-height: 100vh;
   @media screen and (max-width: 768px) {
-    min-height: fit-content;
+    min-height: calc(100vh - 92px - 100px);
   }
   .container {
     max-width: 750px;

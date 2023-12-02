@@ -28,7 +28,7 @@ export default function Logo() {
   }, [currentIndex, letter]);
 
   return (
-    <div className="header-logo ms-4 mt-3">
+    <div className="header-logo ms-4 pt-3">
       <BrailleLetter letter={letter} />
     </div>
   );

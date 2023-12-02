@@ -4,18 +4,23 @@ import React, { useEffect, useRef, useState } from "react";
 import Icon from "../Icon";
 import { motion } from "framer-motion";
 import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function Navigation() {
   const router = useRouter();
   const pathname = usePathname();
   const menuContainer = useRef<any>(null);
-  const [activeProps, setActiveProps] = useState({ width: 90.5, x: 12 });
+  const [activeProps, setActiveProps] = useState({
+    width: 0,
+    x: 12,
+  });
 
   const changePage = async (route?: string) => {
-    await new Promise((resolve) => setTimeout(resolve, 10));
+    await new Promise((resolve) => setTimeout(resolve, 5));
 
     const container = document.querySelector(".menu-item.active");
-    if (container instanceof HTMLDivElement) {
+    console.log(container);
+    if (container instanceof HTMLAnchorElement) {
       if (route === "/contact") {
         setActiveProps({
           width: container.getBoundingClientRect().width + 36,
@@ -32,8 +37,8 @@ export default function Navigation() {
             menuContainer.current?.getBoundingClientRect().x,
         });
       }
+      router.push(route!);
     }
-    router.push(route!);
   };
 
   useEffect(() => {
@@ -53,7 +58,8 @@ export default function Navigation() {
           style={{ width: activeProps.width, left: activeProps.x }}
         ></div>
         <div className="nav-menu d-flex position-relative" ref={menuContainer}>
-          <div
+          <Link
+            href={"/"}
             className={`d-flex align-items-center menu-item ${
               (pathname === "/" ||
                 pathname === "/braille" ||
@@ -67,8 +73,9 @@ export default function Navigation() {
             <div className="menu-label text-body text-light-green mb-0">
               Home
             </div>
-          </div>
-          <div
+          </Link>
+          <Link
+            href={"/project"}
             className={`d-flex align-items-center menu-item ${
               pathname === "/project" && "active"
             }`}
@@ -79,8 +86,9 @@ export default function Navigation() {
             <div className="menu-label text-body text-light-green mb-0">
               Projects
             </div>
-          </div>
-          <div
+          </Link>
+          <Link
+            href={"experience"}
             className={`d-flex align-items-center menu-item ${
               pathname === "/experience" && "active"
             }`}
@@ -91,8 +99,9 @@ export default function Navigation() {
             <div className="menu-label text-body text-light-green mb-0">
               Experiences
             </div>
-          </div>
-          <div
+          </Link>
+          <Link
+            href={"/blog"}
             className={`d-flex align-items-center menu-item ${
               pathname === "/blog" && "active"
             }`}
@@ -101,16 +110,17 @@ export default function Navigation() {
           >
             <Icon icon="book" size={24} className="menu-icon d-block" />
             <p className="menu-label mb-0">Blogs</p>
-          </div>
+          </Link>
         </div>
-        <div
+        <Link
+          href={"/contact"}
           className={`nav-contact menu-item ${
             pathname === "/contact" && "active"
           }`}
           onClick={() => changePage("/contact")}
         >
           <p className="text-body text-light-green">Let&apos;s Talk!</p>
-        </div>
+        </Link>
       </motion.div>
     </div>
   );

@@ -1,9 +1,9 @@
 "use client";
 
-import React from "react";
+import React, { HTMLAttributes } from "react";
 import { useScramble } from "use-scramble";
 
-interface Props {
+interface Props extends HTMLAttributes<HTMLSpanElement> {
   children: string | undefined;
 }
 
@@ -13,7 +13,7 @@ export default function Scramble(props: Props) {
   });
 
   return (
-    <span ref={ref} onMouseOver={replay} onFocus={replay}>
+    <span {...props} ref={ref} onMouseOver={replay} onFocus={replay}>
       {props.children}
     </span>
   );

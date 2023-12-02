@@ -2,12 +2,17 @@
 
 import HomeList from "@/app/home/HomeList";
 import { FeatureListType, featureList } from "@/utils/menu";
+import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { TypeAnimation } from "react-type-animation";
 
 export default function Home() {
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+
   // Check if the screen width is less than the medium breakpoint
-  const isMobile = window.innerWidth < 768; // You can adjust the breakpoint as needed
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768); // You can adjust the breakpoint as needed
+  }, []);
 
   // Create separate arrays for each column
   const column1 = featureList.slice(0, 4);

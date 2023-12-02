@@ -51,6 +51,7 @@ export default function BraillePlay() {
                   transition={{ type: "tween", duration: 0.5 }}
                 >
                   <Button
+                    buttonType="primary"
                     className="w-100 text-center"
                     onClick={() => onSubmit()}
                   >
