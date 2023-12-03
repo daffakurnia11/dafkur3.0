@@ -22,7 +22,7 @@
 }
 
 section.text-layout {
-  min-height: 100vh;
+  min-height: calc(100vh - 100px);
   @media screen and (max-width: 768px) {
     min-height: calc(100vh - 92px - 100px);
   }

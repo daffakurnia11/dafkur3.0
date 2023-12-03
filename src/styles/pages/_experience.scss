@@ -2,9 +2,8 @@ section.experience {
   .experience-section {
     scroll-snap-align: start;
     scroll-snap-stop: always;
-    min-height: 100vh;
+    min-height: calc(100vh - 100px);
     &:nth-of-type(1) {
-      padding-top: 100px;
       scroll-margin-top: 156px;
     }
     &:nth-of-type(2) {
@@ -17,6 +16,7 @@ section.experience {
         padding-bottom: 50px;
       }
       &:nth-of-type(2) {
+        padding-bottom: 30px;
         scroll-margin-bottom: 100px;
       }
     }
