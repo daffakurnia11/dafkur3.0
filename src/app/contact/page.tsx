@@ -1,21 +1,12 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
-import FormContact from "./FormContact";
-import SocialContact from "./SocialContact";
+import type { Metadata } from "next";
+import ContactPage from ".";
 
-export default function Contact() {
-  return (
-    <section className="contact grid-layout d-flex justify-content-center align-items-center">
-      <Container>
-        <Row>
-          <Col lg={6}>
-            <SocialContact />
-          </Col>
-          <Col lg={6}>
-            <FormContact />
-          </Col>
-        </Row>
-      </Container>
-    </section>
-  );
+export const metadata: Metadata = {
+  title: "Let's Talk - Dafkur 3.0.0",
+  description: "Welcome to Dafkur 3.0.0",
+};
+
+export default function Project() {
+  return <ContactPage />;
 }
