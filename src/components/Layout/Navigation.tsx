@@ -61,10 +61,7 @@ export default function Navigation() {
           <Link
             href={"/"}
             className={`d-flex align-items-center menu-item ${
-              (pathname === "/" ||
-                pathname === "/braille" ||
-                pathname === "/braille/play") &&
-              "active"
+              pathname === "/" && "active"
             }`}
             onClick={() => changePage("/")}
             style={{ gap: 6 }}
@@ -77,7 +74,10 @@ export default function Navigation() {
           <Link
             href={"/project"}
             className={`d-flex align-items-center menu-item ${
-              pathname === "/project" && "active"
+              (pathname === "/project" ||
+                pathname === "/braille" ||
+                pathname === "/braille/play") &&
+              "active"
             }`}
             onClick={() => changePage("/project")}
             style={{ gap: 6 }}

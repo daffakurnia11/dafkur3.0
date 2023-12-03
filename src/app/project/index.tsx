@@ -2,11 +2,11 @@
 
 import React from "react";
 import { Container } from "react-bootstrap";
-import { lgLayout, mdLayout, smLayout } from "./projectLayout";
 import GridLayout from "./GridLayout";
 import { motion } from "framer-motion";
 import { ProjectCard } from "@/components/Card";
-import { ProjectDataType, projectData } from "./data";
+import { ProjectDataType, projectData } from "@/utils/projectdata";
+import { lgLayout, mdLayout, smLayout } from "@/utils/projectLayout";
 
 export default function ProjectPage() {
   const layouts = { lg: lgLayout, md: lgLayout, sm: mdLayout, xs: smLayout };

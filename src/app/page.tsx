@@ -1,6 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
-import Homepage from "./home/Homepage";
+import Homepage from "./home";
 
 export const metadata: Metadata = {
   title: "Home - Dafkur 3.0.0",
