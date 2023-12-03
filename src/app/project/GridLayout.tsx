@@ -37,7 +37,7 @@ export default function GridLayout(props: Props) {
 
   return (
     <ResponsiveGridLayout
-      className="mx-0 mx-md-auto layout"
+      className="mx-0 mx-md-auto grid-content-layout"
       layouts={props.layouts}
       breakpoints={{ lg: 1200, md: 992, sm: 768, xs: 480, xxs: 0 }}
       cols={{ lg: 4, md: 4, sm: 3, xs: 2, xxs: 2 }}

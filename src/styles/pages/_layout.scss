@@ -1,4 +1,10 @@
 .layout {
+  padding-top: 100px;
+  padding-bottom: 70px;
+  @media screen and (max-width: 768px) {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
   & .layout-header {
     top: 0;
     bottom: unset;
@@ -29,12 +35,12 @@ section.text-layout {
 }
 
 section.grid-layout {
-  min-height: 100vh;
+  min-height: calc(100vh - 100px - 70px);
   @media screen and (max-width: 768px) {
     min-height: fit-content;
   }
   & .container {
-    & .layout {
+    & .grid-content-layout {
       width: calc(246px * 4 + 24px * 5);
       @media screen and (max-width: 1200px) {
         width: calc(246px * 3 + 24px * 4);
