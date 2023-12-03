@@ -1,15 +1,13 @@
-import type { Metadata } from "next";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@/icons/style.css";
 import "@/styles/app.scss";
-import Footer from "@/components/Layout/Footer";
-import Logo from "@/components/Layout/Logo";
-import Navigation from "@/components/Layout/Navigation";
+import Loader from "./loader";
+import Layout from "@/components/Layout";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Home - Dafkur 3.0.0",
-  description: "Welcome",
+  title: "Dafkur 3.0.0",
+  description: "Welcome to Dafkur 3.0.0",
 };
 
 export default function RootLayout({
@@ -21,10 +19,8 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <main className="layout position-relative min-vh-100">
-          <Logo />
-          <Navigation />
-          <div className="layout-content">{children}</div>
-          <Footer />
+          <Loader />
+          <Layout>{children}</Layout>
         </main>
       </body>
     </html>
