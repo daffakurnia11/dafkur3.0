@@ -19,7 +19,6 @@ export default function Navigation() {
     await new Promise((resolve) => setTimeout(resolve, 5));
 
     const container = document.querySelector(".menu-item.active");
-    console.log(container);
     if (container instanceof HTMLAnchorElement) {
       if (route === "/contact") {
         setActiveProps({
