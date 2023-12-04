@@ -10,4 +10,8 @@
   &:focus {
     outline: solid 1px $secondary-green;
   }
+  &:disabled {
+    color: $secondary-green;
+    border-color: $dark-green;
+  }
 }

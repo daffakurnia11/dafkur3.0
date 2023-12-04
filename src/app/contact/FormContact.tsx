@@ -7,9 +7,17 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { GradientCard } from "@/components/Card";
 import Scramble from "@/components/Scramble";
+import { ContactDataType, ContactSendApi } from "@/axios/api";
 
 export default function FormContact() {
   const [isCopied, setIsCopied] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [formData, setFormData] = useState<ContactDataType>({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
 
   const handleCopy = () => {
     setIsCopied(true);
@@ -18,6 +26,27 @@ export default function FormContact() {
       setIsCopied(false);
       return clearInterval(3000);
     }, 3000);
+  };
+
+  const handleChange = (value: string, type: string) => {
+    setFormData((prev) => {
+      return { ...prev, [type]: value };
+    });
+  };
+
+  const onSubmit = () => {
+    setLoading(true);
+    ContactSendApi(formData).then((resp) => {
+      setLoading(false);
+      if (resp?.status === 201) {
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      }
+    });
   };
 
   return (
@@ -36,17 +65,47 @@ export default function FormContact() {
                 </Scramble>
               </div>
               <div className="d-flex flex-column flex-md-row justify-content-between gap-3 mb-3">
-                <Input className="w-100" placeholder="Name" />
-                <Input className="w-100" placeholder="Email" />
+                <Input
+                  name="name"
+                  className="w-100"
+                  placeholder="Name"
+                  value={formData.name}
+                  onChange={(e) => handleChange(e.target.value, "name")}
+                  disabled={loading}
+                />
+                <Input
+                  name="email"
+                  className="w-100"
+                  placeholder="Email"
+                  value={formData.email}
+                  onChange={(e) => handleChange(e.target.value, "email")}
+                  disabled={loading}
+                />
               </div>
-              <Input className="w-100 mb-3" placeholder="Subject" />
+              <Input
+                name="subject"
+                className="w-100 mb-3"
+                placeholder="Subject"
+                value={formData.subject}
+                onChange={(e) => handleChange(e.target.value, "subject")}
+                disabled={loading}
+              />
               <InputTextArea
+                name="message"
+                value={formData.message}
+                onChange={(e) => handleChange(e.target.value, "message")}
+                disabled={loading}
                 className="w-100 mb-3"
                 rows={3}
                 placeholder="Your message.."
               />
-              <Button buttonType="primary" className="w-100">
-                <Scramble>Submit</Scramble>
+              <Button
+                buttonType="primary"
+                className="w-100"
+                onClick={onSubmit}
+                disabled={loading}
+              >
+                <Scramble>{loading ? "Sending.." : "Submit"}</Scramble>
               </Button>
             </div>
             <div className="mt-4">
