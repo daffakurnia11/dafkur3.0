@@ -8,10 +8,13 @@ import { motion } from "framer-motion";
 import { GradientCard } from "@/components/Card";
 import Scramble from "@/components/Scramble";
 import { ContactDataType, ContactSendApi } from "@/axios/api";
+import { useSetAtom } from "jotai";
+import { notifContent } from "@/utils/atom";
 
 export default function FormContact() {
   const [isCopied, setIsCopied] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
+  const setNotif = useSetAtom(notifContent);
   const [formData, setFormData] = useState<ContactDataType>({
     name: "",
     email: "",
@@ -44,6 +47,15 @@ export default function FormContact() {
           email: "",
           subject: "",
           message: "",
+        });
+        setNotif({
+          title: "Yeyy! The message is sent!",
+          message: "Kindly check your email regularly!",
+        });
+      } else {
+        setNotif({
+          title: "Oops! Something's happen.",
+          message: "You need to check your data once more.",
         });
       }
     });
