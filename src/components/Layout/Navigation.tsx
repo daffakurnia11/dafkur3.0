@@ -17,7 +17,7 @@ export default function Navigation() {
   });
 
   const changePage = async (route?: string) => {
-    await new Promise((resolve) => setTimeout(resolve, 5));
+    await new Promise((resolve) => setTimeout(resolve, 100));
 
     const container = document.querySelector(".menu-item.active");
     if (container instanceof HTMLAnchorElement) {
