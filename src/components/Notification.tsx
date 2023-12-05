@@ -40,7 +40,9 @@ export function CustomNotification({
             />
             <div className="py-2 my-1">
               <p className="text-light-green text-body">{title}</p>
-              <small className="text-primary-green text-small">{message}</small>
+              <small className="text-primary-green text-small lh-1">
+                {message}
+              </small>
             </div>
           </div>
         </motion.div>

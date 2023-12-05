@@ -5,6 +5,7 @@ import Icon from "../Icon";
 import { motion } from "framer-motion";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
+import Scramble from "../Scramble";
 
 export default function Navigation() {
   const router = useRouter();
@@ -67,7 +68,7 @@ export default function Navigation() {
           >
             <Icon icon="home" size={24} className="menu-icon d-block" />
             <div className="menu-label text-body text-light-green mb-0">
-              Home
+              <Scramble>Home</Scramble>
             </div>
           </Link>
           <Link
@@ -83,7 +84,7 @@ export default function Navigation() {
           >
             <Icon icon="library" size={24} className="menu-icon d-block" />
             <div className="menu-label text-body text-light-green mb-0">
-              Projects
+              <Scramble>Projects</Scramble>
             </div>
           </Link>
           <Link
@@ -96,7 +97,7 @@ export default function Navigation() {
           >
             <Icon icon="rocket" size={24} className="menu-icon d-block" />
             <div className="menu-label text-body text-light-green mb-0">
-              Experiences
+              <Scramble>Experiences</Scramble>
             </div>
           </Link>
           <Link
@@ -108,7 +109,9 @@ export default function Navigation() {
             style={{ gap: 6 }}
           >
             <Icon icon="book" size={24} className="menu-icon d-block" />
-            <p className="menu-label mb-0">Blogs</p>
+            <div className="menu-label text-body text-light-green mb-0">
+              <Scramble>Blogs</Scramble>
+            </div>
           </Link>
         </div>
         <Link
@@ -118,7 +121,9 @@ export default function Navigation() {
           }`}
           onClick={() => changePage("/contact")}
         >
-          <p className="text-body text-light-green">Let&apos;s Talk!</p>
+          <p className="text-body text-light-green">
+            <Scramble>Let&apos;s Talk!</Scramble>
+          </p>
         </Link>
       </motion.div>
     </div>
