@@ -13,7 +13,7 @@ export default function Footer() {
       <small className="text-small text-primary-green d-flex align-items-end flex-column flex-sm-row gap-sm-2 gap-0">
         <Scramble>Dafkur Version</Scramble>
         <span className="d-none d-sm-block">-</span>
-        <Scramble>3.0.0</Scramble>
+        <Scramble>{process.env.NEXT_PUBLIC_VERSION!}</Scramble>
       </small>
     </div>
   );
