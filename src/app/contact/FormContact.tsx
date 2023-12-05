@@ -50,7 +50,7 @@ export default function FormContact() {
         });
         setNotif({
           title: "Yeyy! The message is sent!",
-          message: "Kindly check your email regularly!",
+          message: "I will contact you by email very soon!",
         });
       } else {
         setNotif({

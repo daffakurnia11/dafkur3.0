@@ -12,7 +12,7 @@ export default function Navigation() {
   const pathname = usePathname();
   const menuContainer = useRef<any>(null);
   const [activeProps, setActiveProps] = useState({
-    width: 0,
+    width: 87.72,
     x: 12,
   });
 
