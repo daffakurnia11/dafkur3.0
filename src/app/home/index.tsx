@@ -104,13 +104,15 @@ export default function Homepage() {
             <Col md={4} xs={6}>
               {isMobile
                 ? mobileColumn2.map((data: FeatureListType, key: number) => (
-                    <HomeList
-                      key={key}
-                      number={data.number}
-                      label={data.label}
-                      link={data.link}
-                      newTab={data.newTab}
-                    />
+                    <>
+                      <HomeList
+                        key={key}
+                        number={data.number}
+                        label={data.label}
+                        link={data.link}
+                        newTab={data.newTab}
+                      />
+                    </>
                   ))
                 : column2.map((data: FeatureListType, key: number) => (
                     <HomeList
