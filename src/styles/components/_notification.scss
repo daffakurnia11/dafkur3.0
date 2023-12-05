@@ -1,0 +1,13 @@
+.notification {
+  top: 0;
+  right: 0;
+  width: 330px;
+  min-height: 70px;
+  border: 1px solid $primary-green;
+  background-color: #181c1c83;
+  backdrop-filter: blur(3px);
+  border-radius: 16px;
+  & .notification-profile {
+    border-radius: 60px;
+  }
+}

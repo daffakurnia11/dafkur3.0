@@ -1,0 +1,1 @@
+export const contactFormUrl: string = `/api/contact/`;
