@@ -48,7 +48,7 @@ export default function Comingsoon() {
             className="btn d-flex align-items-center gap-2 p-0 mt-4"
           >
             <Icon icon="arrow-right" className="text-primary-green" size={16} />
-            <Scramble className="text-body text-light-green">
+            <Scramble className="text-body text-light-green text-decoration-underline">
               Get back to Home!
             </Scramble>
           </Link>
