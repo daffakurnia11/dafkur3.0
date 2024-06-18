@@ -10,6 +10,7 @@ interface Props extends HTMLAttributes<HTMLSpanElement> {
 export default function Scramble(props: Props) {
   const { ref, replay } = useScramble({
     text: props.children,
+    speed: 0.5,
   });
 
   return (
