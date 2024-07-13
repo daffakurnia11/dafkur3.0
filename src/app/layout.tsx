@@ -1,5 +1,6 @@
 import "@/icons/style.css";
-import "@/styles/app.scss";
+// import "@/styles/app.scss";
+import "@/styles/tailwind.css";
 import Loader from "./loader";
 import Layout from "@/components/Layout";
 import type { Metadata } from "next";
