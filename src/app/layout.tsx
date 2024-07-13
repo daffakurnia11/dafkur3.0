@@ -1,5 +1,4 @@
 import "@/icons/style.css";
-// import "@/styles/app.scss";
 import "@/styles/tailwind.css";
 import Loader from "./loader";
 import Layout from "@/components/Layout";
@@ -18,12 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <main className="layout position-relative min-vh-100">
-          <Loader />
-          <Layout>{children}</Layout>
-          <Notification />
-        </main>
+      <body className="bg-black min-h-dvh font-roboto">
+        <Loader />
+        <Layout>{children}</Layout>
+        <Notification />
       </body>
     </html>
   );
