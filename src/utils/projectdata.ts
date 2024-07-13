@@ -14,7 +14,7 @@ export const projectData: ProjectDataType[] = [
     logo: null,
     image: "dafkur2.png",
     background: null,
-    link: null,
+    link: "https://v2.dafkur.com/",
   },
   {
     key: "breakpoint",
@@ -36,7 +36,7 @@ export const projectData: ProjectDataType[] = [
     logo: "candlecraft.png",
     image: null,
     background: "#05060A",
-    link: null,
+    link: "https://candlecraft.co.id/",
   },
   {
     key: "ifem",
@@ -58,7 +58,7 @@ export const projectData: ProjectDataType[] = [
     logo: null,
     image: "crawlerhub.png",
     background: null,
-    link: null,
+    link: "https://crawlerhub.lndata.com/",
   },
   {
     key: "ecs",

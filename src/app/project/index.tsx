@@ -30,6 +30,7 @@ export default function ProjectPage() {
                   image={data.image}
                   logo={data.logo}
                   background={data.background}
+                  link={data.link}
                 />
               </div>
             ))}
