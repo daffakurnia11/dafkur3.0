@@ -9,4 +9,6 @@ interface TextProps {
   isScrambled?: boolean;
 }
 
+export interface ParagraphProps extends TextProps {}
+
 export interface SmallProps extends TextProps {}
