@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        roboto: ["Roboto", "sans-serif"],
+      },
       fontSize: {
         "4xl": ["40px", "48px"],
         "3xl": ["32px", "40px"],
