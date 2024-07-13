@@ -34,13 +34,13 @@ export const featureList: FeatureListType[] = [
   },
   {
     number: "06.",
-    label: "Whatsapp",
+    label: "WhatsApp",
     link: "https://wa.me/6285156317473",
     newTab: true,
   },
   {
     number: "07.",
-    label: "Github",
+    label: "GitHub",
     link: "https://github.com/daffakurnia11",
     newTab: true,
   },
