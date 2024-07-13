@@ -49,6 +49,7 @@ export default function GridLayout(props: Props) {
       useCSSTransforms={true}
       isResizable={false}
       isDraggable={screenWidth > 576}
+      draggableCancel=".non-draggable"
     >
       {props.children}
     </ResponsiveGridLayout>

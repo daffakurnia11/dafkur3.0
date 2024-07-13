@@ -17,7 +17,12 @@ export function HorizontalCard(props: ProjectContentProps) {
         style={{ userSelect: "none" }}
       >
         {link && (
-          <div style={{ width: "fit-content" }}>
+          <div
+            style={{
+              width: "fit-content",
+            }}
+            className="non-draggable"
+          >
             <Link href={link} target="_blank">
               <ArrowButton isHover={isHover!} />
             </Link>

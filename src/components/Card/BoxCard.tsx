@@ -97,7 +97,10 @@ export function BoxCard(props: BoxCardProps) {
               </Scramble>
             </p>
             {link && (
-              <div className="mx-auto" style={{ width: "fit-content" }}>
+              <div
+                className="mx-auto non-draggable"
+                style={{ width: "fit-content" }}
+              >
                 <Link href={link} target="_blank">
                   <ArrowButton
                     isHover={false}

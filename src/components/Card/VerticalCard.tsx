@@ -12,7 +12,7 @@ export function VerticalCard(props: ProjectContentProps) {
       <div className="project-content" style={{ userSelect: "none" }}>
         <div className="position-absolute bottom-0 start-0 mb-4 mx-4">
           {link && (
-            <div style={{ width: "fit-content" }}>
+            <div style={{ width: "fit-content" }} className="non-draggable">
               <Link href={link} target="_blank">
                 <ArrowButton isHover={isHover!} />
               </Link>
