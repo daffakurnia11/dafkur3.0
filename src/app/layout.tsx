@@ -1,4 +1,3 @@
-import "bootstrap/dist/css/bootstrap.min.css";
 import "@/icons/style.css";
 import "@/styles/app.scss";
 import Loader from "./loader";
