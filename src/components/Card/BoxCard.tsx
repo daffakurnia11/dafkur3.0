@@ -60,7 +60,10 @@ export function BoxCard(props: BoxCardProps) {
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
       >
-        <div className="d-flex flex-column align-items-center justify-content-center px-3">
+        <div
+          className="d-flex flex-column align-items-center justify-content-center px-3"
+          style={{ userSelect: "none" }}
+        >
           <motion.div
             variants={imageVariant}
             animate={isHover ? "hover" : "initial"}

@@ -8,7 +8,7 @@ export function VerticalCard(props: ProjectContentProps) {
   const { isHover, name, description, tech, image, link } = props;
   return (
     <>
-      <div className="project-content">
+      <div className="project-content" style={{ userSelect: "none" }}>
         <div className="position-absolute bottom-0 start-0 mb-4 mx-4">
           {link && <ArrowButton isHover={isHover!} className="mb-2" />}
           <h2>

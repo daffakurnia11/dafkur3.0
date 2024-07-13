@@ -3,8 +3,8 @@
 import React, { HTMLAttributes, useEffect, useState } from "react";
 import { Layouts, Responsive as ResponsiveGridLayout } from "react-grid-layout";
 
-import "/node_modules/react-grid-layout/css/styles.css";
-import "/node_modules/react-resizable/css/styles.css";
+import "react-grid-layout/css/styles.css";
+import "react-resizable/css/styles.css";
 
 interface Props extends HTMLAttributes<HTMLDivElement> {
   layouts: Layouts;
@@ -13,8 +13,9 @@ interface Props extends HTMLAttributes<HTMLDivElement> {
 export default function GridLayout(props: Props) {
   const [layoutWidth, setLayoutWidth] = useState(0);
   const [screenWidth, setScreenWidth] = useState(0);
+
   const updateDimensions = () => {
-    let screen = window.innerWidth;
+    const screen = window.innerWidth;
     setScreenWidth(screen);
 
     if (screen >= 1200) {
@@ -29,6 +30,7 @@ export default function GridLayout(props: Props) {
       setLayoutWidth(375);
     }
   };
+
   useEffect(() => {
     updateDimensions();
     window.addEventListener("resize", updateDimensions);
@@ -46,6 +48,7 @@ export default function GridLayout(props: Props) {
       margin={screenWidth > 576 ? [24, 24] : [16, 16]}
       useCSSTransforms={true}
       isResizable={false}
+      isDraggable={screenWidth > 576}
     >
       {props.children}
     </ResponsiveGridLayout>

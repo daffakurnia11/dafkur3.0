@@ -11,7 +11,10 @@ export function HorizontalCard(props: ProjectContentProps) {
 
   return (
     <>
-      <div className="position-absolute bottom-0 start-0 mb-4 mx-4">
+      <div
+        className="position-absolute bottom-0 start-0 mb-4 mx-4"
+        style={{ userSelect: "none" }}
+      >
         {link && <ArrowButton isHover={isHover!} className="mb-2" />}
         <h2>
           <Scramble className="text-heading-5 text-light-green">
