@@ -59,7 +59,7 @@ export default function Homepage() {
                 `
                 Fellow wanderers of the digital domain! I'm Daffa Kurnia Fatah
                 - think of me as your trusty coding bard from the sun-kissed lands
-                of Sidoarjo, East Java - Indonesia. With Next.js and ReactJS as my trusty instruments
+                of Sidoarjo, East Java - Indonesia. With Next.js and React as my trusty instruments
                 since 2021, I craft not only code but also wield the art of design, conjuring up
                 web magic through Figma and weaving interactive spells of user
                 experience and animation. Your wish is my code!
