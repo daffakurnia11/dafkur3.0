@@ -4,6 +4,7 @@ import { motion, useAnimation } from "framer-motion";
 import type { BoxCardProps } from "./type";
 import { ArrowButton } from "../Button";
 import Scramble from "../Scramble";
+import Link from "next/link";
 
 export function BoxCard(props: BoxCardProps) {
   const { name, description, logo, background, link } = props;
@@ -60,7 +61,10 @@ export function BoxCard(props: BoxCardProps) {
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
       >
-        <div className="d-flex flex-column align-items-center justify-content-center px-3">
+        <div
+          className="d-flex flex-column align-items-center justify-content-center px-3"
+          style={{ userSelect: "none" }}
+        >
           <motion.div
             variants={imageVariant}
             animate={isHover ? "hover" : "initial"}
@@ -93,14 +97,21 @@ export function BoxCard(props: BoxCardProps) {
               </Scramble>
             </p>
             {link && (
-              <ArrowButton
-                isHover={false}
-                style={{
-                  backgroundColor: "#fcfefd",
-                  color: background || "#426872",
-                }}
-                className="mx-auto mt-2"
-              />
+              <div
+                className="mx-auto non-draggable"
+                style={{ width: "fit-content" }}
+              >
+                <Link href={link} target="_blank">
+                  <ArrowButton
+                    isHover={false}
+                    style={{
+                      backgroundColor: "#fcfefd",
+                      color: background || "#426872",
+                    }}
+                    className="mx-auto mt-2"
+                  />
+                </Link>
+              </div>
             )}
           </motion.div>
         </div>

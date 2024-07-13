@@ -5,14 +5,29 @@ import Image from "next/image";
 import type { ProjectContentProps } from "./type";
 import { ArrowButton } from "../Button";
 import Scramble from "../Scramble";
+import Link from "next/link";
 
 export function HorizontalCard(props: ProjectContentProps) {
   const { isHover, name, description, tech, image, link } = props;
 
   return (
     <>
-      <div className="position-absolute bottom-0 start-0 mb-4 mx-4">
-        {link && <ArrowButton isHover={isHover!} className="mb-2" />}
+      <div
+        className="position-absolute bottom-0 start-0 mb-4 mx-4"
+        style={{ userSelect: "none" }}
+      >
+        {link && (
+          <div
+            style={{
+              width: "fit-content",
+            }}
+            className="non-draggable"
+          >
+            <Link href={link} target="_blank">
+              <ArrowButton isHover={isHover!} />
+            </Link>
+          </div>
+        )}
         <h2>
           <Scramble className="text-heading-5 text-light-green">
             {name}

@@ -32,6 +32,7 @@ $border: 1px;
   overflow: hidden;
   border-radius: 16px;
   transition: all 0.3s ease-in-out;
+  cursor: grab;
   &.card-vertical {
     background: linear-gradient(to bottom, $primary-green 60%, #42687232);
   }
@@ -43,6 +44,9 @@ $border: 1px;
   }
   &:hover {
     background-color: $primary-green;
+  }
+  &:active {
+    cursor: grabbing;
   }
   & .project-card-content {
     position: absolute;
