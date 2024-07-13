@@ -17,7 +17,10 @@ export default function Small({
   };
 
   return (
-    <Component {...props} className={classNames("text-sm", props.className)}>
+    <Component
+      {...props}
+      className={classNames("font-roboto text-sm", props.className)}
+    >
       {renderContent()}
     </Component>
   );

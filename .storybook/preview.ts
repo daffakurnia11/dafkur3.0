@@ -4,6 +4,9 @@ import "../src/styles/tailwind.css";
 
 const preview: Preview = {
   parameters: {
+    docs: {
+      toc: true, // 👈 Enables the table of contents
+    },
     backgrounds: {
       default: "dark",
       values: [
