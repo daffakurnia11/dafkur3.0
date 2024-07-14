@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import Scramble from "../Scramble";
-import { HeadingProps } from "@/types/Typography";
+import type { HeadingProps } from "@/types/Typography";
 
 export default function Heading({
   as = "h1",

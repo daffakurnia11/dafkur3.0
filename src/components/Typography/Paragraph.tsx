@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import Scramble from "../Scramble";
-import { ParagraphProps } from "@/types/Typography";
+import type { ParagraphProps } from "@/types/Typography";
 
 export default function Paragraph({
   as: Component = "p",

@@ -4,7 +4,7 @@ import SocialCard from "@/components/Card/Social";
 import Icon from "@/components/Icon";
 import Typography from "@/components/Typography";
 import { useMobileHook } from "@/hooks/Mobile.hook";
-import { SocialListType } from "@/types/Content";
+import type { SocialListType } from "@/types/Content";
 import { socialList } from "@/utils/content";
 import { motion } from "framer-motion";
 import Link from "next/link";

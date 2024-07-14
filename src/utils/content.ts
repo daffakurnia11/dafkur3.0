@@ -1,4 +1,80 @@
-import { SocialListType } from "@/types/Content";
+import type { MenuItemType, PagesListType, SocialListType } from "@/types/Content";
+
+export const menuItem: MenuItemType[] = [
+  {
+    name: "Home",
+    icon: "home",
+    pathname: ["/", "/about"],
+  },
+  {
+    name: "Experiences",
+    icon: "skills",
+    pathname: ["/experience"],
+  },
+  {
+    name: "Skills",
+    icon: "stack",
+    pathname: ["/skills"],
+  },
+  {
+    name: "Projects",
+    icon: "project",
+    pathname: ["/project"],
+  },
+  {
+    name: "Blog",
+    icon: "blog",
+    pathname: ["/blog"],
+  },
+  {
+    name: "Contact",
+    icon: "contact",
+    pathname: ["/contact"],
+  },
+];
+
+export const pagesList: PagesListType[] = [
+  {
+    number: "01.",
+    label: "Home",
+    link: "/",
+  },
+  {
+    number: "02.",
+    label: "About",
+    link: "/about",
+  },
+  {
+    number: "03.",
+    label: "Experiences",
+    link: "/experience",
+  },
+  {
+    number: "04.",
+    label: "Skills",
+    link: "/skills",
+  },
+  {
+    number: "05.",
+    label: "Projects",
+    link: "/projects",
+  },
+  {
+    number: "06.",
+    label: "Blogs",
+    link: "/blog",
+  },
+  {
+    number: "07.",
+    label: "Games",
+    link: "/games",
+  },
+  {
+    number: "08.",
+    label: "Contacts",
+    link: "/contact",
+  }
+]
 
 export const socialList: SocialListType[] = [
   {

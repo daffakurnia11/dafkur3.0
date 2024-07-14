@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import Scramble from "../Scramble";
-import { SmallProps } from "@/types/Typography";
+import type { SmallProps } from "@/types/Typography";
 
 export default function Small({
   as: Component = "small",

@@ -5,49 +5,6 @@ export interface FeatureListType {
   newTab?: boolean,
 }
 
-export const pagesList: FeatureListType[] = [
-  {
-    number: "01.",
-    label: "Home",
-    link: "/",
-  },
-  {
-    number: "02.",
-    label: "About",
-    link: "/about",
-  },
-  {
-    number: "03.",
-    label: "Experiences",
-    link: "/experience",
-  },
-  {
-    number: "04.",
-    label: "Skills",
-    link: "/skills",
-  },
-  {
-    number: "05.",
-    label: "Projects",
-    link: "/projects",
-  },
-  {
-    number: "06.",
-    label: "Blogs",
-    link: "/blog",
-  },
-  {
-    number: "07.",
-    label: "Games",
-    link: "/games",
-  },
-  {
-    number: "08.",
-    label: "Contacts",
-    link: "/contact",
-  }
-]
-
 export const featureList: FeatureListType[] = [
   {
     number: "01.",

@@ -1,8 +1,8 @@
 "use client";
 
 import Typography from "@/components/Typography";
-import { useMobileHook } from "@/hooks/Mobile.hook";
-import { FeatureListType, pagesList } from "@/utils/menu";
+import type { PagesListType } from "@/types/Content";
+import { pagesList } from "@/utils/content";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
@@ -16,7 +16,7 @@ const SecondRow = ({ children }: { children: React.ReactNode }) => (
 );
 
 export default function Homepage() {
-  const [list, setList] = useState<FeatureListType[]>([]);
+  const [list, setList] = useState<PagesListType[]>([]);
 
   function createGridReorderedList() {
     const numRows = window.innerWidth < 640 ? 2 : 3;
@@ -94,7 +94,7 @@ export default function Homepage() {
           </FirstRow>
           <SecondRow>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-0.5">
-              {list.map((page: FeatureListType, index: number) => (
+              {list.map((page: PagesListType, index: number) => (
                 <div className="flex gap-2 items-center" key={index}>
                   <TypeAnimation
                     className="text-base text-green-primary"
