@@ -1,6 +1,8 @@
 "use client";
 
 import Typography from "@/components/Typography";
+import { FeatureListType, pagesList } from "@/utils/menu";
+import Link from "next/link";
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
 
@@ -13,6 +15,17 @@ const SecondRow = ({ children }: { children: React.ReactNode }) => (
 );
 
 export default function Homepage() {
+  function createGridReorderedList(list: FeatureListType[], numRows: number) {
+    const numCols = Math.ceil(list.length / numRows);
+    return list.reduce((acc, _, index) => {
+      const col = Math.floor(index / numRows);
+      const row = index % numRows;
+      const gridIndex = col + row * numCols;
+      acc[gridIndex] = list[index];
+      return acc;
+    }, new Array(list.length));
+  }
+
   return (
     <section className="min-h-dvh flex items-center justify-center">
       <div className="max-w-[750px] flex-1">
@@ -37,7 +50,7 @@ export default function Homepage() {
             />
           </SecondRow>
         </div>
-        <div className="flex gap-5 mb-4 min-h-[132px]">
+        <div className="flex gap-5 mb-4 min-h-[145px]">
           <FirstRow>
             <Typography.Paragraph className="text-green-primary text-end">
               Greetings.
@@ -50,7 +63,7 @@ export default function Homepage() {
                 `
                 Fellow wanderers of the digital domain! I'm Daffa Kurnia Fatah
                 - think of me as your trusty coding bard from the sun-kissed lands
-                of Sidoarjo, East Java - Indonesia. With Next.js and React as my trusty instruments
+                of Sidoarjo, East Java, Indonesia. With Next.js and React as my trusty instruments
                 since 2021, I craft not only code but also wield the art of design, conjuring up
                 web magic through Figma and weaving interactive spells of user
                 experience and animation. Your wish is my code!
@@ -59,6 +72,37 @@ export default function Homepage() {
               speed={99}
               cursor={false}
             />
+          </SecondRow>
+        </div>
+        <div className="flex gap-5 mb-4 min-h-[76px]">
+          <FirstRow>
+            <Typography.Paragraph className="text-green-primary text-end">
+              Pages.
+            </Typography.Paragraph>
+          </FirstRow>
+          <SecondRow>
+            <div className="grid grid-cols-3 gap-y-0.5">
+              {createGridReorderedList(pagesList, 3).map(
+                (page: FeatureListType, index: number) => (
+                  <div className="flex gap-2 items-center" key={index}>
+                    <TypeAnimation
+                      className="text-base text-green-primary"
+                      sequence={[index * 200, page.number]}
+                      speed={30}
+                      cursor={false}
+                    />
+                    <Link href={page.link!}>
+                      <TypeAnimation
+                        className="text-base text-green-light underline"
+                        sequence={[(index + 1) * 200, page.label]}
+                        speed={30}
+                        cursor={false}
+                      />
+                    </Link>
+                  </div>
+                )
+              )}
+            </div>
           </SecondRow>
         </div>
       </div>
