@@ -18,6 +18,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ type: "tween" }}
+          className="min-h-dvh relative"
         >
           <div className="absolute top-0 left-0 px-6 py-4">
             <Logo />

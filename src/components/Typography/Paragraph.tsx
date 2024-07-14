@@ -19,7 +19,10 @@ export default function Paragraph({
   return (
     <Component
       {...props}
-      className={classNames("font-roboto text-base", props.className)}
+      className={classNames(
+        "font-roboto text-sm sm:text-base",
+        props.className
+      )}
     >
       {renderContent()}
     </Component>
