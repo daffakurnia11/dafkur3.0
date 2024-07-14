@@ -4,6 +4,7 @@ import Typography from "../Typography";
 import { usePathname } from "next/navigation";
 import classNames from "classnames";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 interface MenuItemType {
   name: string;
@@ -71,9 +72,12 @@ export default function Menu() {
 
   return (
     <div className="fixed left-0 right-0 top-0 py-4 flex justify-center z-50">
-      <div
-        className="relative flex flex-row gap-2 bg-black border border-solid border-green-primary rounded-[50px] py-2 px-2.5 w-fit transition-all"
+      <motion.div
+        className="relative flex flex-row gap-2 bg-black border border-solid border-green-primary rounded-[50px] py-2 px-2.5 w-fit"
         ref={menuContainer}
+        initial={{ y: "-100%", opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.7, delay: 0.3 }}
       >
         <div
           className="absolute w-10 h-10 content-none bg-green-primary rounded-[50px] transition-all duration-300"
@@ -105,7 +109,7 @@ export default function Menu() {
             </div>
           </Link>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }
