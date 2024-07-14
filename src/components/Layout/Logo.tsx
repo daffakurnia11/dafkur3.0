@@ -3,7 +3,7 @@
 import BrailleLetter from "@/app/braille/BrailleLetter";
 import React, { useEffect, useState } from "react";
 
-export default function Logo() {
+export default function Logo({ delay }: { delay?: number }) {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [letter, setLetter] = useState<string>("");
   const wordInput = "DAFFA";
@@ -22,14 +22,10 @@ export default function Logo() {
         setLetter("space");
         clearInterval(interval);
       }
-    }, 750);
+    }, delay ?? 750);
 
     return () => clearInterval(interval);
   }, [currentIndex, letter]);
 
-  return (
-    <div className="absolute top-0 left-0 px-6 py-4">
-      <BrailleLetter letter={letter} />
-    </div>
-  );
+  return <BrailleLetter letter={letter} />;
 }

@@ -20,7 +20,7 @@ export default function RootLayout({
       <body className="bg-black min-h-dvh font-roboto">
         <Loader />
         <Layout>{children}</Layout>
-        <Notification />
+        {/* <Notification /> */}
       </body>
     </html>
   );
