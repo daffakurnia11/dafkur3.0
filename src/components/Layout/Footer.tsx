@@ -4,7 +4,7 @@ import Typography from "../Typography";
 
 export default function Footer() {
   return (
-    <div className="absolute bottom-0 left-0 right-0 p-6 flex items-center justify-between">
+    <div className="absolute bottom-0 left-0 right-0 p-6 hidden sm:flex items-center justify-between">
       <div className="flex flex-col items-start">
         <Typography.Small isScrambled className="text-green-primary">
           Sidoarjo, East Java - Indonesia

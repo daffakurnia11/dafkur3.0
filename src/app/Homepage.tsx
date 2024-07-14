@@ -1,13 +1,14 @@
 "use client";
 
 import Typography from "@/components/Typography";
+import { useMobileHook } from "@/hooks/Mobile.hook";
 import { FeatureListType, pagesList } from "@/utils/menu";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 
 const FirstRow = ({ children }: { children?: React.ReactNode }) => (
-  <div className="shrink-0 w-[85px]">{children}</div>
+  <div className="sm:block hidden shrink-0 w-[85px]">{children}</div>
 );
 
 const SecondRow = ({ children }: { children: React.ReactNode }) => (
@@ -15,20 +16,31 @@ const SecondRow = ({ children }: { children: React.ReactNode }) => (
 );
 
 export default function Homepage() {
-  function createGridReorderedList(list: FeatureListType[], numRows: number) {
-    const numCols = Math.ceil(list.length / numRows);
-    return list.reduce((acc, _, index) => {
-      const col = Math.floor(index / numRows);
-      const row = index % numRows;
-      const gridIndex = col + row * numCols;
-      acc[gridIndex] = list[index];
-      return acc;
-    }, new Array(list.length));
+  const [list, setList] = useState<FeatureListType[]>([]);
+
+  function createGridReorderedList() {
+    const numRows = window.innerWidth < 640 ? 2 : 3;
+    const numCols = Math.ceil(pagesList.length / numRows);
+    const reorderedList = [];
+
+    for (let col = 0; col < numCols; col++) {
+      for (let row = 0; row < numRows; row++) {
+        const index = col + row * numCols;
+        if (index < pagesList.length) {
+          reorderedList.push(pagesList[index]);
+        }
+      }
+    }
+    setList(reorderedList);
   }
+
+  useEffect(() => {
+    createGridReorderedList();
+  }, []);
 
   return (
     <section className="min-h-dvh flex items-center justify-center">
-      <div className="max-w-[750px] flex-1">
+      <div className="max-w-[750px] flex-1 px-6">
         <div className="flex gap-5 mb-4">
           <FirstRow />
           <SecondRow>
@@ -81,27 +93,25 @@ export default function Homepage() {
             </Typography.Paragraph>
           </FirstRow>
           <SecondRow>
-            <div className="grid grid-cols-3 gap-y-0.5">
-              {createGridReorderedList(pagesList, 3).map(
-                (page: FeatureListType, index: number) => (
-                  <div className="flex gap-2 items-center" key={index}>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-0.5">
+              {list.map((page: FeatureListType, index: number) => (
+                <div className="flex gap-2 items-center" key={index}>
+                  <TypeAnimation
+                    className="text-base text-green-primary"
+                    sequence={[index * 200, page.number]}
+                    speed={30}
+                    cursor={false}
+                  />
+                  <Link href={page.link!}>
                     <TypeAnimation
-                      className="text-base text-green-primary"
-                      sequence={[index * 200, page.number]}
+                      className="text-base text-green-light underline"
+                      sequence={[(index + 1) * 200, page.label]}
                       speed={30}
                       cursor={false}
                     />
-                    <Link href={page.link!}>
-                      <TypeAnimation
-                        className="text-base text-green-light underline"
-                        sequence={[(index + 1) * 200, page.label]}
-                        speed={30}
-                        cursor={false}
-                      />
-                    </Link>
-                  </div>
-                )
-              )}
+                  </Link>
+                </div>
+              ))}
             </div>
           </SecondRow>
         </div>

@@ -71,7 +71,7 @@ export default function Menu() {
   const isActive = (list: string[]) => list.includes(pathname);
 
   return (
-    <div className="fixed left-0 right-0 top-0 py-4 flex justify-center z-50">
+    <div className="fixed left-0 right-0 bottom-0 top-auto sm:top-0 sm:bottom-auto py-4 flex justify-center z-50">
       <motion.div
         className="relative flex flex-row gap-2 bg-black border border-solid border-green-primary rounded-[50px] py-2 px-2.5 w-fit"
         ref={menuContainer}
@@ -99,7 +99,7 @@ export default function Menu() {
                 className="text-green-secondary"
               />
             </div>
-            <div className="absolute -bottom-3 translate-y-full left-1/2 -translate-x-1/2 bg-green-primary/50 py-1.5 px-3 rounded-[30px] transition-all duration-300 opacity-0 group-hover:opacity-100">
+            <div className="absolute bottom-auto -top-3 sm:-bottom-3 sm:top-auto -translate-y-full sm:translate-y-full left-1/2 -translate-x-1/2 bg-green-primary/50 py-1.5 px-3 rounded-[30px] transition-all duration-300 opacity-0 group-hover:opacity-100">
               <Typography.Paragraph
                 as="span"
                 className={classNames("text-green-secondary")}
