@@ -28,7 +28,7 @@ export default function Logo() {
   }, [currentIndex, letter]);
 
   return (
-    <div className="header-logo ms-4 pt-3">
+    <div className="absolute top-0 left-0 px-6 py-4">
       <BrailleLetter letter={letter} />
     </div>
   );
