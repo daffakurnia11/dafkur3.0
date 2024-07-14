@@ -1,5 +1,6 @@
 import "@/icons/style.css";
 import "@/styles/tailwind.css";
+
 import Loader from "./loader";
 import Layout from "@/components/Layout";
 import type { Metadata } from "next";
@@ -20,7 +21,7 @@ export default function RootLayout({
       <body className="bg-black min-h-dvh font-roboto">
         <Loader />
         <Layout>{children}</Layout>
-        {/* <Notification /> */}
+        <Notification />
       </body>
     </html>
   );

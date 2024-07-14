@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useAtom } from "jotai";
 import { notifContent } from "@/utils/atom";
 import toast, { Toaster } from "react-hot-toast";
+import Typography from "./Typography";
 
 export function CustomNotification({
   title,
@@ -28,21 +29,23 @@ export function CustomNotification({
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0 }}
           transition={{ type: "tween", duration: 0.3 }}
-          className="notification position-absolute d-flex align-items-center"
+          className="absolute top-0 right-0 z-50 sm:w-[370px] min-h-[70px] border border-solid border-green-primary bg-black/80 backdrop-blur-sm rounded-2xl flex items-center"
         >
-          <div className="px-3 d-flex align-items-center gap-3 h-auto">
+          <div className="px-4 flex items-center gap-3">
             <Image
               src={"/profile.png"}
               alt="My Profile Picture"
               width={50}
               height={50}
-              className="notification-profile"
+              className="rounded-full"
             />
-            <div className="py-2 my-1">
-              <p className="text-light-green text-body">{title}</p>
-              <small className="text-primary-green text-small lh-1">
+            <div className="py-3">
+              <Typography.Paragraph as="p" className="text-green-light">
+                {title}
+              </Typography.Paragraph>
+              <Typography.Small as="span" className="text-green-primary">
                 {message}
-              </small>
+              </Typography.Small>
             </div>
           </div>
         </motion.div>
