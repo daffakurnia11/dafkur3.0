@@ -1,6 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
-import ContactPage from ".";
+import Contact from "./Contact";
 
 export const metadata: Metadata = {
   title: "Let's Talk - Dafkur 3.0.0",
@@ -8,5 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function Project() {
-  return <ContactPage />;
+  return <Contact />;
 }

@@ -23,7 +23,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <Logo />
           </div>
           <Menu />
-          <div className="layout-content">{children}</div>
+          <div className="pt-[100px] pb-[70px] min-h-dvh flex justify-center items-center">
+            {children}
+          </div>
           <Footer />
         </motion.div>
       )}

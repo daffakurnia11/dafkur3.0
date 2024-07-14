@@ -39,7 +39,7 @@ export default function Homepage() {
   }, []);
 
   return (
-    <section className="min-h-dvh flex items-center justify-center">
+    <section className="container mx-auto flex justify-center">
       <div className="max-w-[750px] flex-1 px-6">
         <div className="flex gap-5 mb-4">
           <FirstRow />
