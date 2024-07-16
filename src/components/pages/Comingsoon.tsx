@@ -6,10 +6,11 @@ import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Scramble from "@/components/Scramble";
+import TextLayout from "../Layout/TextLayout";
 
 export default function Comingsoon() {
   return (
-    <section className="container mx-auto max-w-[750px] h-dvh px-8 flex flex-col justify-center">
+    <TextLayout>
       <TypeAnimation
         className="font-semibold text-xl text-white"
         sequence={[
@@ -52,6 +53,6 @@ export default function Comingsoon() {
           </Scramble>
         </Link>
       </motion.div>
-    </section>
+    </TextLayout>
   );
 }

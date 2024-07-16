@@ -7,13 +7,14 @@ import { Container } from "react-bootstrap";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Scramble from "@/components/Scramble";
+import TextLayout from "@/components/Layout/TextLayout";
 
 export default function NotFound() {
   return (
-    <section className="notfound text-layout d-flex justify-content-center align-items-center">
+    <TextLayout>
       <Container>
         <TypeAnimation
-          className="text-heading-4"
+          className="font-semibold text-xl text-white"
           sequence={[
             "Page Not Found!",
             1000,
@@ -31,11 +32,9 @@ export default function NotFound() {
           wrapper="h1"
         />
         <TypeAnimation
-          className="d-block notfound-desc text-body text-light-green mt-3"
+          className="block text-base text-green-light my-4 sm:min-h-[44px] min-h-[88px]"
           sequence={[
-            `
-                "Looks like you're off the beaten path! The page you're seeking is playing hide-and-seek. We're on it—hang tight!"
-                `,
+            "Looks like you're off the beaten path! The page you're seeking is playing hide-and-seek. We're on it—hang tight!",
           ]}
           speed={90}
           cursor={false}
@@ -45,17 +44,18 @@ export default function NotFound() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ type: "tween", duration: 0.5, delay: 1.5 }}
         >
-          <Link
-            href={"/"}
-            className="btn d-flex align-items-center gap-2 p-0 mt-4"
-          >
-            <Icon icon="arrow-right" className="text-primary-green" size={16} />
-            <Scramble className="text-body text-light-green">
+          <Link href={"/"} className="flex items-center gap-2">
+            <Icon
+              icon="arrow-right-linear"
+              className="text-green-primary"
+              size={16}
+            />
+            <Scramble className="text-base text-green-light underline">
               Get back to Home!
             </Scramble>
           </Link>
         </motion.div>
       </Container>
-    </section>
+    </TextLayout>
   );
 }
