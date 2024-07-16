@@ -9,7 +9,7 @@ import Scramble from "@/components/Scramble";
 
 export default function Comingsoon() {
   return (
-    <section className="container mx-auto max-w-[750px] px-8">
+    <section className="container mx-auto max-w-[750px] h-dvh px-8 flex flex-col justify-center">
       <TypeAnimation
         className="font-semibold text-xl text-white"
         sequence={[
@@ -29,7 +29,7 @@ export default function Comingsoon() {
         wrapper="h1"
       />
       <TypeAnimation
-        className="block text-base text-green-light my-4 min-h-[44px]"
+        className="block text-base text-green-light my-4 sm:min-h-[44px] min-h-[88px]"
         sequence={[
           "Something incredible! We're putting the finishing touches on a project that'll blow your mind. Hang tight as we get ready to share it with you!",
         ]}
