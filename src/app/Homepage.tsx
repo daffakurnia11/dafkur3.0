@@ -39,8 +39,8 @@ export default function Homepage() {
   }, []);
 
   return (
-    <section className="container mx-auto flex justify-center">
-      <div className="max-w-[750px] flex-1 px-6">
+    <section className="pt-[100px] pb-[80px] min-h-dvh container mx-auto flex justify-center items-center">
+      <div className="max-w-[327px] sm:max-w-[750px] h-full flex-1 sm:px-6">
         <div className="flex gap-5 mb-4">
           <FirstRow />
           <SecondRow>
@@ -62,7 +62,7 @@ export default function Homepage() {
             />
           </SecondRow>
         </div>
-        <div className="flex gap-5 mb-4 min-h-[145px]">
+        <div className="flex gap-5 mb-4 min-h-[264px] sm:min-h-[192px] md:min-h-[145px]">
           <FirstRow>
             <Typography.Paragraph className="text-green-primary text-end">
               Greetings.
@@ -86,7 +86,7 @@ export default function Homepage() {
             />
           </SecondRow>
         </div>
-        <div className="flex gap-5 mb-4 min-h-[76px]">
+        <div className="flex gap-5 mb-4 min-h-[102px] sm:min-h-[76px]">
           <FirstRow>
             <Typography.Paragraph className="text-green-primary text-end">
               Pages.
