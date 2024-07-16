@@ -1,10 +1,10 @@
 import "@/icons/style.css";
 import "@/styles/tailwind.css";
 
-import Loader from "./loader";
 import Layout from "@/components/Layout";
 import type { Metadata } from "next";
 import Notification from "@/components/Notification";
+import Loader from "@/components/pages/Loader";
 
 export const metadata: Metadata = {
   title: "Dafkur 3.0.0",

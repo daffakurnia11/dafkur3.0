@@ -1,8 +1,8 @@
 "use client";
 
+import FormContact from "@/components/pages/FormContact";
+import SocialContact from "@/components/pages/SocialContact";
 import React from "react";
-import SocialContact from "./SocialContact";
-import FormContact from "./FormContact";
 
 export default function ContactPage() {
   return (
