@@ -7,11 +7,11 @@ import { Container } from "react-bootstrap";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Scramble from "@/components/Scramble";
-import TextLayout from "@/components/Layout/TextLayout";
+import Layout from "@/components/Layout";
 
 export default function NotFound() {
   return (
-    <TextLayout>
+    <Layout.Text>
       <Container>
         <TypeAnimation
           className="font-semibold text-xl text-white"
@@ -56,6 +56,6 @@ export default function NotFound() {
           </Link>
         </motion.div>
       </Container>
-    </TextLayout>
+    </Layout.Text>
   );
 }

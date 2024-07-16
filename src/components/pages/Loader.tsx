@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useAtom } from "jotai";
 import { firstLoading } from "@/utils/atom";
-import Logo from "@/components/Layout/Logo";
+import Logo from "../Layout/Top/Logo";
 
 export default function Loader() {
   const [isVisible, setIsVisible] = useAtom(firstLoading);

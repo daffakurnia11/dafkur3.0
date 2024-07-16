@@ -1,6 +1,6 @@
 import React from "react";
 import LiveClock from "./LiveClock";
-import Typography from "../Typography";
+import Typography from "../../Typography";
 
 export default function Footer() {
   return (

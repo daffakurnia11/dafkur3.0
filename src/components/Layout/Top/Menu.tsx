@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import Icon from "../Icon";
-import Typography from "../Typography";
+import Icon from "../../Icon";
+import Typography from "../../Typography";
 import { usePathname } from "next/navigation";
 import classNames from "classnames";
 import Link from "next/link";
