@@ -24,7 +24,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <Logo />
           </div>
           <Menu />
-          <div className="pt-[100px] pb-[70px] min-h-dvh flex justify-center items-center">
+          <div className="min-h-dvh flex-col justify-center items-center">
             {children}
           </div>
           <Footer />

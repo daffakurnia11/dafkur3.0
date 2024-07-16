@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="snap-y snap-mandatory">
       <body className="bg-black min-h-dvh font-roboto">
         <Loader />
         <Layout>{children}</Layout>
