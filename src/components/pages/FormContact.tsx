@@ -3,12 +3,14 @@ import Icon from "@/components/Icon";
 import Input, { InputTextArea } from "@/components/Input";
 import Typography from "@/components/Typography";
 import { useFormContact } from "@/hooks/FormContact.hook";
+import { useMobileHook } from "@/hooks/Mobile.hook";
 import { motion } from "framer-motion";
 import React from "react";
 
 export default function FormContact() {
   const { formData, handleChange, handleCopy, isCopied, loading, onSubmit } =
     useFormContact();
+  const { isMobile } = useMobileHook();
 
   return (
     <motion.div
@@ -17,7 +19,7 @@ export default function FormContact() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ type: "tween", duration: 0.5, delay: 0.8 }}
     >
-      <Card.Gradient isSquare={false}>
+      <Card.Gradient isSquare={!isMobile}>
         <div className="flex flex-col gap-4 justify-between h-full">
           <div className="flex-1">
             <Typography.Paragraph className="text-white mb-4">
