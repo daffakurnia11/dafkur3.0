@@ -56,7 +56,7 @@ export default function ProjectPage() {
 
   return (
     <section className="pt-[100px] pb-[80px] min-h-dvh flex justify-center items-center">
-      <div className="container mx-auto xl:w-[1280px] lg:w-[1024px] md:w-[768px] sm:w-[540px] w-[370px]">
+      <div className="container mx-auto xl:w-[1024px] lg:w-[1024px] md:w-[768px] sm:w-[540px] w-[370px]">
         <ResponsiveGridLayout
           className="mx-auto relative"
           layouts={gridLayout}
