@@ -1,6 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
-import BlogPage from ".";
+import BlogPage from "./BlogPage";
 
 export const metadata: Metadata = {
   title: "Coming Soon - Dafkur 3.0.0",

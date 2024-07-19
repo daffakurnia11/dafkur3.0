@@ -1,10 +1,12 @@
-import "bootstrap/dist/css/bootstrap.min.css";
 import "@/icons/style.css";
-import "@/styles/app.scss";
-import Loader from "./loader";
-import Layout from "@/components/Layout";
+import "@/styles/tailwind.css";
+import "react-grid-layout/css/styles.css";
+import "react-resizable/css/styles.css";
+
 import type { Metadata } from "next";
 import Notification from "@/components/Notification";
+import Loader from "@/components/pages/Loader";
+import Layout from "@/components/Layout";
 
 export const metadata: Metadata = {
   title: "Dafkur 3.0.0",
@@ -17,13 +19,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>
-        <main className="layout position-relative min-vh-100">
-          <Loader />
-          <Layout>{children}</Layout>
-          <Notification />
-        </main>
+    <html lang="en" className="snap-y snap-mandatory">
+      <body className="bg-black min-h-dvh font-roboto overflow-x-hidden">
+        <Loader />
+        <Layout.Main>{children}</Layout.Main>
+        <Notification />
       </body>
     </html>
   );

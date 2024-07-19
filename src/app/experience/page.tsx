@@ -1,9 +1,9 @@
 import React from "react";
 import type { Metadata } from "next";
-import ExperiencePage from ".";
+import ExperiencePage from "./ExperiencePage";
 
 export const metadata: Metadata = {
-  title: "My Experience - Dafkur 3.0.0",
+  title: "My Experiences - Dafkur 3.0.0",
   description: "Welcome to Dafkur 3.0.0",
 };
 

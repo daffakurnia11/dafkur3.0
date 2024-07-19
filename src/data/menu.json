@@ -1,0 +1,45 @@
+[
+  {
+    "name": "Home",
+    "icon": "home",
+    "pathname": [
+      "/",
+      "/about"
+    ]
+  },
+  {
+    "name": "Experiences",
+    "icon": "skills",
+    "pathname": [
+      "/experience"
+    ]
+  },
+  {
+    "name": "Skills",
+    "icon": "stack",
+    "pathname": [
+      "/skills"
+    ]
+  },
+  {
+    "name": "Projects",
+    "icon": "project",
+    "pathname": [
+      "/project"
+    ]
+  },
+  {
+    "name": "Blog",
+    "icon": "blog",
+    "pathname": [
+      "/blog"
+    ]
+  },
+  {
+    "name": "Contact",
+    "icon": "contact",
+    "pathname": [
+      "/contact"
+    ]
+  }
+]
