@@ -40,7 +40,7 @@ export default function ExperiencePage() {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0.3, delay: 3 }}
+                transition={{ duration: 0.3, delay: 2.2 }}
                 className="absolute -bottom-10 sm:-bottom-2 -left-7 sm:left-0 w-full translate-y-0 sm:translate-y-1/2 flex justify-start sm:justify-center"
               >
                 <button
