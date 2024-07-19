@@ -62,24 +62,16 @@ export default function Homepage() {
             />
           </SecondRow>
         </div>
-        <div className="flex gap-5 mb-4 min-h-[264px] sm:min-h-[192px] md:min-h-[145px]">
+        <div className="flex gap-5 mb-4">
           <FirstRow>
             <Typography.Paragraph className="text-green-primary text-end">
               Greetings.
             </Typography.Paragraph>
           </FirstRow>
           <SecondRow>
-            <TypeAnimation
-              className="font-normal text-base text-green-light"
+            <Typography.Typing
               sequence={[
-                `
-                Fellow wanderers of the digital domain! I'm Daffa Kurnia Fatah
-                - think of me as your trusty coding bard from the sun-kissed lands
-                of Sidoarjo, East Java, Indonesia. With Next.js and React as my trusty instruments
-                since 2021, I craft not only code but also wield the art of design, conjuring up
-                web magic through Figma and weaving interactive spells of user
-                experience and animation. Your wish is my code!
-                `,
+                "Greetings, fellow wanderers! I'm Daffa Kurnia Fatah, your trusty coding bard from the sun-kissed lands of Sidoarjo, East Java, Indonesia. With Next.js and ReactJS as my instruments, I craft code and design magic through Figma, weaving interactive spells of user experience and animation. Your wish is my code!",
               ]}
               speed={99}
               cursor={false}

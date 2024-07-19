@@ -68,7 +68,7 @@ export default function AboutPage() {
               <Typography.Typing
                 sequence={[
                   800,
-                  "This website is a platform for me to showcase my work, projects, and skills in web development.",
+                  "This website is a platform for me to showcase my works, projects, and skills in web development.",
                 ]}
                 cursor={false}
                 speed={90}
