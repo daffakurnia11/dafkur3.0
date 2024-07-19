@@ -6,8 +6,8 @@ import classNames from "classnames";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useMobileHook } from "@/hooks/Mobile.hook";
-import { menuItem } from "@/utils/content";
 import type { MenuItemType } from "@/types/Content";
+import menu from "@/data/menu.json";
 
 export default function Menu() {
   const pathname = usePathname();
@@ -48,7 +48,7 @@ export default function Menu() {
           className="absolute w-8 h-8 sm:w-10 sm:h-10 content-none bg-green-primary rounded-[50px] transition-all duration-300"
           style={{ left: activeProps.x }}
         ></div>
-        {menuItem.map((item: MenuItemType, index: number) => (
+        {menu.map((item: MenuItemType, index: number) => (
           <Link
             href={item.pathname[0]}
             key={index}

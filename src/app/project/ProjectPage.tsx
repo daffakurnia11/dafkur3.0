@@ -1,11 +1,9 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import layout from "@/utils/projectLayout.json";
+import projects from "@/data/projects.json";
 import { Responsive as ResponsiveGridLayout } from "react-grid-layout";
 import { useMobileHook } from "@/hooks/Mobile.hook";
-import Typography from "@/components/Typography";
-import { projectData } from "@/utils/content";
 import { ProjectDataType } from "@/types/Content";
 import { motion } from "framer-motion";
 import Card from "@/components/Card";
@@ -16,28 +14,28 @@ export default function ProjectPage() {
     "xl"
   );
   const gridLayout = {
-    lg: layout.layout.lg,
-    md: layout.layout.lg,
-    sm: layout.layout.md,
-    xs: layout.layout.sm,
+    lg: projects.layout.lg,
+    md: projects.layout.lg,
+    sm: projects.layout.md,
+    xs: projects.layout.sm,
   };
 
   useEffect(() => {
-    if (screenWidth >= layout.breakpoints.xl) {
+    if (screenWidth >= projects.breakpoints.xl) {
       setGridSize("xl");
     } else if (
-      screenWidth < layout.breakpoints.xl &&
-      screenWidth >= layout.breakpoints.lg
+      screenWidth < projects.breakpoints.xl &&
+      screenWidth >= projects.breakpoints.lg
     ) {
       setGridSize("lg");
     } else if (
-      screenWidth < layout.breakpoints.lg &&
-      screenWidth >= layout.breakpoints.md
+      screenWidth < projects.breakpoints.lg &&
+      screenWidth >= projects.breakpoints.md
     ) {
       setGridSize("md");
     } else if (
-      screenWidth < layout.breakpoints.md &&
-      screenWidth >= layout.breakpoints.sm
+      screenWidth < projects.breakpoints.md &&
+      screenWidth >= projects.breakpoints.sm
     ) {
       setGridSize("sm");
     } else {
@@ -62,17 +60,17 @@ export default function ProjectPage() {
         <ResponsiveGridLayout
           className="mx-auto relative"
           layouts={gridLayout}
-          width={layout.width[gridSize]}
-          rowHeight={layout.height[gridSize]}
+          width={projects.width[gridSize]}
+          rowHeight={projects.height[gridSize]}
           margin={isMobile ? [12, 12] : [24, 24]}
-          breakpoints={layout.breakpoints}
-          cols={layout.columns}
+          breakpoints={projects.breakpoints}
+          cols={projects.columns}
           useCSSTransforms={true}
           isResizable={false}
           isDraggable={!isMobile}
           draggableCancel=".non-draggable"
         >
-          {projectData.map((data: ProjectDataType, index: number) => (
+          {projects.data.map((data: any, index: number) => (
             <div key={data.key}>
               <motion.div
                 initial={{ opacity: 0, y: 30 }}

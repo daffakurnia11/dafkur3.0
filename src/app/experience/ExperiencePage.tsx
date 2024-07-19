@@ -1,15 +1,15 @@
 "use client";
 
 import type { ExperienceDataType } from "@/types/Content";
-import { workData } from "@/utils/content";
 import React, { useRef } from "react";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Icon from "@/components/Icon";
 import Typography from "@/components/Typography";
-import { organizationData } from "@/utils/experiences";
 import { useMobileHook } from "@/hooks/Mobile.hook";
 import ExperienceItem from "@/components/pages/ExperienceItem";
+import works from "@/data/works.json";
+import organizations from "@/data/organizations.json";
 
 export default function ExperiencePage() {
   const { isMobile } = useMobileHook();
@@ -34,7 +34,7 @@ export default function ExperiencePage() {
                 transition={{ type: "tween", duration: 1 }}
                 className="content-none absolute w-[1px] rounded-sm bg-green-primary top-0 -left-4 sm:left-1/2 translate-x-[80%] sm:-translate-x-1/2"
               ></motion.div>
-              {workData.map((data: ExperienceDataType, key: number) => (
+              {works.map((data: ExperienceDataType, key: number) => (
                 <ExperienceItem key={key} index={key} {...data} />
               ))}
               <motion.div
@@ -85,7 +85,7 @@ export default function ExperiencePage() {
                 transition={{ type: "tween", duration: 1 }}
                 className="content-none absolute w-[1px] rounded-sm bg-green-primary top-0 -left-4 sm:left-1/2 translate-x-[80%] sm:-translate-x-1/2"
               ></motion.div>
-              {organizationData.map((data: ExperienceDataType, key: number) => (
+              {organizations.map((data: ExperienceDataType, key: number) => (
                 <ExperienceItem key={key} index={key} {...data} />
               ))}
             </div>

@@ -5,10 +5,10 @@ import Icon from "@/components/Icon";
 import Typography from "@/components/Typography";
 import { useMobileHook } from "@/hooks/Mobile.hook";
 import type { SocialListType } from "@/types/Content";
-import { socialList } from "@/utils/content";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import React from "react";
+import socialmedia from "@/data/socialmedia.json";
 
 export default function SocialContact() {
   const { isMobile } = useMobileHook();
@@ -16,7 +16,7 @@ export default function SocialContact() {
   return (
     <div className="col-span-1">
       <div className="grid grid-cols-2 gap-2 sm:gap-6">
-        {socialList.map((item: SocialListType, key: number) => (
+        {socialmedia.map((item: SocialListType, key: number) => (
           <motion.div
             key={key}
             className="col-span-1"

@@ -2,10 +2,10 @@
 
 import Typography from "@/components/Typography";
 import type { PagesListType } from "@/types/Content";
-import { pagesList } from "@/utils/content";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
+import pages from "@/data/pages.json";
 
 const FirstRow = ({ children }: { children?: React.ReactNode }) => (
   <div className="sm:block hidden shrink-0 w-[85px]">{children}</div>
@@ -20,14 +20,14 @@ export default function Homepage() {
 
   function createGridReorderedList() {
     const numRows = window.innerWidth < 640 ? 2 : 3;
-    const numCols = Math.ceil(pagesList.length / numRows);
+    const numCols = Math.ceil(pages.length / numRows);
     const reorderedList = [];
 
     for (let col = 0; col < numCols; col++) {
       for (let row = 0; row < numRows; row++) {
         const index = col + row * numCols;
-        if (index < pagesList.length) {
-          reorderedList.push(pagesList[index]);
+        if (index < pages.length) {
+          reorderedList.push(pages[index]);
         }
       }
     }
