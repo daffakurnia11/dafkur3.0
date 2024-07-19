@@ -1,5 +1,7 @@
 import "@/icons/style.css";
 import "@/styles/tailwind.css";
+import "react-grid-layout/css/styles.css";
+import "react-resizable/css/styles.css";
 
 import type { Metadata } from "next";
 import Notification from "@/components/Notification";
@@ -18,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="snap-y snap-mandatory">
-      <body className="bg-black min-h-dvh font-roboto">
+      <body className="bg-black min-h-dvh font-roboto overflow-x-hidden">
         <Loader />
         <Layout.Main>{children}</Layout.Main>
         <Notification />

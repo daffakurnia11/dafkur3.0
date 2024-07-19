@@ -5,3 +5,7 @@
 @layer base {
   @import url("./fonts/style.css");
 }
+
+.react-grid-item.react-grid-placeholder.cssTransforms {
+  @apply bg-green-primary rounded-2xl;
+}
