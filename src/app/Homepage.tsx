@@ -99,14 +99,14 @@ export default function Homepage() {
                   <TypeAnimation
                     className="text-base text-green-primary"
                     sequence={[index * 200, page.number]}
-                    speed={30}
+                    speed={60}
                     cursor={false}
                   />
                   <Link href={page.link!}>
                     <TypeAnimation
                       className="text-base text-green-light underline"
                       sequence={[(index + 1) * 200, page.label]}
-                      speed={30}
+                      speed={60}
                       cursor={false}
                     />
                   </Link>
