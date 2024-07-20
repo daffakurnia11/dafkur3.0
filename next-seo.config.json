@@ -1,0 +1,42 @@
+{
+  "title": "Daffa Kurnia Fatah | Dafkur.com",
+  "description": "Welcome to Daffa Kurnia Fatah Personal Website, a full-stack web developer and a front-end developer.",
+  "canonical": "https://dafkur.com",
+  "openGraph": {
+    "url": "https://dafkur.com",
+    "type": "website",
+    "locale": "en_IE",
+    "title": "Daffa Kurnia Fatah | Dafkur.com",
+    "description": "Welcome to Daffa Kurnia Fatah Personal Website, a full-stack web developer and a front-end developer.",
+    "images": [
+      {
+        "url": "https://dafkur.com/og-image.png",
+        "width": 550,
+        "height": 550,
+        "alt": "Dafkur.com Logo"
+      },
+      {
+        "url": "https://dafkur.com/profile.png",
+        "width": 3300,
+        "height": 3300,
+        "alt": "Daffa Kurnia Fatah Profile"
+      }
+    ],
+    "siteName": "Daffa Kurnia Fatah | Dafkur.com"
+  },
+  "twitter": {
+    "handle": "@daffakurniafatah",
+    "site": "@daffakurniafatah",
+    "cardType": "summary_large_image"
+  },
+  "additionalMetaTags": [
+    {
+      "name": "keywords",
+      "content": "Full-stack web developer, Front-end developer, Next.js enthusiast, Software engineer, Daffa Kurnia Fatah, Dafkur.com, Dafkur, Daffa Kurnia"
+    },
+    {
+      "name": "author",
+      "content": "Daffa Kurnia Fatah, Dafkur.com, Dafkur, Daffa Kurnia"
+    }
+  ]
+}

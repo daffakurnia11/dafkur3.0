@@ -1,12 +1,37 @@
 import React from "react";
-import type { Metadata } from "next";
 import Homepage from "./Homepage";
+import Seo from "@/components/Seo";
+import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Home - Dafkur 3.0.0",
-  description: "Welcome to Dafkur 3.0.0",
+const pageMetadata = {
+  title: "Home | Daffa Kurnia Fatah | Dafkur.com",
+  description:
+    "Welcome to the personal website of Daffa Kurnia Fatah, a Full-Stack Web Developer from Sidoarjo, East Java, Indonesia. Explore my skills in Next.js, ReactJS, Figma, and web animations.",
+  authors: { name: "Daffa Kurnia Fatah", url: "https://dafkur.com" },
+  keywords:
+    "Daffa Kurnia Fatah, Home, Full-Stack Web Developer, Next.js, ReactJS, Figma, Web Animations, User Experience, Web Design, Sidoarjo, East Java, Indonesia",
 };
 
+export const metadata: Metadata = pageMetadata;
+
 export default function Home() {
-  return <Homepage />;
+  return (
+    <>
+      <Seo
+        title={pageMetadata.title}
+        description={pageMetadata.description}
+        additionalMetaTags={[
+          {
+            name: "keywords",
+            content: pageMetadata.keywords,
+          },
+          {
+            name: "author",
+            content: pageMetadata.authors.name,
+          },
+        ]}
+      />
+      <Homepage />
+    </>
+  );
 }
