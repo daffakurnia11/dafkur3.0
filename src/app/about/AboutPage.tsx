@@ -18,6 +18,7 @@ export default function AboutPage() {
                 sequence={["About"]}
                 speed={80}
                 cursor={false}
+                wrapper="h2"
               />
               <TypeAnimation
                 className="text-green-light text-xl font-bold"
@@ -31,6 +32,7 @@ export default function AboutPage() {
                 ]}
                 speed={50}
                 repeat={Infinity}
+                wrapper="h1"
               />
             </div>
             <div className="flex flex-col gap-2">

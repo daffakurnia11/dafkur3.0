@@ -43,7 +43,7 @@ export default function VerticalCard(props: ProjectDataType) {
           <Typography.Heading
             isScrambled
             level={5}
-            as="h3"
+            as="h2"
             className="text-white mb-1 mt-4 font-bold"
           >
             {props.name}

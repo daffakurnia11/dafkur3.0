@@ -114,7 +114,7 @@ export default function BoxCard(props: ProjectDataType) {
       >
         <Typography.Heading
           level={5}
-          as="h3"
+          as="h2"
           className="text-white text-center font-bold"
           isScrambled
         >
