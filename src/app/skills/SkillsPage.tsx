@@ -1,13 +1,15 @@
 "use client";
 
+import SkillsEditor from "@/components/pages/SkillsEditor";
 import Typography from "@/components/Typography";
-import classNames from "classnames";
-import React, { useState } from "react";
+import React from "react";
 import { TypeAnimation } from "react-type-animation";
+import { motion } from "framer-motion";
+import Icon from "@/components/Icon";
+import Link from "next/link";
+import skills from "@/data/skills.json";
 
 export default function SkillsPage() {
-  const [lang, setLang] = useState<string>("js");
-
   return (
     <section className="pt-[100px] pb-[80px] min-h-dvh flex justify-center items-center">
       <div className="container mx-auto xl-max-w-[1024px] px-5 flex justify-center items-center">
@@ -19,7 +21,7 @@ export default function SkillsPage() {
             cursor={false}
             wrapper="h1"
           />
-          <div className="max-w-[450px] text-center">
+          <div className="w-full mx-auto text-center">
             <Typography.Typing
               sequence={[
                 "Just a few of my skills using some programming lang that I've learned and mastered.",
@@ -28,63 +30,50 @@ export default function SkillsPage() {
               cursor={false}
               speed={90}
             />
-            <div className="mt-5 w-full bg-gradient-to-b from-green-primary from-50% to-green-primary/15 hover:bg-green-primary rounded-[16px] p-[1px] aspect-[5/3] transition duration-300">
-              <div className="w-full h-full flex flex-col gap-2 bg-black rounded-[15px] pt-2 pb-3 px-3">
-                <div className="flex justify-between gap-3">
-                  <button
-                    className={classNames(
-                      "flex-1 shrink-0 block w-full pb-2 border-b border-solid transition duration-300",
-                      lang === "js"
-                        ? "border-green-primary"
-                        : "border-transparent"
-                    )}
-                    onClick={() => setLang("js")}
-                  >
-                    <Typography.Small className="text-white">
-                      Javascript
-                    </Typography.Small>
-                  </button>
-                  <button
-                    className={classNames(
-                      "flex-1 shrink-0 block w-full pb-2 border-b border-solid transition duration-300",
-                      lang === "ts"
-                        ? "border-green-primary"
-                        : "border-transparent"
-                    )}
-                    onClick={() => setLang("ts")}
-                  >
-                    <Typography.Small className="text-white">
-                      Typescript
-                    </Typography.Small>
-                  </button>
-                  <button
-                    className={classNames(
-                      "flex-1 shrink-0 block w-full pb-2 border-b border-solid transition duration-300",
-                      lang === "py"
-                        ? "border-green-primary"
-                        : "border-transparent"
-                    )}
-                    onClick={() => setLang("py")}
-                  >
-                    <Typography.Small className="text-white">
-                      Python
-                    </Typography.Small>
-                  </button>
-                  <button
-                    className={classNames(
-                      "flex-1 shrink-0 block w-full pb-2 border-b border-solid transition duration-300",
-                      lang === "php"
-                        ? "border-green-primary"
-                        : "border-transparent"
-                    )}
-                    onClick={() => setLang("php")}
-                  >
-                    <Typography.Small className="text-white">
-                      PHP
-                    </Typography.Small>
-                  </button>
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ type: "tween", duration: 0.5, delay: 0.3 }}
+            >
+              <div className="mt-5 max-w-[370px] sm:max-w-[500px] mx-auto bg-gradient-to-b from-green-primary from-50% to-green-primary/15 hover:bg-green-primary rounded-[16px] p-[1px] aspect-[3/2] sm:aspect-[5/3] transition duration-300">
+                <div className="w-full h-full flex flex-col gap-2 bg-black rounded-[15px] pt-2 pb-3 px-3">
+                  <SkillsEditor />
                 </div>
               </div>
+            </motion.div>
+          </div>
+          <div className="h-7 mt-5">
+            <TypeAnimation
+              className="text-xl text-green-light text-center font-semibold"
+              sequence={[500, "Tech Stacks"]}
+              speed={60}
+              cursor={false}
+              wrapper="h2"
+            />
+          </div>
+          <div className="flex justify-center mb-8">
+            <div className="grid grid-cols-4 sm:grid-cols-6 gap-8 justify-center items-center">
+              {skills.map((skill: any, key: number) => (
+                <motion.div
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    type: "tween",
+                    duration: 0.3,
+                    delay: 0.7 + key * 0.1,
+                  }}
+                  key={key}
+                  className="col-span-1 flex justify-center"
+                >
+                  <Link href={skill.link} target="_blank" className="group">
+                    <Icon
+                      icon={skill.icon}
+                      size={40}
+                      className="text-green-secondary group-hover:text-white transition duration-300"
+                    />
+                  </Link>
+                </motion.div>
+              ))}
             </div>
           </div>
         </div>

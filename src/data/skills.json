@@ -1,0 +1,62 @@
+[
+  {
+    "icon": "react",
+    "name": "React",
+    "link": "https://react.dev/"
+  },
+  {
+    "icon": "vue",
+    "name": "Vue.js",
+    "link": "https://vuejs.org/"
+  },
+  {
+    "icon": "nextjs",
+    "name": "Next.js",
+    "link": "https://nextjs.org/"
+  },
+  {
+    "icon": "nodejs",
+    "name": "Node.js",
+    "link": "https://nodejs.org/en/"
+  },
+  {
+    "icon": "django",
+    "name": "Django",
+    "link": "https://www.djangoproject.com/"
+  },
+  {
+    "icon": "laravel",
+    "name": "Laravel",
+    "link": "https://laravel.com/"
+  },
+  {
+    "icon": "tailwind",
+    "name": "Tailwind CSS",
+    "link": "https://tailwindcss.com/"
+  },
+  {
+    "icon": "bootstrap",
+    "name": "Bootstrap",
+    "link": "https://getbootstrap.com/"
+  },
+  {
+    "icon": "antd",
+    "name": "AntDesign",
+    "link": "https://ant.design/"
+  },
+  {
+    "icon": "storybook",
+    "name": "Storybook",
+    "link": "https://storybook.js.org/"
+  },
+  {
+    "icon": "redux",
+    "name": "Redux",
+    "link": "https://redux.js.org/"
+  },
+  {
+    "icon": "framer",
+    "name": "Framer Motion",
+    "link": "https://www.framer.com/motion/"
+  }
+]

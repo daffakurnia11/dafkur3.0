@@ -3,7 +3,13 @@
     "name": "Home",
     "icon": "home",
     "pathname": [
-      "/",
+      "/"
+    ]
+  },
+  {
+    "name": "About",
+    "icon": "user",
+    "pathname": [
       "/about"
     ]
   },
