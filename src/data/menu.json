@@ -14,17 +14,17 @@
     ]
   },
   {
-    "name": "Experiences",
-    "icon": "skills",
-    "pathname": [
-      "/experience"
-    ]
-  },
-  {
     "name": "Skills",
     "icon": "stack",
     "pathname": [
       "/skills"
+    ]
+  },
+  {
+    "name": "Experiences",
+    "icon": "skills",
+    "pathname": [
+      "/experience"
     ]
   },
   {
