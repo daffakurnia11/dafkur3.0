@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@monaco-editor/react": "^4.6.0",
     "autoprefixer": "^10.4.19",
     "axios": "^1.6.2",
     "classnames": "^2.5.1",
