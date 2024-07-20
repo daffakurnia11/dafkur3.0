@@ -6,7 +6,7 @@ import Seo from "@/components/Seo";
 const pageMetadata = {
   title: "Projects | Daffa Kurnia Fatah | Dafkur.com",
   description:
-    "Explore the web development and programming projects by Daffa Kurnia Fatah. Discover his work on Dafkur.com, IFEM 2022, Petrolida 2022, Crawlerhub, and many other projects showcasing his skills in React, Bootstrap, SCSS, Laravel, and more.",
+    "Explore web development projects by Daffa Kurnia Fatah showcasing skills in React, Bootstrap, and more.",
   authors: { name: "Daffa Kurnia Fatah", url: "https://dafkur.com" },
   keywords:
     "Daffa Kurnia Fatah, Projects, Web Development Projects, Programming Projects, Dafkur.com, IFEM 2022, Petrolida 2022, Crawlerhub, React, Bootstrap, SCSS, Laravel, AntDesign, Full-stack Web Developer, Frontend Developer, Indonesia",

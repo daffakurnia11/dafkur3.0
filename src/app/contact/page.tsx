@@ -6,7 +6,7 @@ import Seo from "@/components/Seo";
 const pageMetadata = {
   title: "Contact | Daffa Kurnia Fatah | Dafkur.com",
   description:
-    "Reach out to Daffa Kurnia Fatah, a Full-stack Web Developer. Connect via Instagram, WhatsApp, GitHub, LinkedIn, or send a message directly through the contact form. Let's discuss web development, collaboration, or any inquiries you have.",
+    "Contact Daffa Kurnia Fatah, a Full-stack Web Developer. Connect via Instagram, WhatsApp, GitHub, or LinkedIn.",
   authors: { name: "Daffa Kurnia Fatah", url: "https://dafkur.com" },
   keywords:
     "Daffa Kurnia Fatah, Contact, Get in Touch, Full-stack Web Developer, Instagram, WhatsApp, GitHub, LinkedIn, Contact Form, Web Development, Collaboration, Sidoarjo, East Java, Indonesia",

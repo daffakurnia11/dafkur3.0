@@ -6,7 +6,7 @@ import Seo from "@/components/Seo";
 const pageMetadata = {
   title: "Skills | Daffa Kurnia Fatah | Dafkur.com",
   description:
-    "Discover the programming languages and technologies that Daffa Kurnia Fatah has mastered. Explore his skills in JavaScript, TypeScript, Python, PHP, and various modern tech stacks including React, Vue, Next.js, and more.",
+    "Discover Daffa Kurnia Fatah's skills in JavaScript, TypeScript, Python, PHP, React, Vue, and Next.js.",
   authors: { name: "Daffa Kurnia Fatah", url: "https://dafkur.com" },
   keywords:
     "Daffa Kurnia Fatah, Skills, Programming Languages, Tech Stacks, JavaScript, TypeScript, Python, PHP, React, Vue, Next.js, Node.js, Django, Laravel, Frontend Developer, Full-stack Web Developer, Web Development, Sidoarjo, East Java, Indonesia",

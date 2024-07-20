@@ -6,7 +6,7 @@ import { Metadata } from "next";
 const pageMetadata = {
   title: "Home | Daffa Kurnia Fatah | Dafkur.com",
   description:
-    "Welcome to the personal website of Daffa Kurnia Fatah, a Full-Stack Web Developer from Sidoarjo, East Java, Indonesia. Explore my skills in Next.js, ReactJS, Figma, and web animations.",
+    "Welcome to Daffa Kurnia Fatah's website. Explore skills in Next.js, ReactJS, Figma, and animations.",
   authors: { name: "Daffa Kurnia Fatah", url: "https://dafkur.com" },
   keywords:
     "Daffa Kurnia Fatah, Home, Full-Stack Web Developer, Next.js, ReactJS, Figma, Web Animations, User Experience, Web Design, Sidoarjo, East Java, Indonesia",

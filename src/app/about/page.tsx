@@ -6,7 +6,7 @@ import Seo from "@/components/Seo";
 const pageMetadata = {
   title: "About | Daffa Kurnia Fatah | Dafkur.com",
   description:
-    "Learn more about Daffa Kurnia Fatah, a Full-stack Web Developer specializing in frontend development using Next.js. Discover his journey into web development, his learning resources, and his passion for sharing knowledge.",
+    "Daffa Kurnia Fatah, a Full-stack Web Developer specializing in frontend development with Next.js.",
   authors: { name: "Daffa Kurnia Fatah", url: "https://dafkur.com" },
   keywords:
     "Daffa Kurnia Fatah, About Daffa Kurnia Fatah, Full-stack Web Developer, Frontend Developer, Next.js, React.js, Web Development, Itsavirus, Sidoarjo, East Java, Indonesia, Mobile Development, React Native, Web Development Journey, Learning Resources, Self-learning, Web Development Services",
