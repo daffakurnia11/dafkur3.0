@@ -67,7 +67,7 @@ export default function ExperiencePage() {
       </section>
       <section
         ref={nextView}
-        className="container mx-auto snap-always snap-start max-w-[300px] sm:max-w-full"
+        className="container mx-auto snap-always snap-start max-w-[300px] sm:max-w-full pb-8"
       >
         <div className="flex flex-col items-center justify-start sm:justify-center min-h-[calc(100vh-100px)] sm:min-h-[calc(100vh)] pt-8 pb-20 sm:py-16">
           <div className="w-full">

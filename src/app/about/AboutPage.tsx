@@ -11,7 +11,7 @@ export default function AboutPage() {
     <section className="pt-[100px] pb-[80px] min-h-dvh container mx-auto flex justify-center items-center">
       <div className="container xl:max-w-[1024px] mx-auto h-full flex-1 px-6">
         <div className="grid grid-cols-7 gap-8">
-          <div className="col-span-7 lg:col-span-5 order-2 lg:order-1">
+          <div className="col-span-7 lg:col-span-5 order-2 lg:order-1 pb-8">
             <div className="flex flex-col gap-0 mb-4">
               <TypeAnimation
                 className="text-green-primary text-base"
@@ -111,7 +111,7 @@ export default function AboutPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ type: "tween", duration: 0.5, delay: 0.5 }}
             >
-              <div className="w-full max-w-[300px] mx-auto mt-16 rounded-2xl overflow-hidden">
+              <div className="w-full max-w-[300px] mx-auto lg:mt-16 rounded-2xl overflow-hidden">
                 <Image
                   src="/profile.png"
                   alt="Daffa Kurnia Fatah"
