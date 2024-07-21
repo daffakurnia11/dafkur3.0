@@ -1,7 +1,7 @@
 import React from "react";
 import Homepage from "./Homepage";
-import Seo from "@/components/Seo";
 import { Metadata } from "next";
+import defaultSeoConfig from "@/utils/seo.json";
 
 const pageMetadata = {
   title: "Home | Daffa Kurnia Fatah | Dafkur.com",
@@ -12,26 +12,8 @@ const pageMetadata = {
     "Daffa Kurnia Fatah, Home, Full-Stack Web Developer, Next.js, ReactJS, Figma, Web Animations, User Experience, Web Design, Sidoarjo, East Java, Indonesia",
 };
 
-export const metadata: Metadata = pageMetadata;
+export const metadata: Metadata = { ...defaultSeoConfig, ...pageMetadata };
 
 export default function Home() {
-  return (
-    <>
-      <Seo
-        title={pageMetadata.title}
-        description={pageMetadata.description}
-        additionalMetaTags={[
-          {
-            name: "keywords",
-            content: pageMetadata.keywords,
-          },
-          {
-            name: "author",
-            content: pageMetadata.authors.name,
-          },
-        ]}
-      />
-      <Homepage />
-    </>
-  );
+  return <Homepage />;
 }

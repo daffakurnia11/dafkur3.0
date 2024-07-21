@@ -1,7 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import ExperiencePage from "./ExperiencePage";
-import Seo from "@/components/Seo";
+import defaultSeoConfig from "@/utils/seo.json";
 
 const pageMetadata = {
   title: "Experience | Daffa Kurnia Fatah | Dafkur.com",
@@ -12,26 +12,8 @@ const pageMetadata = {
     "Daffa Kurnia Fatah, Experiences, Professional Experience, Organizational Experience, Full-stack Web Developer, Front-end Developer, Itsavirus, LnData Indonesia, Unilever Indonesia, Bangkit Academy, Breakpoint Indonesia, SMAN 1 Sidoarjo, Coordinator of Laboratory Assistant, Coordinator of Web Development, IT Manager, Head of Web Development, Web Development, East Java, Indonesia",
 };
 
-export const metadata: Metadata = pageMetadata;
+export const metadata: Metadata = { ...defaultSeoConfig, ...pageMetadata };
 
 export default function Experience() {
-  return (
-    <>
-      <Seo
-        title={pageMetadata.title}
-        description={pageMetadata.description}
-        additionalMetaTags={[
-          {
-            name: "keywords",
-            content: pageMetadata.keywords,
-          },
-          {
-            name: "author",
-            content: pageMetadata.authors.name,
-          },
-        ]}
-      />
-      <ExperiencePage />
-    </>
-  );
+  return <ExperiencePage />;
 }

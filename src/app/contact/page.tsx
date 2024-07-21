@@ -1,7 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import ContactPage from "./ContactPage";
-import Seo from "@/components/Seo";
+import defaultSeoConfig from "@/utils/seo.json";
 
 const pageMetadata = {
   title: "Contact | Daffa Kurnia Fatah | Dafkur.com",
@@ -12,26 +12,8 @@ const pageMetadata = {
     "Daffa Kurnia Fatah, Contact, Get in Touch, Full-stack Web Developer, Instagram, WhatsApp, GitHub, LinkedIn, Contact Form, Web Development, Collaboration, Sidoarjo, East Java, Indonesia",
 };
 
-export const metadata: Metadata = pageMetadata;
+export const metadata: Metadata = { ...defaultSeoConfig, ...pageMetadata };
 
 export default function Project() {
-  return (
-    <>
-      <Seo
-        title={pageMetadata.title}
-        description={pageMetadata.description}
-        additionalMetaTags={[
-          {
-            name: "keywords",
-            content: pageMetadata.keywords,
-          },
-          {
-            name: "author",
-            content: pageMetadata.authors.name,
-          },
-        ]}
-      />
-      <ContactPage />
-    </>
-  );
+  return <ContactPage />;
 }
