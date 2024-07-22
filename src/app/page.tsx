@@ -12,7 +12,10 @@ const pageMetadata = {
     "Daffa Kurnia Fatah, Home, Full-Stack Web Developer, Next.js, ReactJS, Figma, Web Animations, User Experience, Web Design, Sidoarjo, East Java, Indonesia",
 };
 
-export const metadata: Metadata = { ...defaultSeoConfig, ...pageMetadata };
+export const metadata: Metadata = {
+  ...defaultSeoConfig,
+  ...pageMetadata,
+};
 
 export default function Home() {
   return <Homepage />;

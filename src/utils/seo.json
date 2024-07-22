@@ -1,7 +1,12 @@
 {
   "title": "Daffa Kurnia Fatah | Dafkur.com",
   "description": "Welcome to Daffa Kurnia Fatah Personal Website, a full-stack web developer and a front-end developer.",
-  "canonical": "https://dafkur.com",
+  "alternates": {
+    "canonical": "https://dafkur.com",
+    "languages": {
+      "en": "https://dafkur.com"
+    }
+  },
   "openGraph": {
     "url": "https://dafkur.com",
     "type": "website",
