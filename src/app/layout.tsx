@@ -14,22 +14,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="snap-y snap-mandatory scroll-smooth">
-      <head>
-        <script
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_TAG}`}
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
+      <script
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_TAG}`}
+      ></script>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_TAG}');
           `,
-          }}
-        />
-      </head>
+        }}
+      />
       <body className="bg-black min-h-dvh font-roboto overflow-x-hidden">
         <Loader />
         <Layout.Main>{children}</Layout.Main>
