@@ -35,7 +35,7 @@ export default function HorizontalCard(props: ProjectDataType) {
 
   return (
     <div
-      className="w-full h-full bg-gradient-to-r from-green-primary from-50% to-green-primary/15 rounded-[16px] p-[1px] hover:bg-green-primary transition duration-300"
+      className="w-full h-full bg-gradient-to-r from-green-primary from-50% to-green-primary/15 rounded-[16px] p-[1px] hover:bg-green-primary transition duration-300 select-none"
       onMouseEnter={handleMouseEnterControls}
       onMouseDown={handleMouseDownControls}
       onMouseLeave={handleMouseLeaveControls}
