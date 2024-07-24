@@ -67,7 +67,7 @@ export default function VerticalCard(props: ProjectDataType) {
         <div className="absolute z-0 overflow-hidden -right-3 -top-5 translate-x-1/2 -rotate-[30deg] opacity-70 flex gap-4">
           <div className="w-[170px] rounded-2xl ">
             <Image
-              src={`/project/${props.image}`}
+              src={`/mockup/${props.id}/mobile-portrait.png`}
               alt={`Project ${props.name}`}
               width={0}
               height={0}
@@ -77,7 +77,7 @@ export default function VerticalCard(props: ProjectDataType) {
           </div>
           <div className="w-[170px] rounded-2xl ">
             <Image
-              src={`/project/${props.image}`}
+              src={`/mockup/${props.id}/mobile-portrait.png`}
               alt={`Project ${props.name}`}
               width={0}
               height={0}

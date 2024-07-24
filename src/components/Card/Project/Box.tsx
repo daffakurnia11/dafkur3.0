@@ -84,7 +84,7 @@ export default function BoxCard(props: ProjectDataType) {
         className="w-full h-full flex items-center justify-center"
       >
         <Image
-          src={`/project/${props.logo!}`}
+          src={`/mockup/${props.id}/logo.png`}
           alt={props.name}
           width={0}
           height={0}

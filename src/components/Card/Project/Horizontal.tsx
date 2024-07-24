@@ -82,9 +82,9 @@ export default function HorizontalCard(props: ProjectDataType) {
             ))}
           </div>
         </div>
-        <div className="absolute z-0 w-[400px] rounded-2xl overflow-hidden right-0 -top-5 translate-x-1/3 -rotate-[20deg] opacity-70">
+        <div className="absolute z-0 w-[350px] rounded-2xl overflow-hidden right-0 -top-5 translate-x-1/4 -rotate-[24deg] opacity-70">
           <Image
-            src={`/project/${props.image}`}
+            src={`/mockup/${props.id}/laptop.png`}
             alt={`Project ${props.name}`}
             width={0}
             height={0}

@@ -20,17 +20,16 @@ export interface ExperienceDataType {
 }
 
 export interface ProjectContentProps {
+  id: string;
   name: string;
   description: string;
   link?: string | null;
   isHover?: boolean | null;
   tech?: string[] | null;
-  image?: string | null;
 }
 
 export interface BoxCardProps extends ProjectContentProps {
   background?: string | null;
-  logo?: string | null;
 }
 
 export interface ProjectCardProps
