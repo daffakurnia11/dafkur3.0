@@ -3,6 +3,9 @@ import { useCardGrab } from "@/hooks/CardGrab.hook";
 import { ProjectDataType } from "@/types/Content";
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import Icon from "@/components/Icon";
 
 export default function VerticalCard(props: ProjectDataType) {
   const {
@@ -39,6 +42,27 @@ export default function VerticalCard(props: ProjectDataType) {
       onMouseUp={handleMouseUpControls}
     >
       <div className="w-full h-full bg-black rounded-[15px] relative overflow-hidden">
+        <motion.div
+          variants={linkVariant}
+          animate={isHover ? "hover" : "initial"}
+          className="absolute z-10 top-5 right-5 flex gap-2"
+        >
+          {props.link && (
+            <Link
+              href={props.link}
+              className="non-draggable w-6 h-6 rounded-full bg-white flex items-center justify-center"
+              target="_blank"
+            >
+              <Icon size={16} icon="link" className="text-dark" />
+            </Link>
+          )}
+          <Link
+            href={`/project/${props.id}`}
+            className="non-draggable w-6 h-6 rounded-full bg-white flex items-center justify-center"
+          >
+            <Icon size={16} icon="arrow-top-right" className="text-dark" />
+          </Link>
+        </motion.div>
         <div className="absolute bottom-0 left-0 p-6 z-10">
           <Typography.Heading
             isScrambled

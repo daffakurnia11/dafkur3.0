@@ -23,9 +23,11 @@ export interface ProjectContentProps {
   id: string;
   name: string;
   description: string;
+  brief: string;
   link?: string | null;
   isHover?: boolean | null;
   tech?: string[] | null;
+  repo?: string | null;
 }
 
 export interface BoxCardProps extends ProjectContentProps {
@@ -40,7 +42,7 @@ export interface ProjectCardProps
 }
 
 export interface ProjectDataType extends ProjectCardProps {
-  key: string;
+  id: string;
 }
 
 export interface SocialListType {

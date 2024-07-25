@@ -45,7 +45,7 @@ export default function HorizontalCard(props: ProjectDataType) {
         <motion.div
           variants={linkVariant}
           animate={isHover ? "hover" : "initial"}
-          className="absolute top-5 right-5 z-10"
+          className="absolute top-5 right-5 z-10 flex gap-2"
         >
           {props.link && (
             <Link
@@ -53,9 +53,15 @@ export default function HorizontalCard(props: ProjectDataType) {
               className="non-draggable w-6 h-6 rounded-full bg-white flex items-center justify-center"
               target="_blank"
             >
-              <Icon size={16} icon="arrow-top-right" className="text-dark" />
+              <Icon size={16} icon="link" className="text-dark" />
             </Link>
           )}
+          <Link
+            href={`/project/${props.id}`}
+            className="non-draggable w-6 h-6 rounded-full bg-white flex items-center justify-center"
+          >
+            <Icon size={16} icon="arrow-top-right" className="text-dark" />
+          </Link>
         </motion.div>
         <div className="absolute bottom-0 left-0 p-6 z-10">
           <Typography.Heading

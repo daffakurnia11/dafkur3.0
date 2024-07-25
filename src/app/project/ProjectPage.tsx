@@ -70,22 +70,24 @@ export default function ProjectPage() {
           isDraggable={!isMobile}
           draggableCancel=".non-draggable"
         >
-          {projects.data.map((data: any, index: number) => (
-            <div key={data.key}>
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.5,
-                  delay: 0.3 + 0.2 * index,
-                  type: "tween",
-                }}
-                className="w-full h-full cursor-grab active:cursor-grabbing"
-              >
-                <ProjectCard {...data} />
-              </motion.div>
-            </div>
-          ))}
+          {(projects.data as ProjectDataType[]).map(
+            (data: ProjectDataType, index: number) => (
+              <div key={data.id}>
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.3 + 0.2 * index,
+                    type: "tween",
+                  }}
+                  className="w-full h-full cursor-grab active:cursor-grabbing"
+                >
+                  <ProjectCard {...data} />
+                </motion.div>
+              </div>
+            )
+          )}
         </ResponsiveGridLayout>
       </div>
     </section>

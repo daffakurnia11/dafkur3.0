@@ -1,0 +1,86 @@
+import { ProjectDataType } from "@/types/Content";
+import React from "react";
+import { TypeAnimation } from "react-type-animation";
+import Typography from "../Typography";
+import Link from "next/link";
+import Icon from "../Icon";
+import { motion } from "framer-motion";
+
+export default function ProjectDescription({
+  data,
+}: {
+  data: ProjectDataType;
+}) {
+  return (
+    <>
+      <div className="flex items-start gap-2">
+        <TypeAnimation
+          sequence={[data.name]}
+          className="font-bold text-2xl text-white mb-3"
+          speed={50}
+          wrapper="h1"
+          cursor={false}
+        />
+        {data.link && (
+          <Link
+            href={data.link}
+            target="_blank"
+            className="block -translate-y-1/4"
+          >
+            <Icon
+              size={16}
+              icon="arrow-top-right"
+              className="text-green-light"
+            />
+          </Link>
+        )}
+      </div>
+      <Typography.Typing
+        sequence={[data.brief]}
+        className="font-normal text-base text-green-primary"
+        speed={99}
+        wrapper="p"
+        cursor={false}
+      />
+      <div className="mt-10">
+        <TypeAnimation
+          className="text-green-primary text-base"
+          sequence={["What tech stack I used"]}
+          speed={80}
+          cursor={false}
+        />
+        <div className="flex flex-wrap gap-2 mt-1">
+          {data.tech?.map((tech, index) => (
+            <div
+              key={index}
+              className="py-1.5 px-4 bg-green-dark rounded-[32px] flex"
+            >
+              <Typography.Small className="text-white" isScrambled>
+                {tech}
+              </Typography.Small>
+            </div>
+          ))}
+        </div>
+      </div>
+      {data.repo && (
+        <div className="mt-10">
+          <TypeAnimation
+            className="text-green-primary text-base"
+            sequence={["Access the repository"]}
+            speed={80}
+            cursor={false}
+          />
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ type: "tween", duration: 0.3, delay: 0.3 }}
+          >
+            <Link href={data.repo} target="_blank" className="block mt-1">
+              <Icon icon="github" size={24} className="text-white" />
+            </Link>
+          </motion.div>
+        </div>
+      )}
+    </>
+  );
+}

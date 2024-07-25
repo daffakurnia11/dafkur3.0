@@ -6,13 +6,15 @@
       "shape": "horizontal",
       "name": "Dafkur.com 2.0",
       "description": "My second version of Personal Website",
+      "brief": "Amet ipsum lobortis sit auctor. Felis sit vehicula nullam lacus gravida. Egestas amet egestas quam sed. Neque non purus nunc ipsum dignissim arcu in fames ultrices. Leo in arcu eget donec velit morbi et fermentum. Eget pretium est vestibulum varius. Ultricies nunc semper fermentum dolor lacus scelerisque. Ut.",
       "tech": [
         "React",
         "Bootstrap",
         "SCSS"
       ],
       "background": null,
-      "link": "https://v2.dafkur.com/"
+      "link": "https://v2.dafkur.com/",
+      "repo": "https://github.com/daffakurnia11/daffakurnia.me-new"
     },
     {
       "key": "candlecraft",
@@ -20,13 +22,15 @@
       "shape": "box",
       "name": "Candle Craft",
       "description": "Candle Exporter Product Website.",
+      "brief": "Amet ipsum lobortis sit auctor. Felis sit vehicula nullam lacus gravida. Egestas amet egestas quam sed. Neque non purus nunc ipsum dignissim arcu in fames ultrices. Leo in arcu eget donec velit morbi et fermentum. Eget pretium est vestibulum varius. Ultricies nunc semper fermentum dolor lacus scelerisque. Ut.",
       "tech": [
         "Next.js",
         "Bootstrap",
         "SCSS"
       ],
       "background": "#05060A",
-      "link": "https://candlecraft.co.id/"
+      "link": "https://candlecraft.co.id/",
+      "repo": "https://github.com/daffakurnia11/candle-craft"
     },
     {
       "key": "ifem",
@@ -34,13 +38,15 @@
       "shape": "vertical",
       "name": "IFEM 2022",
       "description": "Biggest Mechanical Engineering ITS Event.",
+      "brief": "Amet ipsum lobortis sit auctor. Felis sit vehicula nullam lacus gravida. Egestas amet egestas quam sed. Neque non purus nunc ipsum dignissim arcu in fames ultrices. Leo in arcu eget donec velit morbi et fermentum. Eget pretium est vestibulum varius. Ultricies nunc semper fermentum dolor lacus scelerisque. Ut.",
       "tech": [
         "Laravel",
         "Bootstrap",
         "SCSS"
       ],
       "background": null,
-      "link": null
+      "link": null,
+      "repo": "https://github.com/daffakurnia11/ifemits.com"
     },
     {
       "key": "petrolida",
@@ -48,13 +54,15 @@
       "shape": "vertical",
       "name": "Petrolida 2022",
       "description": "Biggest Events by SPE ITS.",
+      "brief": "Amet ipsum lobortis sit auctor. Felis sit vehicula nullam lacus gravida. Egestas amet egestas quam sed. Neque non purus nunc ipsum dignissim arcu in fames ultrices. Leo in arcu eget donec velit morbi et fermentum. Eget pretium est vestibulum varius. Ultricies nunc semper fermentum dolor lacus scelerisque. Ut.",
       "tech": [
         "React",
         "Bootstrap",
         "Laravel"
       ],
       "background": null,
-      "link": null
+      "link": null,
+      "repo": null
     },
     {
       "key": "chartdemo",
@@ -62,13 +70,15 @@
       "shape": "horizontal",
       "name": "Chart Demo",
       "description": "My free-time project for learning Chart.js and D3.js",
+      "brief": "Amet ipsum lobortis sit auctor. Felis sit vehicula nullam lacus gravida. Egestas amet egestas quam sed. Neque non purus nunc ipsum dignissim arcu in fames ultrices. Leo in arcu eget donec velit morbi et fermentum. Eget pretium est vestibulum varius. Ultricies nunc semper fermentum dolor lacus scelerisque. Ut.",
       "tech": [
         "Next.js",
         "Chart.js",
         "D3.js"
       ],
       "background": null,
-      "link": "https://d3-chart-demo.vercel.app/"
+      "link": "https://d3-chart-demo.vercel.app/",
+      "repo": "https://github.com/daffakurnia11/d3-chart-demo"
     },
     {
       "key": "smarthydroponic",
@@ -76,13 +86,15 @@
       "shape": "vertical",
       "name": "Smart Hydroponic",
       "description": "My first project of Internet of Things.",
+      "brief": "Amet ipsum lobortis sit auctor. Felis sit vehicula nullam lacus gravida. Egestas amet egestas quam sed. Neque non purus nunc ipsum dignissim arcu in fames ultrices. Leo in arcu eget donec velit morbi et fermentum. Eget pretium est vestibulum varius. Ultricies nunc semper fermentum dolor lacus scelerisque. Ut.",
       "tech": [
         "Laravel",
         "Bootstrap",
         "SCSS"
       ],
       "background": null,
-      "link": null
+      "link": null,
+      "repo": "https://github.com/daffakurnia11/smarthydroponic"
     },
     {
       "key": "spe",
@@ -90,13 +102,15 @@
       "shape": "box",
       "name": "SPE ITS",
       "description": "Society of Petroleum Engineers ITS.",
+      "brief": "Amet ipsum lobortis sit auctor. Felis sit vehicula nullam lacus gravida. Egestas amet egestas quam sed. Neque non purus nunc ipsum dignissim arcu in fames ultrices. Leo in arcu eget donec velit morbi et fermentum. Eget pretium est vestibulum varius. Ultricies nunc semper fermentum dolor lacus scelerisque. Ut.",
       "tech": [
         "Laravel",
         "Bootstrap",
         "SCSS"
       ],
       "background": "#111840",
-      "link": null
+      "link": null,
+      "repo": "https://github.com/daffakurnia11/speitssc"
     },
     {
       "key": "ecs",
@@ -104,13 +118,15 @@
       "shape": "box",
       "name": "ECS Training",
       "description": "Programming Training by ECS Laboratory.",
+      "brief": "Amet ipsum lobortis sit auctor. Felis sit vehicula nullam lacus gravida. Egestas amet egestas quam sed. Neque non purus nunc ipsum dignissim arcu in fames ultrices. Leo in arcu eget donec velit morbi et fermentum. Eget pretium est vestibulum varius. Ultricies nunc semper fermentum dolor lacus scelerisque. Ut.",
       "tech": [
         "Laravel",
         "Bootstrap",
         "SCSS"
       ],
       "background": "#E0D6B6",
-      "link": null
+      "link": null,
+      "repo": "https://github.com/daffakurnia11/prokom-ecs"
     },
     {
       "key": "breakpoint",
@@ -118,13 +134,15 @@
       "shape": "box",
       "name": "Breakpoint",
       "description": "My Startup Company Profile.",
+      "brief": "Amet ipsum lobortis sit auctor. Felis sit vehicula nullam lacus gravida. Egestas amet egestas quam sed. Neque non purus nunc ipsum dignissim arcu in fames ultrices. Leo in arcu eget donec velit morbi et fermentum. Eget pretium est vestibulum varius. Ultricies nunc semper fermentum dolor lacus scelerisque. Ut.",
       "tech": [
         "Laravel",
         "Bootstrap",
         "SCSS"
       ],
       "background": "#0C1523",
-      "link": null
+      "link": null,
+      "repo": "https://github.com/daffakurnia11/breakpoint2.0"
     },
     {
       "key": "ukmexpo",
@@ -132,13 +150,15 @@
       "shape": "horizontal",
       "name": "UKM Expo ITS",
       "description": "Biggest Event by ITS Communities.",
+      "brief": "Amet ipsum lobortis sit auctor. Felis sit vehicula nullam lacus gravida. Egestas amet egestas quam sed. Neque non purus nunc ipsum dignissim arcu in fames ultrices. Leo in arcu eget donec velit morbi et fermentum. Eget pretium est vestibulum varius. Ultricies nunc semper fermentum dolor lacus scelerisque. Ut.",
       "tech": [
         "Laravel",
         "Bootstrap",
         "SCSS"
       ],
       "background": null,
-      "link": null
+      "link": null,
+      "repo": "https://github.com/daffakurnia11/ukmexpo"
     },
     {
       "key": "deligo",
@@ -146,13 +166,15 @@
       "shape": "box",
       "name": "Deligo",
       "description": "A company profile for Cloud Kitchen.",
+      "brief": "Amet ipsum lobortis sit auctor. Felis sit vehicula nullam lacus gravida. Egestas amet egestas quam sed. Neque non purus nunc ipsum dignissim arcu in fames ultrices. Leo in arcu eget donec velit morbi et fermentum. Eget pretium est vestibulum varius. Ultricies nunc semper fermentum dolor lacus scelerisque. Ut.",
       "tech": [
         "Laravel",
         "Bootstrap",
         "SCSS"
       ],
       "background": "#64BF81",
-      "link": null
+      "link": null,
+      "repo": "https://github.com/daffakurnia11/deligo"
     },
     {
       "key": "crawlerhub",
@@ -160,13 +182,15 @@
       "shape": "horizontal",
       "name": "Crawlerhub",
       "description": "Web Crawler by LnData Indonesia.",
+      "brief": "Amet ipsum lobortis sit auctor. Felis sit vehicula nullam lacus gravida. Egestas amet egestas quam sed. Neque non purus nunc ipsum dignissim arcu in fames ultrices. Leo in arcu eget donec velit morbi et fermentum. Eget pretium est vestibulum varius. Ultricies nunc semper fermentum dolor lacus scelerisque. Ut.",
       "tech": [
         "React",
         "AntDesign",
         "SCSS"
       ],
       "background": null,
-      "link": "https://crawlerhub.lndata.com/"
+      "link": "https://crawlerhub.lndata.com/",
+      "repo": null
     },
     {
       "key": "ilits",
@@ -174,13 +198,15 @@
       "shape": "box",
       "name": "Ini Lho ITS! 2021",
       "description": "Biggest Event in ITS Surabaya.",
+      "brief": "Amet ipsum lobortis sit auctor. Felis sit vehicula nullam lacus gravida. Egestas amet egestas quam sed. Neque non purus nunc ipsum dignissim arcu in fames ultrices. Leo in arcu eget donec velit morbi et fermentum. Eget pretium est vestibulum varius. Ultricies nunc semper fermentum dolor lacus scelerisque. Ut.",
       "tech": [
         "Laravel",
         "Bootstrap",
         "SCSS"
       ],
       "background": "#1C2945",
-      "link": null
+      "link": null,
+      "repo": "https://github.com/daffakurnia11/inilho.its.ac.id"
     }
   ],
   "breakpoints": {
