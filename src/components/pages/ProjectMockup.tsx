@@ -26,7 +26,7 @@ export default function ProjectMockup({ data }: { data: ProjectDataType }) {
   }, [data, mockupType]);
 
   return (
-    <div className="w-full aspect-square mb-20">
+    <div className="w-full lg:aspect-square lg:mb-20">
       <div className="w-full flex justify-center">
         <div className="h-fit w-fit border border-solid border-green-dark rounded-[8px] flex relative overflow-hidden mb-4">
           <div
@@ -78,7 +78,7 @@ export default function ProjectMockup({ data }: { data: ProjectDataType }) {
               height={0}
               sizes="100vw"
               style={{ width: "100%", height: "auto" }}
-              className="scale-[1.75] origin-left -translate-x-[50px]"
+              className="lg:scale-[1.75] origin-left lg:-translate-x-[50px]"
             />
           </motion.div>
         ) : (
@@ -88,7 +88,7 @@ export default function ProjectMockup({ data }: { data: ProjectDataType }) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             transition={{ type: "tween", duration: 0.3 }}
-            className="w-full h-full flex items-center justify-center relative"
+            className="lg:w-full h-[400px] lg:h-full flex items-center justify-center relative"
           >
             <Image
               src={`/mockup/${data.id}/mobile-portrait.png`}
