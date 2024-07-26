@@ -65,12 +65,24 @@ export default function SkillsPage() {
                   key={key}
                   className="col-span-1 flex justify-center"
                 >
-                  <Link href={skill.link} target="_blank" className="group">
+                  <Link
+                    href={skill.link}
+                    target="_blank"
+                    className="group relative"
+                  >
                     <Icon
                       icon={skill.icon}
                       size={40}
                       className="text-green-secondary group-hover:text-white transition duration-300"
                     />
+                    <div className="absolute bottom-auto -top-3 sm:-bottom-3 sm:top-auto -translate-y-full sm:translate-y-full left-1/2 -translate-x-1/2 -z-[1] group-hover:z-20 bg-green-primary/50 py-1 sm:py-1.5 px-3 rounded-[30px] transition-all duration-300 opacity-0 group-hover:opacity-100 flex items-center backdrop-blur-sm w-fit">
+                      <Typography.Paragraph
+                        as="span"
+                        className="text-green-secondary text-nowrap"
+                      >
+                        {skill.name}
+                      </Typography.Paragraph>
+                    </div>
                   </Link>
                 </motion.div>
               ))}
