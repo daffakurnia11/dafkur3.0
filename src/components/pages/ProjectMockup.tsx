@@ -88,7 +88,7 @@ export default function ProjectMockup({ data }: { data: ProjectDataType }) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             transition={{ type: "tween", duration: 0.3 }}
-            className="lg:w-full h-[400px] lg:h-full flex items-center justify-center relative"
+            className="lg:w-full h-[400px] lg:h-full flex items-center justify-center relative -z-[1]"
           >
             <Image
               src={`/mockup/${data.id}/mobile-portrait.png`}

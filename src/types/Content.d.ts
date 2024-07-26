@@ -23,7 +23,7 @@ export interface ProjectContentProps {
   id: string;
   name: string;
   description: string;
-  brief: string;
+  brief: string[];
   link?: string | null;
   isHover?: boolean | null;
   tech?: string[] | null;
