@@ -84,7 +84,7 @@ export default function BoxCard(props: ProjectDataType) {
         className="w-full h-full flex items-center justify-center"
       >
         <Image
-          src={`/project/${props.logo!}`}
+          src={`/mockup/${props.id}/logo.png`}
           alt={props.name}
           width={0}
           height={0}
@@ -95,7 +95,7 @@ export default function BoxCard(props: ProjectDataType) {
       <motion.div
         variants={linkVariant}
         animate={isHover ? "hover" : "initial"}
-        className="absolute top-5 right-5"
+        className="absolute top-5 right-5 flex gap-2"
       >
         {props.link && (
           <Link
@@ -103,9 +103,15 @@ export default function BoxCard(props: ProjectDataType) {
             className="non-draggable w-6 h-6 rounded-full bg-white flex items-center justify-center"
             target="_blank"
           >
-            <Icon size={16} icon="arrow-top-right" className="text-dark" />
+            <Icon size={16} icon="link" className="text-dark" />
           </Link>
         )}
+        <Link
+          href={`/project/${props.id}`}
+          className="non-draggable w-6 h-6 rounded-full bg-white flex items-center justify-center"
+        >
+          <Icon size={16} icon="arrow-top-right" className="text-dark" />
+        </Link>
       </motion.div>
       <motion.div
         variants={textVariant}

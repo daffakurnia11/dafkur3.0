@@ -2,168 +2,250 @@
   "data": [
     {
       "key": "dafkur2.0",
+      "id": "dafkur2.0",
       "shape": "horizontal",
       "name": "Dafkur.com 2.0",
       "description": "My second version of Personal Website",
+      "brief": [
+        "Dafkur.com 2.0 is my second version of personal website designed to showcase my previous projects and serve as an online portfolio. The website aims to enhance personal branding by including sections like About, Contact, and Experiences. The website also features a resume section that showcases my skills and experience. The website is fully responsive and mobile-friendly.",
+        "One of the main challenges I faced was implementing a simple yet effective design for mobile and tablet devices. To overcome this, I researched various references for mobile and tablet implementations and sought direct feedback from my colleagues, particularly a UI/UX designer, to refine the frontend. Additionally, I utilized a combination of HTML, CSS, and JavaScript to create a responsive and user-friendly website."
+      ],
       "tech": [
         "React",
         "Bootstrap",
         "SCSS"
       ],
-      "logo": null,
-      "image": "dafkur2.png",
       "background": null,
-      "link": "https://v2.dafkur.com/"
-    },
-    {
-      "key": "ifem",
-      "shape": "vertical",
-      "name": "IFEM 2022",
-      "description": "Biggest Mechanical Engineering ITS Event.",
-      "tech": [
-        "Laravel",
-        "Bootstrap",
-        "SCSS"
-      ],
-      "logo": null,
-      "image": "ifem.png",
-      "background": null,
-      "link": null
-    },
-    {
-      "key": "breakpoint",
-      "shape": "box",
-      "name": "Breakpoint",
-      "description": "My Startup Company Profile.",
-      "tech": [
-        "Laravel",
-        "Bootstrap",
-        "SCSS"
-      ],
-      "logo": "breakpoint.png",
-      "image": null,
-      "background": "#0C1523",
-      "link": null
-    },
-    {
-      "key": "petrolida",
-      "shape": "vertical",
-      "name": "Petrolida 2022",
-      "description": "Biggest Events by SPE ITS.",
-      "tech": [
-        "React",
-        "Bootstrap",
-        "Laravel"
-      ],
-      "logo": null,
-      "image": "petrolida.png",
-      "background": null,
-      "link": null
+      "link": "https://v2.dafkur.com/",
+      "repo": "https://github.com/daffakurnia11/daffakurnia.me-new"
     },
     {
       "key": "candlecraft",
+      "id": "candlecraft",
       "shape": "box",
       "name": "Candle Craft",
       "description": "Candle Exporter Product Website.",
+      "brief": [
+        "CandleCraft is a project aimed at creating a company profile for an exporting company to showcase their products. The website aims to provide comprehensive information about the company, including its vision, mission, goals, detailed product information, and specifications. The website also features a contact form for potential customers to get in touch with the company. The website is fully responsive and mobile-friendly.",
+        "One of the main challenges I faced was the limited information available about the company and the highly varied product photos, making it difficult to match the colors and styles. To overcome this, I researched various references to design a website with limited information and made several improvisations. Additionally, I consulted with the production company to obtain detailed information about their products."
+      ],
       "tech": [
         "Next.js",
         "Bootstrap",
         "SCSS"
       ],
-      "logo": "candlecraft.png",
-      "image": null,
       "background": "#05060A",
-      "link": "https://candlecraft.co.id/"
+      "link": "https://candlecraft.co.id/",
+      "repo": "https://github.com/daffakurnia11/candle-craft"
     },
     {
-      "key": "ecs",
-      "shape": "box",
-      "name": "ECS Training",
-      "description": "Programming Training by ECS Laboratory.",
+      "key": "ifem",
+      "id": "ifem",
+      "shape": "vertical",
+      "name": "IFEM 2022",
+      "description": "Biggest Mechanical Engineering ITS Event.",
+      "brief": [
+        "IFEM is a website designed to introduce and gather all information about an event organized by the Mechanical Engineering Department of ITS. The website features various events that can be participated in by students from Indonesia, themed around Sci-Fi design. The website is fully responsive and mobile-friendly.",
+        "One of the main challenges I faced was the abundance of design assets and the complexity of the design, making mobile and tablet implementation particularly challenging. To overcome this, I frequently discussed with the UI/UX Designer to ensure the mobile and tablet implementation did not compromise the website's theme and optimized the necessary design assets to avoid heavy loading times."
+      ],
       "tech": [
         "Laravel",
         "Bootstrap",
         "SCSS"
       ],
-      "logo": "ecs.png",
-      "image": null,
-      "background": "#E0D6B6",
-      "link": null
+      "background": null,
+      "link": null,
+      "repo": "https://github.com/daffakurnia11/ifemits.com"
+    },
+    {
+      "key": "petrolida",
+      "id": "petrolida",
+      "shape": "vertical",
+      "name": "Petrolida 2022",
+      "description": "Biggest Events by SPE ITS.",
+      "brief": [
+        "Petrolida is the largest event organized by the Society of Petroleum Engineer ITS, open to all university students in Indonesia. The website aims to provide detailed information about each event and facilitate event registration. The website also features a contact form for potential customers to get in touch with the event.",
+        "As a Fullstack Engineer, one of the main challenges I faced was optimizing the database, as each event required different data, resulting in varied frontend forms. To overcome this, I created an Entity-Relationship Diagram (ERD) to optimize the necessary data, simplifying the backend. Additionally, I optimized API development to ensure seamless integration with the frontend."
+      ],
+      "tech": [
+        "React",
+        "Bootstrap",
+        "Laravel"
+      ],
+      "background": null,
+      "link": null,
+      "repo": null
+    },
+    {
+      "key": "chartdemo",
+      "id": "chartdemo",
+      "shape": "horizontal",
+      "name": "Chart Demo",
+      "description": "My free-time project for learning Chart.js and D3.js",
+      "brief": [
+        "Chart Demo is a website created to experiment with chart creation using Chart.js and D3.js libraries. As a frontend developer, I aimed to create various commonly used data visualizations, including Radial Tree chart, Sankey chart, Sunburst chart, and Gauge chart.",
+        "One of the main challenges I faced was the complexity of creating charts using D3.js, a new library for me, and the limited number of developers using this library. To overcome this, I continually experimented and learned more about D3.js, conducting in-depth research to obtain more accurate information."
+      ],
+      "tech": [
+        "Next.js",
+        "Chart.js",
+        "D3.js"
+      ],
+      "background": null,
+      "link": "https://d3-chart-demo.vercel.app/",
+      "repo": "https://github.com/daffakurnia11/d3-chart-demo"
+    },
+    {
+      "key": "smarthydroponic",
+      "id": "smarthydroponic",
+      "shape": "vertical",
+      "name": "Smart Hydroponic",
+      "description": "My first project of Internet of Things.",
+      "brief": [
+        "Smarthydroponic is my first Internet of Things (IoT) project, developed in collaboration with a professor from my university. The website aims to monitor the growth of hydroponic plants based on soil pH, ppm content, and energy supply from solar panels. The website is fully responsive and mobile-friendly. ",
+        "As a Fullstack Engineer, one of the main challenges I faced was ensuring that data remained updated in real-time, allowing for accurate and real-time analysis. To overcome this, I learned about real-time communication that can be implemented on hardware and researched papers on existing implementations, which I adapted for this project. Additionally, I created an Entity-Relationship Diagram (ERD) to optimize the necessary data, simplifying the backend."
+      ],
+      "tech": [
+        "Laravel",
+        "Bootstrap",
+        "SCSS"
+      ],
+      "background": null,
+      "link": null,
+      "repo": "https://github.com/daffakurnia11/smarthydroponic"
     },
     {
       "key": "spe",
+      "id": "spe",
       "shape": "box",
       "name": "SPE ITS",
       "description": "Society of Petroleum Engineers ITS.",
+      "brief": [
+        "The Society of Petroleum Engineers (SPE) ITS website is designed for one of the largest organizations at ITS, promoting professional development for students through involvement in the energy industry. The website features information about SPE ITS, its management, events, and articles discussing oil and gas. It also accommodates member registration, offering several benefits to SPE ITS members. The website is fully responsive and mobile-friendly. ",
+        "As the Head of the Website Development Division, one of the main challenges I faced was communicating with other divisions to gather necessary information and managing the team to develop the website according to the required features and criteria. To overcome this, I frequently held meetings with other divisions and consistently followed up on my team members' progress, resulting in a published website beneficial to the general public. "
+      ],
       "tech": [
         "Laravel",
         "Bootstrap",
         "SCSS"
       ],
-      "logo": "spe.png",
-      "image": null,
       "background": "#111840",
-      "link": null
+      "link": null,
+      "repo": "https://github.com/daffakurnia11/speitssc"
     },
     {
-      "key": "crawlerhub",
-      "shape": "horizontal",
-      "name": "Crawlerhub",
-      "description": "Web Crawler by LnData Indonesia.",
-      "tech": [
-        "React",
-        "AntDesign",
-        "SCSS"
-      ],
-      "logo": null,
-      "image": "crawlerhub.png",
-      "background": null,
-      "link": "https://crawlerhub.lndata.com/"
-    },
-    {
-      "key": "epw",
+      "key": "ecs",
+      "id": "ecs",
       "shape": "box",
-      "name": "EPW ITS 2022",
-      "description": "Biggest Engineering Physics ITS Event.",
+      "name": "ECS Training",
+      "description": "Programming Training by ECS Laboratory.",
+      "brief": [
+        "ECS Python Training is a website created for a training program organized by the Embedded and Cyber-physical System Laboratory at ITS. The website includes information about the training, such as registration, participant dashboard, schedule, and project submissions. It also offers a community forum where participants can discuss and share their learning experiences. The website is fully responsive and mobile-friendly. ",
+        "One of the main challenges I faced was creating a website that encompassed all the necessary information for the smooth execution of the training. To overcome this, I designed the website before the development process, allowing me to structure the information needed by participants in a user-friendly manner."
+      ],
       "tech": [
         "Laravel",
         "Bootstrap",
         "SCSS"
       ],
-      "logo": "epw.png",
-      "image": null,
-      "background": "#9BB56D",
-      "link": null
+      "background": "#E0D6B6",
+      "link": null,
+      "repo": "https://github.com/daffakurnia11/prokom-ecs"
+    },
+    {
+      "key": "breakpoint",
+      "id": "breakpoint",
+      "shape": "box",
+      "name": "Breakpoint",
+      "description": "My Startup Company Profile.",
+      "brief": [
+        "Breakpoint is the company profile website for my first startup, which specializes in web development services. The website aims to introduce my company by showcasing its vision and mission, completed projects, partner companies, testimonials, and contact information. The website also features information about my team, including their roles, skills, and experience. The website is fully responsive and mobile-friendly.",
+        "One of the main challenges I faced was the complex design and assets, making mobile and tablet implementation particularly difficult. To overcome this, I communicated closely with the UI/UX designer to ensure that the design remained appealing and could be easily implemented on mobile and tablet screens by developers, resulting in an attractive and informative website. "
+      ],
+      "tech": [
+        "Laravel",
+        "Bootstrap",
+        "SCSS"
+      ],
+      "background": "#0C1523",
+      "link": null,
+      "repo": "https://github.com/daffakurnia11/breakpoint2.0"
     },
     {
       "key": "ukmexpo",
+      "id": "ukmexpo",
       "shape": "horizontal",
       "name": "UKM Expo ITS",
       "description": "Biggest Event by ITS Communities.",
+      "brief": [
+        "UKM Expo ITS is one of the largest events held at ITS, aimed at providing information about the event, its schedule, and location, as well as details about all Student Activity Units at ITS. The website also features information about the community, including its events, activities, and community members. The website is fully responsive and mobile-friendly.",
+        "One of the main challenges I faced was implementing a Virtual Reality feature in the website to allow users to attend the event online and explore each activity at ITS, as the event was conducted virtually. To overcome this, I researched methods to implement Virtual Reality on the website and optimized it to ensure the website remained lightweight and easy to load."
+      ],
       "tech": [
         "Laravel",
         "Bootstrap",
         "SCSS"
       ],
-      "logo": null,
-      "image": "ukmexpo.png",
       "background": null,
-      "link": null
+      "link": null,
+      "repo": "https://github.com/daffakurnia11/ukmexpo"
+    },
+    {
+      "key": "deligo",
+      "id": "deligo",
+      "shape": "box",
+      "name": "Deligo",
+      "description": "A company profile for Cloud Kitchen.",
+      "brief": [
+        "Deligo is a website designed to introduce a cloud kitchen named Deligo. The website includes information about Deligo, its partnered food and beverage tenants, and the locations of Deligo kitchens.",
+        "One of the main challenges I faced was that the website design was provided upfront in the form of images, making it difficult to break down the design. To overcome this, I used a Figma plugin to convert the images into a website format, allowing me to extract the necessary asset sizes and text details."
+      ],
+      "tech": [
+        "Laravel",
+        "Bootstrap",
+        "SCSS"
+      ],
+      "background": "#64BF81",
+      "link": null,
+      "repo": "https://github.com/daffakurnia11/deligo"
+    },
+    {
+      "key": "crawlerhub",
+      "id": "crawlerhub",
+      "shape": "horizontal",
+      "name": "Crawlerhub",
+      "description": "Web Crawler by LnData Indonesia.",
+      "brief": [
+        "Crawlerhub is a software solution provided by LnData, a company I worked for. The website offers data crawling services from various social media platforms like Twitter, Facebook, Instagram, TikTok, and LinkedIn, collecting public data that is typically accessible to users and adhering to each platform's privacy policies.",
+        "As a Full-stack Developer, one of the main challenges I faced was that this was my first project using Django, and I initially struggled with its unfamiliarity. To overcome this, I continually learned and researched Django, implemented best practices from other developers, and frequently shared and discussed with my team to gain more knowledge. Additionally, I created an Entity-Relationship Diagram (ERD) to optimize the necessary data, simplifying the backend."
+      ],
+      "tech": [
+        "React",
+        "AntDesign",
+        "Django"
+      ],
+      "background": null,
+      "link": "https://crawlerhub.lndata.com/",
+      "repo": null
     },
     {
       "key": "ilits",
+      "id": "ilits",
       "shape": "box",
       "name": "Ini Lho ITS! 2021",
       "description": "Biggest Event in ITS Surabaya.",
+      "brief": [
+        "Ini Lho ITS! is one of the largest events at ITS, designed for students who want to learn more about the university. The website includes events for tryouts to help students prepare for university entrance exams and events to introduce ITS, including its faculties and departments. One of the key features I developed was the merchandise sales section, which includes a product list, shopping cart, and automatic checkout functionality. The website is fully responsive and mobile-friendly.",
+        "As a web developer, the main challenge I faced was that this was my first project in web development, so I had limited experience and a lot to learn. To overcome this, I continuously learned and researched web development, particularly JavaScript and PHP. Additionally, as a staff member of the web development division, I sought guidance from my more experienced division leader to enhance my skills and knowledge. I also learned best practices from other developers and frequently shared and discussed with my team to gain more knowledge."
+      ],
       "tech": [
-        "Laravel",
+        "CodeIgniter3",
         "Bootstrap",
         "SCSS"
       ],
-      "logo": "ilits.png",
-      "image": null,
       "background": "#1C2945",
-      "link": null
+      "link": null,
+      "repo": "https://github.com/daffakurnia11/inilho.its.ac.id"
     }
   ],
   "breakpoints": {
@@ -206,18 +288,18 @@
         "h": 1
       },
       {
-        "i": "ifem",
+        "i": "candlecraft",
         "x": 2,
         "y": 0,
         "w": 1,
-        "h": 2
+        "h": 1
       },
       {
-        "i": "breakpoint",
+        "i": "ifem",
         "x": 3,
-        "y": 1,
+        "y": 0,
         "w": 1,
-        "h": 1
+        "h": 2
       },
       {
         "i": "petrolida",
@@ -227,17 +309,24 @@
         "h": 2
       },
       {
-        "i": "candlecraft",
+        "i": "chartdemo",
         "x": 1,
         "y": 1,
-        "w": 1,
+        "w": 2,
         "h": 1
       },
       {
-        "i": "crawlerhub",
-        "x": 3,
-        "y": 3,
-        "w": 2,
+        "i": "smarthydroponic",
+        "x": 1,
+        "y": 2,
+        "w": 1,
+        "h": 2
+      },
+      {
+        "i": "spe",
+        "x": 2,
+        "y": 2,
+        "w": 1,
         "h": 1
       },
       {
@@ -248,21 +337,28 @@
         "h": 1
       },
       {
-        "i": "spe",
-        "x": 1,
+        "i": "breakpoint",
+        "x": 0,
         "y": 3,
         "w": 1,
         "h": 1
       },
       {
-        "i": "epw",
+        "i": "ukmexpo",
+        "x": 2,
+        "y": 3,
+        "w": 2,
+        "h": 1
+      },
+      {
+        "i": "deligo",
         "x": 0,
         "y": 4,
         "w": 1,
         "h": 1
       },
       {
-        "i": "ukmexpo",
+        "i": "crawlerhub",
         "x": 1,
         "y": 4,
         "w": 2,
@@ -285,72 +381,86 @@
         "h": 1
       },
       {
-        "i": "ifem",
+        "i": "candlecraft",
         "x": 2,
         "y": 0,
-        "w": 1,
-        "h": 2
-      },
-      {
-        "i": "breakpoint",
-        "x": 2,
-        "y": 2,
-        "w": 1,
-        "h": 1
-      },
-      {
-        "i": "petrolida",
-        "x": 0,
-        "y": 1,
-        "w": 1,
-        "h": 2
-      },
-      {
-        "i": "candlecraft",
-        "x": 1,
-        "y": 1,
-        "w": 1,
-        "h": 1
-      },
-      {
-        "i": "crawlerhub",
-        "x": 2,
-        "y": 3,
-        "w": 2,
-        "h": 1
-      },
-      {
-        "i": "ecs",
-        "x": 0,
-        "y": 3,
         "w": 1,
         "h": 1
       },
       {
         "i": "spe",
-        "x": 1,
-        "y": 2,
-        "w": 1,
-        "h": 1
-      },
-      {
-        "i": "epw",
-        "x": 2,
-        "y": 4,
-        "w": 1,
-        "h": 1
-      },
-      {
-        "i": "ukmexpo",
         "x": 0,
-        "y": 4,
+        "y": 1,
+        "w": 1,
+        "h": 1
+      },
+      {
+        "i": "ecs",
+        "x": 1,
+        "y": 1,
+        "w": 1,
+        "h": 1
+      },
+      {
+        "i": "ifem",
+        "x": 2,
+        "y": 1,
+        "w": 1,
+        "h": 2
+      },
+      {
+        "i": "chartdemo",
+        "x": 0,
+        "y": 2,
         "w": 2,
         "h": 1
       },
       {
-        "i": "ilits",
+        "i": "petrolida",
+        "x": 0,
+        "y": 3,
+        "w": 1,
+        "h": 2
+      },
+      {
+        "i": "ukmexpo",
         "x": 1,
+        "y": 3,
+        "w": 2,
+        "h": 1
+      },
+      {
+        "i": "breakpoint",
+        "x": 1,
+        "y": 4,
+        "w": 1,
+        "h": 1
+      },
+      {
+        "i": "smarthydroponic",
+        "x": 2,
+        "y": 4,
+        "w": 1,
+        "h": 2
+      },
+      {
+        "i": "crawlerhub",
+        "x": 0,
         "y": 5,
+        "w": 2,
+        "h": 1
+      },
+      {
+        "i": "deligo",
+        "x": 0.5,
+        "y": 6,
+        "w": 1,
+        "h": 1
+      },
+      {
+        "i": "ilits",
+        "x": 1.5,
+        "y": 6,
         "w": 1,
         "h": 1
       }

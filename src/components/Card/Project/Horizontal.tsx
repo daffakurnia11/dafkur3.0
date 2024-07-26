@@ -45,7 +45,7 @@ export default function HorizontalCard(props: ProjectDataType) {
         <motion.div
           variants={linkVariant}
           animate={isHover ? "hover" : "initial"}
-          className="absolute top-5 right-5 z-10"
+          className="absolute top-5 right-5 z-10 flex gap-2"
         >
           {props.link && (
             <Link
@@ -53,9 +53,15 @@ export default function HorizontalCard(props: ProjectDataType) {
               className="non-draggable w-6 h-6 rounded-full bg-white flex items-center justify-center"
               target="_blank"
             >
-              <Icon size={16} icon="arrow-top-right" className="text-dark" />
+              <Icon size={16} icon="link" className="text-dark" />
             </Link>
           )}
+          <Link
+            href={`/project/${props.id}`}
+            className="non-draggable w-6 h-6 rounded-full bg-white flex items-center justify-center"
+          >
+            <Icon size={16} icon="arrow-top-right" className="text-dark" />
+          </Link>
         </motion.div>
         <div className="absolute bottom-0 left-0 p-6 z-10">
           <Typography.Heading
@@ -82,9 +88,9 @@ export default function HorizontalCard(props: ProjectDataType) {
             ))}
           </div>
         </div>
-        <div className="absolute z-0 w-[400px] rounded-2xl overflow-hidden right-0 -top-5 translate-x-1/3 -rotate-[20deg] opacity-70">
+        <div className="absolute z-0 w-[350px] rounded-2xl overflow-hidden right-0 -top-5 translate-x-1/4 -rotate-[24deg] opacity-70">
           <Image
-            src={`/project/${props.image}`}
+            src={`/mockup/${props.id}/laptop.png`}
             alt={`Project ${props.name}`}
             width={0}
             height={0}

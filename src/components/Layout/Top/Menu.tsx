@@ -33,7 +33,8 @@ export default function Menu() {
     changePage();
   }, [pathname]);
 
-  const isActive = (list: string[]) => list.includes(pathname);
+  const isActive = (list: string[]) =>
+    list.includes(pathname.split("/").splice(0, 2).join("/"));
 
   return (
     <div className="fixed left-0 right-0 bottom-0 top-auto sm:top-0 sm:bottom-auto py-4 flex justify-center z-50">
