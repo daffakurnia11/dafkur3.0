@@ -31,12 +31,12 @@
   },
   {
     "number": "07.",
-    "label": "Games",
-    "link": "/games"
+    "label": "Contacts",
+    "link": "/contact"
   },
   {
     "number": "08.",
-    "label": "Contacts",
-    "link": "/contact"
+    "label": "Download My Resume",
+    "link": "https://drive.google.com/file/d/1sDccHvvBpOsYa-prdrqa7R0bH-_Nis9D/view?usp=sharing"
   }
 ]

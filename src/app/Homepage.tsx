@@ -94,7 +94,10 @@ export default function Homepage() {
                     speed={60}
                     cursor={false}
                   />
-                  <Link href={page.link!}>
+                  <Link
+                    href={page.link!}
+                    target={page.link?.startsWith("/") ? "_self" : "_blank"}
+                  >
                     <TypeAnimation
                       className="text-base text-green-light underline"
                       sequence={[(index + 1) * 200, page.label]}
