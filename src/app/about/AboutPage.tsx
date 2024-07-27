@@ -5,6 +5,7 @@ import Image from "next/image";
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
+import GitHubCalendar from "react-github-calendar";
 
 export default function AboutPage() {
   return (
@@ -76,40 +77,28 @@ export default function AboutPage() {
                 speed={90}
               />
             </div>
-            <div className="grid grid-cols-2 gap-6 mt-6">
-              <div className="col-span-2 sm:col-span-1 flex flex-col">
-                <TypeAnimation
-                  className="text-green-primary text-base"
-                  sequence={["Currently working on"]}
-                  speed={80}
-                  cursor={false}
-                />
-                <TypeAnimation
-                  className="text-green-light text-base font-bold"
-                  sequence={["Itsavirus"]}
-                  speed={80}
-                  cursor={false}
-                />
-              </div>
-              <div className="col-span-2 sm:col-span-1 flex flex-col">
-                <TypeAnimation
-                  className="text-green-primary text-base"
-                  sequence={["Work remotely from"]}
-                  speed={80}
-                  cursor={false}
-                />
-                <TypeAnimation
-                  className="text-green-light text-base font-bold"
-                  sequence={["Sidoarjo, East Java, Indonesia"]}
-                  speed={80}
-                  cursor={false}
-                />
-              </div>
+            <TypeAnimation
+              className="text-green-primary text-base my-4"
+              sequence={["My contributions"]}
+              speed={80}
+              cursor={false}
+              wrapper="h2"
+            />
+            <div className="text-green-secondary">
+              <GitHubCalendar
+                colorScheme="dark"
+                username="daffakurnia11"
+                theme={{
+                  dark: ["#2C3333", "#395B64", "#A5C9CA", "#E7F6F2", "#FCFEFD"],
+                }}
+                blockSize={9}
+                fontSize={10}
+              />
             </div>
           </div>
           <div className="col-span-7 lg:col-span-2 order-1 lg:order-2">
             <motion.div
-              initial={{ opacity: 0, y: 100 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ type: "tween", duration: 0.5, delay: 0.5 }}
             >
@@ -127,6 +116,50 @@ export default function AboutPage() {
                 />
               </div>
             </motion.div>
+            <div className="flex flex-col gap-3 mt-6">
+              <div className="flex flex-col">
+                <TypeAnimation
+                  className="text-green-primary text-base"
+                  sequence={["My role is"]}
+                  speed={80}
+                  cursor={false}
+                />
+                <TypeAnimation
+                  className="text-green-light text-base font-bold"
+                  sequence={["Frontend Developer"]}
+                  speed={80}
+                  cursor={false}
+                />
+              </div>
+              <div className="flex flex-col">
+                <TypeAnimation
+                  className="text-green-primary text-base"
+                  sequence={["Currently working on"]}
+                  speed={80}
+                  cursor={false}
+                />
+                <TypeAnimation
+                  className="text-green-light text-base font-bold"
+                  sequence={["Itsavirus"]}
+                  speed={80}
+                  cursor={false}
+                />
+              </div>
+              <div className="flex flex-col">
+                <TypeAnimation
+                  className="text-green-primary text-base"
+                  sequence={["Remotely from"]}
+                  speed={80}
+                  cursor={false}
+                />
+                <TypeAnimation
+                  className="text-green-light text-base font-bold"
+                  sequence={["Sidoarjo, East Java, Indonesia"]}
+                  speed={80}
+                  cursor={false}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>

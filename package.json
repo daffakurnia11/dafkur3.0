@@ -23,6 +23,7 @@
     "postcss": "^8.4.39",
     "react": "^18",
     "react-dom": "^18",
+    "react-github-calendar": "^4.1.6",
     "react-grid-layout": "^1.4.4",
     "react-hot-toast": "^2.4.1",
     "react-icomoon": "^2.5.7",
