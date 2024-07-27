@@ -7,6 +7,9 @@ import Notification from "@/components/Notification";
 import Loader from "@/components/pages/Loader";
 import Layout from "@/components/Layout";
 
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
+
 export default function RootLayout({
   children,
 }: {
@@ -32,6 +35,8 @@ export default function RootLayout({
         <Loader />
         <Layout.Main>{children}</Layout.Main>
         <Notification />
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
