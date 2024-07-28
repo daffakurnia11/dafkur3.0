@@ -77,14 +77,63 @@ export default function AboutPage() {
                 speed={90}
               />
             </div>
+            <div className="flex mt-6 w-full flex-wrap">
+              <div className="mb-4 flex flex-col basis-full">
+                <TypeAnimation
+                  className="text-green-primary text-base"
+                  sequence={["My role is"]}
+                  speed={80}
+                  cursor={false}
+                />
+                <TypeAnimation
+                  className="text-green-light text-base font-bold"
+                  sequence={["Frontend Developer"]}
+                  speed={80}
+                  cursor={false}
+                />
+              </div>
+              <div className="mb-4 flex flex-col basis-1/2">
+                <TypeAnimation
+                  className="text-green-primary text-base"
+                  sequence={["Currently working on"]}
+                  speed={80}
+                  cursor={false}
+                />
+                <TypeAnimation
+                  className="text-green-light text-base font-bold"
+                  sequence={["Itsavirus"]}
+                  speed={80}
+                  cursor={false}
+                />
+              </div>
+              <div className="mb-4 flex flex-col basis-1/2">
+                <TypeAnimation
+                  className="text-green-primary text-base"
+                  sequence={["Remotely from"]}
+                  speed={80}
+                  cursor={false}
+                />
+                <TypeAnimation
+                  className="text-green-light text-base font-bold"
+                  sequence={["Sidoarjo, East Java, Indonesia"]}
+                  speed={80}
+                  cursor={false}
+                />
+              </div>
+            </div>
             <TypeAnimation
-              className="text-green-primary text-base my-4"
+              className="text-green-primary text-base mb-1"
               sequence={["My contributions"]}
               speed={80}
               cursor={false}
               wrapper="h2"
             />
-            <div className="text-green-secondary">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ type: "tween", duration: 0.5, delay: 0.3 }}
+              className="text-green-secondary"
+            >
               <GitHubCalendar
                 colorScheme="dark"
                 username="daffakurnia11"
@@ -94,7 +143,7 @@ export default function AboutPage() {
                 blockSize={9}
                 fontSize={10}
               />
-            </div>
+            </motion.div>
           </div>
           <div className="col-span-7 lg:col-span-2 order-1 lg:order-2">
             <motion.div
@@ -116,50 +165,6 @@ export default function AboutPage() {
                 />
               </div>
             </motion.div>
-            <div className="flex flex-col gap-3 mt-6">
-              <div className="flex flex-col">
-                <TypeAnimation
-                  className="text-green-primary text-base"
-                  sequence={["My role is"]}
-                  speed={80}
-                  cursor={false}
-                />
-                <TypeAnimation
-                  className="text-green-light text-base font-bold"
-                  sequence={["Frontend Developer"]}
-                  speed={80}
-                  cursor={false}
-                />
-              </div>
-              <div className="flex flex-col">
-                <TypeAnimation
-                  className="text-green-primary text-base"
-                  sequence={["Currently working on"]}
-                  speed={80}
-                  cursor={false}
-                />
-                <TypeAnimation
-                  className="text-green-light text-base font-bold"
-                  sequence={["Itsavirus"]}
-                  speed={80}
-                  cursor={false}
-                />
-              </div>
-              <div className="flex flex-col">
-                <TypeAnimation
-                  className="text-green-primary text-base"
-                  sequence={["Remotely from"]}
-                  speed={80}
-                  cursor={false}
-                />
-                <TypeAnimation
-                  className="text-green-light text-base font-bold"
-                  sequence={["Sidoarjo, East Java, Indonesia"]}
-                  speed={80}
-                  cursor={false}
-                />
-              </div>
-            </div>
           </div>
         </div>
       </div>
