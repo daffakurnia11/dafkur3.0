@@ -101,7 +101,7 @@ export default function AboutPage() {
                 />
                 <TypeAnimation
                   className="text-green-light text-base font-bold"
-                  sequence={["Itsavirus"]}
+                  sequence={["A Job Thing"]}
                   speed={80}
                   cursor={false}
                 />
@@ -109,13 +109,13 @@ export default function AboutPage() {
               <div className="mb-4 flex flex-col basis-1/2">
                 <TypeAnimation
                   className="text-green-primary text-base"
-                  sequence={["Remotely from"]}
+                  sequence={["Working at"]}
                   speed={80}
                   cursor={false}
                 />
                 <TypeAnimation
                   className="text-green-light text-base font-bold"
-                  sequence={["Sidoarjo, East Java, Indonesia"]}
+                  sequence={["Sleman, Yogyakarta, Indonesia"]}
                   speed={80}
                   cursor={false}
                 />
