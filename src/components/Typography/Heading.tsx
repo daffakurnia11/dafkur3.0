@@ -20,7 +20,9 @@ export default function Heading({
 
   const sizeClass = sizeLevel[level];
 
-  const Component = as || `h${level}`;
+  const Component: React.ElementType = (
+    typeof as === "string" ? as : `h${level}`
+  ) as React.ElementType;
 
   const renderContent = () => {
     if (isScrambled && typeof children === "string") {

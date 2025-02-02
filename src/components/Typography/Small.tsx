@@ -4,7 +4,7 @@ import Scramble from "../Scramble";
 import type { SmallProps } from "@/types/Typography";
 
 export default function Small({
-  as: Component = "small",
+  as = "small",
   children,
   isScrambled,
   ...props
@@ -15,6 +15,10 @@ export default function Small({
     }
     return children;
   };
+
+  const Component: React.ElementType = (
+    typeof as === "string" ? as : `small`
+  ) as React.ElementType;
 
   return (
     <Component

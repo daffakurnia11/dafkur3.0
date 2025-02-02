@@ -4,7 +4,7 @@ import Scramble from "../Scramble";
 import type { ParagraphProps } from "@/types/Typography";
 
 export default function Paragraph({
-  as: Component = "p",
+  as = "p",
   children,
   isScrambled,
   ...props
@@ -15,6 +15,10 @@ export default function Paragraph({
     }
     return children;
   };
+
+  const Component: React.ElementType = (
+    typeof as === "string" ? as : `p`
+  ) as React.ElementType;
 
   return (
     <Component
