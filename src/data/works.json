@@ -1,7 +1,7 @@
 [
   {
     "position": "Front-end Developer",
-    "company": "A Job Thing",
+    "company": "Agensi Pekerjaan Ajobthing Sdn Bhd",
     "place": "Sleman, Yogyakarta - Indonesia",
     "start": "December 2024"
   },
@@ -39,5 +39,12 @@
     "place": "Surabaya, East Java - Indonesia",
     "start": "May 2021",
     "end": "February 2023"
+  },
+  {
+    "position": "Team Coach Extracurricular",
+    "company": "SMAN 1 Sidoarjo",
+    "place": "Sidoarjo, East Java - Indonesia",
+    "start": "January 2020",
+    "end": "August 2023"
   }
 ]

@@ -27,7 +27,7 @@ export default function ExperiencePage() {
               cursor={false}
               wrapper="h1"
             />
-            <div className="relative pt-2 flex flex-col items-center gap-4 mt-4 min-h-[604px] sm:min-h-[500px]">
+            <div className="relative pt-2 flex flex-col items-center gap-4 mt-4 min-h-[706px] sm:min-h-[570px]">
               <motion.div
                 initial={{ height: 0 }}
                 animate={{ height: isMobile ? "calc(100% + 30px)" : "100%" }}
