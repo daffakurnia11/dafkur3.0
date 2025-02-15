@@ -11,13 +11,13 @@
   },
   {
     "number": "03.",
-    "label": "Experiences",
-    "link": "/experience"
+    "label": "Skills",
+    "link": "/skills"
   },
   {
     "number": "04.",
-    "label": "Skills",
-    "link": "/skills"
+    "label": "Experiences",
+    "link": "/experiences"
   },
   {
     "number": "05.",
@@ -27,7 +27,7 @@
   {
     "number": "06.",
     "label": "Blogs",
-    "link": "/blog"
+    "link": "/blogs"
   },
   {
     "number": "07.",
@@ -37,6 +37,6 @@
   {
     "number": "08.",
     "label": "Download My Resume",
-    "link": "https://drive.google.com/file/d/1sDccHvvBpOsYa-prdrqa7R0bH-_Nis9D/view?usp=sharing"
+    "link": "https://drive.google.com/file/d/1kPhZlBvdZLaHWguzRAj2k1CQyPoVEk8q/view?usp=sharing"
   }
 ]

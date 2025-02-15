@@ -24,21 +24,21 @@
     "name": "Experiences",
     "icon": "skills",
     "pathname": [
-      "/experience"
+      "/experiences"
     ]
   },
   {
     "name": "Projects",
     "icon": "project",
     "pathname": [
-      "/project"
+      "/projects"
     ]
   },
   {
-    "name": "Blog",
+    "name": "Blogs",
     "icon": "blog",
     "pathname": [
-      "/blog"
+      "/blogs"
     ]
   },
   {

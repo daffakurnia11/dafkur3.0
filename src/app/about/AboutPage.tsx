@@ -92,7 +92,7 @@ export default function AboutPage() {
                   cursor={false}
                 />
               </div>
-              <div className="mb-4 flex flex-col basis-1/2">
+              <div className="mb-4 flex flex-col basis-full md:basis-1/2">
                 <TypeAnimation
                   className="text-green-primary text-base"
                   sequence={["Currently working on"]}
@@ -101,12 +101,12 @@ export default function AboutPage() {
                 />
                 <TypeAnimation
                   className="text-green-light text-base font-bold"
-                  sequence={["A Job Thing"]}
+                  sequence={["Agensi Pekerjaan Ajobthing Sdn Bhd"]}
                   speed={80}
                   cursor={false}
                 />
               </div>
-              <div className="mb-4 flex flex-col basis-1/2">
+              <div className="mb-4 flex flex-col basis-full md:basis-1/2">
                 <TypeAnimation
                   className="text-green-primary text-base"
                   sequence={["Working at"]}
