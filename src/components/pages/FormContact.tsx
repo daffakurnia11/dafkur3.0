@@ -52,9 +52,9 @@ export default function FormContact() {
               disabled={loading}
             />
             <InputTextArea
-              name="message"
-              value={formData.message}
-              onChange={(e) => handleChange(e.target.value, "message")}
+              name="body"
+              value={formData.body}
+              onChange={(e) => handleChange(e.target.value, "body")}
               disabled={loading}
               className="w-full mb-4"
               rows={3}

@@ -11,7 +11,7 @@ export const useFormContact = () => {
     name: "",
     email: "",
     subject: "",
-    message: "",
+    body: "",
   });
 
   const handleCopy = () => {
@@ -31,14 +31,15 @@ export const useFormContact = () => {
 
   const onSubmit = () => {
     setLoading(true);
-    ContactSendApi(formData).then((resp) => {
+    ContactSendApi(formData).then((resp: any) => {
+      console.log(resp);
       setLoading(false);
-      if (resp?.status === 201) {
+      if (resp.success) {
         setFormData({
           name: "",
           email: "",
           subject: "",
-          message: "",
+          body: "",
         });
         setNotif({
           title: "Yeyy! The message is sent!",
@@ -47,7 +48,7 @@ export const useFormContact = () => {
       } else {
         setNotif({
           title: "Oops! Something's happen.",
-          message: "You need to check your data once more.",
+          message: resp.error || "You need to check your data once more.",
         });
       }
     });

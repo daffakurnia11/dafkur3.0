@@ -6,7 +6,7 @@ export interface ContactDataType {
   name: string,
   email: string,
   subject: string,
-  message: string
+  body: string
 }
 
 export async function ContactSendApi(data: ContactDataType) {
@@ -16,9 +16,9 @@ export async function ContactSendApi(data: ContactDataType) {
     data,
   })
     .then((response: AxiosResponse<ContactDataType>) => {
-      return response;
+      return response.data;
     })
     .catch((error: AxiosError<AxiosResponse>) => {
-      return error.response;
+      return error.response?.data;
     });
 }
