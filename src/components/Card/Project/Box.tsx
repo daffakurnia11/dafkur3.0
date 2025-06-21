@@ -107,7 +107,7 @@ export default function BoxCard(props: ProjectDataType) {
           </Link>
         )}
         <Link
-          href={`/project/${props.id}`}
+          href={`/projects/${props.id}`}
           className="non-draggable w-6 h-6 rounded-full bg-white flex items-center justify-center"
         >
           <Icon size={16} icon="arrow-top-right" className="text-dark" />
