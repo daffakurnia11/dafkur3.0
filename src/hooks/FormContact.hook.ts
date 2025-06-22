@@ -7,7 +7,7 @@ export const useFormContact = () => {
   const [isCopied, setIsCopied] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
   const setNotif = useSetAtom(notifContent);
-  const [formData, setFormData] = useState<ContactDataType>({
+  const [formData, setFormData] = useState<Omit<ContactDataType, "token">>({
     name: "",
     email: "",
     subject: "",
@@ -29,9 +29,17 @@ export const useFormContact = () => {
     });
   };
 
-  const onSubmit = () => {
+  const onSubmit = async (token: string | null) => {
+    if (!token) {
+      setNotif({
+        title: "reCAPTCHA failed",
+        message: "Please try again or check your internet connection.",
+      });
+      return;
+    }
+
     setLoading(true);
-    ContactSendApi(formData).then((resp: any) => {
+    await ContactSendApi({ ...formData, token }).then((resp: any) => {
       console.log(resp);
       setLoading(false);
       if (resp.success) {

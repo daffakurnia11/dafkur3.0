@@ -6,7 +6,8 @@ export interface ContactDataType {
   name: string,
   email: string,
   subject: string,
-  body: string
+  body: string,
+  token: string,
 }
 
 export async function ContactSendApi(data: ContactDataType) {
