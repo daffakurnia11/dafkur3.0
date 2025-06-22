@@ -1,7 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import About from "./_components/About";
-import defaultSeoConfig from "@/utils/seo.json";
+import defaultSeoConfig from "@/data/seo.json";
 
 const pageMetadata = {
   title: "About | Daffa Kurnia Fatah | Dafkur.com",

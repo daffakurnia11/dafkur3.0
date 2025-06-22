@@ -1,7 +1,7 @@
 import React from "react";
 import Home from "./_components/Home";
 import { Metadata } from "next";
-import defaultSeoConfig from "@/utils/seo.json";
+import defaultSeoConfig from "@/data/seo.json";
 
 const pageMetadata = {
   title: "Home | Daffa Kurnia Fatah | Dafkur.com",

@@ -1,6 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
-import defaultSeoConfig from "@/utils/seo.json";
+import defaultSeoConfig from "@/data/seo.json";
 import Experiences from "./_components/Experiences";
 
 const pageMetadata = {
