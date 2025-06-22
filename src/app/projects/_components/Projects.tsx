@@ -1,58 +1,18 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import projects from "@/data/projects.json";
+import React from "react";
 import { Responsive as ResponsiveGridLayout } from "react-grid-layout";
-import { useMobileHook } from "@/hooks/Mobile.hook";
-import { ProjectDataType } from "@/types/Content";
+import { useMobile } from "@/hooks/useMobile.hook";
+import type { ProjectDataType } from "@/types/Content";
 import { motion } from "framer-motion";
-import Card from "@/components/Card";
+import ProjectCard from "./ProjectCard";
+import { useProject } from "../_hooks/useProject.hook";
 
-export default function ProjectPage() {
-  const { isMobile, screenWidth } = useMobileHook();
-  const [gridSize, setGridSize] = useState<"xl" | "lg" | "md" | "sm" | "xs">(
-    "xl"
-  );
-  const gridLayout = {
-    lg: projects.layout.lg,
-    md: projects.layout.lg,
-    sm: projects.layout.md,
-    xs: projects.layout.sm,
-  };
+import projects from "@/data/projects.json";
 
-  useEffect(() => {
-    if (screenWidth >= projects.breakpoints.xl) {
-      setGridSize("xl");
-    } else if (
-      screenWidth < projects.breakpoints.xl &&
-      screenWidth >= projects.breakpoints.lg
-    ) {
-      setGridSize("lg");
-    } else if (
-      screenWidth < projects.breakpoints.lg &&
-      screenWidth >= projects.breakpoints.md
-    ) {
-      setGridSize("md");
-    } else if (
-      screenWidth < projects.breakpoints.md &&
-      screenWidth >= projects.breakpoints.sm
-    ) {
-      setGridSize("sm");
-    } else {
-      setGridSize("xs");
-    }
-  }, [screenWidth]);
-
-  const ProjectCard = (data: ProjectDataType) => {
-    switch (data.shape) {
-      case "box":
-        return <Card.Box {...data} />;
-      case "horizontal":
-        return <Card.Horizontal {...data} />;
-      case "vertical":
-        return <Card.Vertical {...data} />;
-    }
-  };
+export default function Projects() {
+  const { isMobile } = useMobile();
+  const { gridLayout, gridSize } = useProject();
 
   return (
     <section className="pt-[100px] pb-[80px] min-h-dvh flex justify-center items-center">
@@ -83,7 +43,7 @@ export default function ProjectPage() {
                   }}
                   className="w-full h-full cursor-grab active:cursor-grabbing"
                 >
-                  <ProjectCard {...data} />
+                  <ProjectCard data={data} />
                 </motion.div>
               </div>
             )

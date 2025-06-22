@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const useMobileHook = () => {
+export const useMobile = () => {
   const [isMobile, setIsMobile] = useState<boolean>(false);
   const [screenWidth, setScreenWidth] = useState(0);
 

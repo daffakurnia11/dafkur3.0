@@ -3,15 +3,16 @@
 import SocialCard from "@/components/Card/Social";
 import Icon from "@/components/Icon";
 import Typography from "@/components/Typography";
-import { useMobileHook } from "@/hooks/Mobile.hook";
+import { useMobile } from "@/hooks/useMobile.hook";
 import type { SocialListType } from "@/types/Content";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import React from "react";
+
 import socialmedia from "@/data/socialmedia.json";
 
 export default function SocialContact() {
-  const { isMobile } = useMobileHook();
+  const { isMobile } = useMobile();
 
   return (
     <div className="col-span-1">

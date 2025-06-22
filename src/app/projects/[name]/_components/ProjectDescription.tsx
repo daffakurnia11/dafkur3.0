@@ -1,10 +1,10 @@
-import { ProjectDataType } from "@/types/Content";
+import type { ProjectDataType } from "@/types/Content";
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
-import Typography from "../Typography";
 import Link from "next/link";
-import Icon from "../Icon";
 import { motion } from "framer-motion";
+import Typography from "@/components/Typography";
+import Icon from "@/components/Icon";
 
 export default function ProjectDescription({
   data,

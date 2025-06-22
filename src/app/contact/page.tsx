@@ -1,6 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
-import ContactPage from "./ContactPage";
+import Contact from "./_components/Contact";
 import defaultSeoConfig from "@/utils/seo.json";
 
 const pageMetadata = {
@@ -14,6 +14,6 @@ const pageMetadata = {
 
 export const metadata: Metadata = { ...defaultSeoConfig, ...pageMetadata };
 
-export default function Project() {
-  return <ContactPage />;
+export default function ContactPage() {
+  return <Contact />;
 }

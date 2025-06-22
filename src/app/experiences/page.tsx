@@ -1,7 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
-import ExperiencePage from "./ExperiencePage";
 import defaultSeoConfig from "@/utils/seo.json";
+import Experiences from "./_components/Experiences";
 
 const pageMetadata = {
   title: "Experience | Daffa Kurnia Fatah | Dafkur.com",
@@ -14,6 +14,6 @@ const pageMetadata = {
 
 export const metadata: Metadata = { ...defaultSeoConfig, ...pageMetadata };
 
-export default function Experience() {
-  return <ExperiencePage />;
+export default function ExperiencesPage() {
+  return <Experiences />;
 }

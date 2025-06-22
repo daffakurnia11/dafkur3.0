@@ -5,14 +5,14 @@ import { usePathname } from "next/navigation";
 import classNames from "classnames";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useMobileHook } from "@/hooks/Mobile.hook";
+import { useMobile } from "@/hooks/useMobile.hook";
 import type { MenuItemType } from "@/types/Content";
 import menu from "@/data/menu.json";
 
 export default function Menu() {
   const pathname = usePathname();
   const menuContainer = useRef<any>(null);
-  const { isMobile } = useMobileHook();
+  const { isMobile } = useMobile();
   const [activeProps, setActiveProps] = useState({
     x: 10,
   });

@@ -40,7 +40,6 @@ export const useFormContact = () => {
 
     setLoading(true);
     await ContactSendApi({ ...formData, token }).then((resp: any) => {
-      console.log(resp);
       setLoading(false);
       if (resp.success) {
         setFormData({

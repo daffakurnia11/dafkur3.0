@@ -1,21 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Editor from "@monaco-editor/react";
-import samplecode from "@/data/samplecode.json";
-import Typography from "../Typography";
 import classNames from "classnames";
-import { useMobileHook } from "@/hooks/Mobile.hook";
+import { useMobile } from "@/hooks/useMobile.hook";
+import { useSkillsEditor } from "../_hooks/useSkillsEditor.hook";
+import Typography from "@/components/Typography";
 
 export default function SkillsEditor() {
-  const { isMobile } = useMobileHook();
-  const [lang, setLang] = useState<
-    "javascript" | "typescript" | "python" | "php"
-  >("javascript");
-  const [code, setCode] = useState<string | null>(null);
-
-  useEffect(() => {
-    const content = samplecode!.find((item) => item.lang === lang)!.content;
-    setCode(content);
-  }, [lang]);
+  const { isMobile } = useMobile();
+  const { lang, setLang, code } = useSkillsEditor();
 
   return (
     code && (

@@ -1,6 +1,6 @@
 import Typography from "@/components/Typography";
-import { useCardGrab } from "@/hooks/CardGrab.hook";
-import { ProjectDataType } from "@/types/Content";
+import { useCardGrab } from "@/hooks/useCardGrab.hook";
+import type { ProjectDataType } from "@/types/Content";
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";

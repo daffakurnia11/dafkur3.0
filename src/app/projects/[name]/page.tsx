@@ -1,6 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
-import ProjectDetailPage from "./ProjectDetailPage";
+import ProjectDetail from "./_components/ProjectDetail";
 import defaultSeoConfig from "@/utils/seo.json";
 
 const pageMetadata = {
@@ -14,6 +14,6 @@ const pageMetadata = {
 
 export const metadata: Metadata = { ...defaultSeoConfig, ...pageMetadata };
 
-export default function ProjectDetail() {
-  return <ProjectDetailPage />;
+export default function ProjectDetailPage() {
+  return <ProjectDetail />;
 }

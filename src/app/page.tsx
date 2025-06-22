@@ -1,5 +1,5 @@
 import React from "react";
-import Homepage from "./Homepage";
+import Home from "./_components/Home";
 import { Metadata } from "next";
 import defaultSeoConfig from "@/utils/seo.json";
 
@@ -17,6 +17,6 @@ export const metadata: Metadata = {
   ...pageMetadata,
 };
 
-export default function Home() {
-  return <Homepage />;
+export default function Homepage() {
+  return <Home />;
 }

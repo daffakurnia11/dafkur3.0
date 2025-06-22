@@ -3,40 +3,13 @@
 import Typography from "@/components/Typography";
 import type { PagesListType } from "@/types/Content";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { TypeAnimation } from "react-type-animation";
-import pages from "@/data/pages.json";
+import { useHome } from "../_hooks/useHome.hook";
+import { FirstRow, SecondRow } from "./HomeRow";
 
-const FirstRow = ({ children }: { children?: React.ReactNode }) => (
-  <div className="sm:block hidden shrink-0 w-[85px]">{children}</div>
-);
-
-const SecondRow = ({ children }: { children: React.ReactNode }) => (
-  <div className="flex-1 w-full">{children}</div>
-);
-
-export default function Homepage() {
-  const [list, setList] = useState<PagesListType[]>([]);
-
-  function createGridReorderedList() {
-    const numRows = window.innerWidth < 640 ? 2 : 3;
-    const numCols = Math.ceil(pages.length / numRows);
-    const reorderedList = [];
-
-    for (let col = 0; col < numCols; col++) {
-      for (let row = 0; row < numRows; row++) {
-        const index = col + row * numCols;
-        if (index < pages.length) {
-          reorderedList.push(pages[index]);
-        }
-      }
-    }
-    setList(reorderedList);
-  }
-
-  useEffect(() => {
-    createGridReorderedList();
-  }, []);
+export default function Home() {
+  const { list } = useHome();
 
   return (
     <section className="pt-[100px] pb-[80px] min-h-dvh container mx-auto flex justify-center items-center">

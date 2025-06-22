@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Icon from "../Icon";
 import Card from ".";
-import { useMobileHook } from "@/hooks/Mobile.hook";
+import { useMobile } from "@/hooks/useMobile.hook";
 
 const SocialCard = ({ children }: { children: React.ReactNode }) => {
-  const { isMobile } = useMobileHook();
+  const { isMobile } = useMobile();
 
   return (
     <Card.Gradient className="w-full overflow-hidden group" isSquare>

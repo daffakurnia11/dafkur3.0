@@ -1,17 +1,17 @@
 import Card from "@/components/Card";
 import Icon from "@/components/Icon";
 import Input, { InputTextArea } from "@/components/Input";
+import ReCaptchaProvider from "@/components/ReCaptcha/Provider";
 import Typography from "@/components/Typography";
-import { useFormContact } from "@/hooks/FormContact.hook";
-import { useMobileHook } from "@/hooks/Mobile.hook";
+import { useMobile } from "@/hooks/useMobile.hook";
 import { motion } from "framer-motion";
 import React from "react";
-import ReCaptchaProvider from "../ReCaptcha/Provider";
+import { useFormContact } from "../_hooks/useFormContact.hook";
 
 export default function FormContact() {
   const { formData, handleChange, handleCopy, isCopied, loading, onSubmit } =
     useFormContact();
-  const { isMobile } = useMobileHook();
+  const { isMobile } = useMobile();
 
   return (
     <motion.div

@@ -1,29 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Icon from "@/components/Icon";
 import classNames from "classnames";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
-import { ProjectDataType } from "@/types/Content";
+import type { ProjectDataType } from "@/types/Content";
+import { useProjectMockup } from "../_hooks/useProjectMockup.hook";
 
 export default function ProjectMockup({ data }: { data: ProjectDataType }) {
-  const [mockupType, setMockupType] = useState<"laptop" | "mobile">("laptop");
-  const [imageExists, setImageExists] = useState(false);
-
-  useEffect(() => {
-    if (data) {
-      const imageUrl = `/mockup/${data.id}/mobile-portrait.png`;
-
-      fetch(imageUrl)
-        .then((res) => {
-          if (res.ok) {
-            setImageExists(true);
-          } else {
-            setImageExists(false);
-          }
-        })
-        .catch(() => setImageExists(false));
-    }
-  }, [data, mockupType]);
+  const { mockupType, setMockupType, imageExists } = useProjectMockup(data);
 
   return (
     <div className="w-full lg:aspect-square lg:mb-20">

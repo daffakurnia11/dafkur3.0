@@ -1,7 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
-import SkillsPage from "./SkillsPage";
 import defaultSeoConfig from "@/utils/seo.json";
+import Skills from "./_components/Skills";
 
 const pageMetadata = {
   title: "Skills | Daffa Kurnia Fatah | Dafkur.com",
@@ -14,6 +14,6 @@ const pageMetadata = {
 
 export const metadata: Metadata = { ...defaultSeoConfig, ...pageMetadata };
 
-export default function Skills() {
-  return <SkillsPage />;
+export default function SkillsPage() {
+  return <Skills />;
 }

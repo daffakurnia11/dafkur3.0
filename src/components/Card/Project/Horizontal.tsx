@@ -1,11 +1,11 @@
 import Icon from "@/components/Icon";
 import Typography from "@/components/Typography";
-import { ProjectDataType } from "@/types/Content";
+import type { ProjectDataType } from "@/types/Content";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
-import { useCardGrab } from "@/hooks/CardGrab.hook";
+import { useCardGrab } from "@/hooks/useCardGrab.hook";
 
 export default function HorizontalCard(props: ProjectDataType) {
   const {

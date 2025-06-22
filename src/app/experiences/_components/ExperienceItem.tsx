@@ -1,7 +1,7 @@
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
-import { ExperienceDataType } from "@/types/Content";
+import type { ExperienceDataType } from "@/types/Content";
 
 interface Props extends ExperienceDataType {
   index: number;

@@ -1,6 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
-import AboutPage from "./AboutPage";
+import About from "./_components/About";
 import defaultSeoConfig from "@/utils/seo.json";
 
 const pageMetadata = {
@@ -14,6 +14,6 @@ const pageMetadata = {
 
 export const metadata: Metadata = { ...defaultSeoConfig, ...pageMetadata };
 
-export default function About() {
-  return <AboutPage />;
+export default function AboutPage() {
+  return <About />;
 }

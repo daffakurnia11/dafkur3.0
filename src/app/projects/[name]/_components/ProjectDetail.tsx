@@ -1,17 +1,12 @@
 "use client";
 
 import React from "react";
-import projects from "@/data/projects.json";
-import { useParams } from "next/navigation";
-import { ProjectDataType } from "@/types/Content";
-import ProjectMockup from "@/components/pages/ProjectMockup";
-import ProjectDescription from "@/components/pages/ProjectDescription";
+import ProjectDescription from "./ProjectDescription";
+import ProjectMockup from "./ProjectMockup";
+import { useProjectDetail } from "../_hooks/useProjectDetail.hook";
 
-export default function ProjectDetailPage() {
-  const params = useParams();
-  const data: ProjectDataType | undefined = (
-    projects.data as ProjectDataType[]
-  ).find((item) => item.id === params.name);
+export default function ProjectDetail() {
+  const { data } = useProjectDetail();
 
   return (
     data && (

@@ -1,6 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
-import BlogPage from "./BlogPage";
+import Comingsoon from "@/components/pages/Comingsoon";
 
 export const metadata: Metadata = {
   title: "Coming Soon - Dafkur 3.0.0",
@@ -8,5 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function Blog() {
-  return <BlogPage />;
+  return <Comingsoon />;
 }

@@ -1,7 +1,7 @@
 import Icon from "@/components/Icon";
 import Typography from "@/components/Typography";
-import { useCardGrab } from "@/hooks/CardGrab.hook";
-import { ProjectDataType } from "@/types/Content";
+import { useCardGrab } from "@/hooks/useCardGrab.hook";
+import type { ProjectDataType } from "@/types/Content";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
