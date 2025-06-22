@@ -2,7 +2,7 @@
 dafkur.com
 </h1>
 <p align="center">
-  <img src="https://img.shields.io/badge/version-3.3.19-blue?style=flat-square" />
+  <img src="https://img.shields.io/badge/version-3.4.4-blue?style=flat-square" />
 </p>
 
 <p align="center">
@@ -34,6 +34,8 @@ dafkur.com
   <img src="https://img.shields.io/badge/Autoprefixer-EA5E5E?style=flat-square&logo=autoprefixer" />
   <img src="https://img.shields.io/badge/ESLint-4B32C3?style=flat-square&logo=eslint" />
   <img src="https://img.shields.io/badge/Yarn-2C8EBB?style=flat-square&logo=yarn" />
+  <img src="https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white" />
+  <img src="https://img.shields.io/badge/reCAPTCHA-v3-4285F4?style=flat-square&logo=google&logoColor=white" />
 </p>
 
 ---
@@ -43,6 +45,8 @@ dafkur.com
 ---
 
 ## 🌐 Live Website
+
+Visit the live site to explore projects, experiences, resume, and more — all crafted with performance, accessibility, and interactivity in mind.
 
 [https://dafkur.com](https://dafkur.com)
 
@@ -60,6 +64,8 @@ dafkur.com
 - **React Grid Layout** – drag-and-drop project UI
 - **React Hot Toast** – notifications
 - **PostCSS** + **Autoprefixer**
+- **Prisma** – ORM for database communication
+- **react-google-recaptcha** – Bot protection on contact forms
 - **Vercel** – deployment
 
 ---
@@ -69,6 +75,7 @@ dafkur.com
 - **Figma** – UI Design and wireframes
 - **VS Code** – Development environment
 - **Vercel CLI** – Local deployment testing
+- **Neon** – PostgreSQL serverless database hosting
 
 ---
 
@@ -83,6 +90,18 @@ dafkur.com
 - ✍️ Blog section (coming soon)
 - 🎨 Animated UI with Framer Motion
 - 🔍 SEO optimized (Open Graph, Twitter Cards, Sitemap, Robots.txt)
+
+---
+
+## 🧩 API Support
+
+This project includes a built-in **API endpoint** using Next.js App Router (`/api/contact`) to handle contact form submissions.
+
+- Accepts `POST` requests with name, email, subject, and message body.
+- Validates input and stores data securely using **PostgreSQL via Prisma**.
+- Protected with **reCAPTCHA v3** to prevent spam.
+
+📄 See the [`/api/contact`](./src/app/api/contact/route.ts) file for full implementation details.
 
 ---
 
@@ -105,7 +124,10 @@ cp .env.example .env
 Add your environment variable to `.env`:
 
 ```env
-NEXT_PUBLIC_GOOGLE_TAG=<your-google-tag-id>
+NEXT_PUBLIC_GOOGLE_TAG=your-google-tag-id
+NEXT_PUBLIC_RECAPTCHA_SITE_KEY=your-recaptcha-site-key
+DATABASE_URL=your-database-url
+RECAPTCHA_SECRET_KEY=your-recaptcha-secret-key
 ```
 
 Then, start the development server:
@@ -119,16 +141,63 @@ yarn dev
 ## 📁 Project Structure
 
 ```
-src/
-├── app/             # App Router pages
-├── components/      # Reusable UI components
-├── data/            # Static JSON content
-├── hooks/           # Custom React hooks
-├── icons/           # SVG icons and custom icon components
-├── styles/          # Tailwind and fonts
-├── types/           # TypeScript definitions
-├── utils/           # Helpers and SEO config
+├── public/                          # Static assets
+│   ├── icons/                       # SVG icons
+│   ├── mockup/                      # Project screenshots (desktop/mobile)
+│   ├── google*.html                 # Google site verification
+│   └── og-image.png, sitemap.xml    # SEO & meta files
+│
+├── prisma/
+│   └── schema.prisma                # Prisma schema
+│
+├── src/
+│   ├── app/                         # Next.js App Router
+│   │   ├── about/, contact/, skills/...
+│   │   ├── api/                     # Backend API routes
+│   │   ├── projects/, experiences/  # Project/experience pages
+│   │   └── layout.tsx, page.tsx     # Root layouts and pages
+│   │
+│   ├── components/                 # Shared UI components
+│   │   ├── Layout/, Card/, Typography/, ReCaptcha/, ...
+│   │
+│   ├── data/                       # Static JSON data (projects, skills, etc.)
+│   ├── hooks/                      # Custom hooks (e.g. useMobile)
+│   ├── axios/                      # Axios setup and API functions
+│   ├── styles/                     # Tailwind and font imports
+│   ├── types/                      # TypeScript interfaces/types
+│   └── utils/                      # Atoms, helpers, SEO config
+│
+├── .env, .env.example              # Environment variables
+├── README.md                       # Project documentation
+├── next.config.js, tailwind.config.js
+├── package.json, yarn.lock         # Dependencies
+├── version.json                    # Current build version
+└── updateVersion.js                # Auto-bump script for versioning
+
 ```
+
+---
+
+### 🛡️ reCAPTCHA v3 Integration
+
+This project uses **Google reCAPTCHA v3** to prevent spam and abuse.
+
+#### 📦 Setup
+
+1. Create a site in [Google reCAPTCHA Admin Console](https://www.google.com/recaptcha/admin)
+2. Choose **reCAPTCHA v3**
+3. Add both keys to `.env`:
+
+```env
+NEXT_PUBLIC_RECAPTCHA_SITE_KEY=your-site-key
+RECAPTCHA_SECRET_KEY=your-secret-key
+```
+
+#### 🧩 Usage
+
+- `src/components/ReCaptcha/Provider.tsx` handles rendering and execution.
+- Wrap your form logic in this component to get a token.
+- Token is sent to `/api/contact` for verification via Google’s server.
 
 ---
 
@@ -164,9 +233,11 @@ This portfolio is built for:
 
 ## 📌 Version
 
-**Dafkur.com v3.3.19**
+**Dafkur.com v3.4.4**
 
 This version is tracked via `version.json` and represents the latest deployment build.
+
+---
 
 ## 🤝 Contributing
 

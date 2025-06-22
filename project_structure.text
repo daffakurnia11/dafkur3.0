@@ -1,17 +1,20 @@
 - .DS_Store
 - .env
+- .env.example
 - .eslintrc.json
 - .gitignore
 - .vercel
   - README.txt
   - project.json
 - README.md
-- build-storybook.log
 - next-env.d.ts
 - next-sitemap.config.js
 - next.config.js
 - package.json
 - postcss.config.js
+- prisma
+  - schema.prisma
+- project_structure.text
 - public
   - .DS_Store
   - google86cabaabaa0dabd1.html
@@ -137,13 +140,24 @@
 - src
   - .DS_Store
   - app
-    - Homepage.tsx
+    - _components
+      - Home.tsx
+      - HomeRow.tsx
+    - _hooks
+      - useHome.hook.ts
     - about
-      - AboutPage.tsx
+      - _components
+        - About.tsx
+        - AboutBody.tsx
+        - AboutContribution.tsx
+        - AboutPhoto.tsx
+        - AboutStatus.tsx
       - page.tsx
+    - api
+      - contact
+        - route.ts
     - apple-icon.png
     - blogs
-      - BlogPage.tsx
       - page.tsx
     - braille
       - BrailleGenerator.tsx
@@ -154,10 +168,21 @@
         - index.tsx
         - page.tsx
     - contact
-      - ContactPage.tsx
+      - _components
+        - Contact.tsx
+        - FormContact.tsx
+        - SocialContact.tsx
+      - _hooks
+        - useFormContact.hook.ts
       - page.tsx
     - experiences
-      - ExperiencePage.tsx
+      - _components
+        - ExperienceItem.tsx
+        - Experiences.tsx
+        - OrgExperiences.tsx
+        - WorkExperiences.tsx
+      - _context
+        - ExperiencesProvider.tsx
       - page.tsx
     - favicon.ico
     - games
@@ -168,13 +193,29 @@
     - not-found.tsx
     - page.tsx
     - projects
-      - ProjectPage.tsx
       - [name]
-        - ProjectDetailPage.tsx
+        - _components
+          - ProjectDescription.tsx
+          - ProjectDetail.tsx
+          - ProjectMockup.tsx
+        - _hooks
+          - useProjectDetail.hook.ts
+          - useProjectMockup.hook.ts
         - page.tsx
+      - _components
+        - ProjectCard.tsx
+        - Projects.tsx
+      - _hooks
+        - useProject.hook.ts
       - page.tsx
     - skills
-      - SkillsPage.tsx
+      - _components
+        - Skills.tsx
+        - SkillsBody.tsx
+        - SkillsEditor.tsx
+        - SkillsTechStack.tsx
+      - _hooks
+        - useSkillsEditor.hook.ts
       - page.tsx
   - axios
     - api
@@ -205,6 +246,8 @@
         - Menu.tsx
       - index.tsx
     - Notification.tsx
+    - ReCaptcha
+      - Provider.tsx
     - Scramble.tsx
     - Typography
       - Heading.tsx
@@ -214,26 +257,20 @@
       - index.tsx
     - pages
       - Comingsoon.tsx
-      - ExperienceItem.tsx
-      - FormContact.tsx
       - Loader.tsx
-      - ProjectDescription.tsx
-      - ProjectMockup.tsx
-      - SkillsEditor.tsx
-      - SocialContact.tsx
   - data
     - menu.json
     - organizations.json
     - pages.json
     - projects.json
     - samplecode.json
+    - seo.json
     - skills.json
     - socialmedia.json
     - works.json
   - hooks
-    - CardGrab.hook.ts
-    - FormContact.hook.ts
-    - Mobile.hook.ts
+    - useCardGrab.hook.ts
+    - useMobile.hook.ts
   - icons
     - .DS_Store
     - fonts
@@ -269,7 +306,6 @@
   - utils
     - atom.ts
     - braille.ts
-    - seo.json
 - tailwind.config.js
 - tsconfig.json
 - updateVersion.js
