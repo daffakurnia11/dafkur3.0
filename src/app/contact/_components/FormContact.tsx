@@ -64,16 +64,27 @@ export default function FormContact() {
                   placeholder="Your message.."
                 />
                 <button
-                  className="w-full bg-green-primary py-3 px-5 rounded-2xl flex items-center justify-center hover:bg-green-secondary group transition duration-300"
+                  className="w-full bg-green-primary py-3 px-5 rounded-2xl flex items-center justify-center hover:bg-green-secondary group transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                  disabled={loading}
                   onClick={() => executeReCaptcha()}
                 >
-                  <Typography.Small
-                    as="span"
-                    className="text-green-light group-hover:text-black transition duration-300"
-                    isScrambled
-                  >
-                    Submit
-                  </Typography.Small>
+                  {loading ? (
+                    <Typography.Small
+                      as="span"
+                      className="text-green-secondary group-hover:text-black"
+                      isScrambled
+                    >
+                      Submitting...
+                    </Typography.Small>
+                  ) : (
+                    <Typography.Small
+                      as="span"
+                      className="text-green-light group-hover:text-black transition duration-300"
+                      isScrambled
+                    >
+                      Submit
+                    </Typography.Small>
+                  )}
                 </button>
               </div>
               <div className="shrink-0">

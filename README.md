@@ -2,7 +2,7 @@
 dafkur.com
 </h1>
 <p align="center">
-  <img src="https://img.shields.io/badge/version-3.4.4-blue?style=flat-square" />
+  <img src="https://img.shields.io/badge/version-3.4.5-blue?style=flat-square" />
 </p>
 
 <p align="center">
@@ -233,7 +233,7 @@ This portfolio is built for:
 
 ## 📌 Version
 
-**Dafkur.com v3.4.4**
+**Dafkur.com v3.4.5**
 
 This version is tracked via `version.json` and represents the latest deployment build.
 
