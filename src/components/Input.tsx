@@ -2,7 +2,6 @@ import classNames from "classnames";
 import React, {
   InputHTMLAttributes,
   TextareaHTMLAttributes,
-  useMemo,
 } from "react";
 
 interface InputTextProps extends InputHTMLAttributes<HTMLInputElement> {}

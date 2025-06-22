@@ -6,7 +6,6 @@ import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Scramble from "@/components/Scramble";
-import TextLayout from "../Layout/TextLayout";
 import Layout from "../Layout";
 
 export default function Comingsoon() {

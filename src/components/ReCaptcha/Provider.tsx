@@ -4,7 +4,9 @@ import { useRef, ReactNode } from 'react'
 import ReCAPTCHA from 'react-google-recaptcha'
 
 type ReCaptchaProviderProps = {
+  // eslint-disable-next-line no-unused-vars
   onVerify: (token: string | null) => void
+  // eslint-disable-next-line no-unused-vars
   children: (execute: () => void) => ReactNode
 }
 
