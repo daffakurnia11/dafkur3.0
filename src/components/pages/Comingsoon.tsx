@@ -7,8 +7,17 @@ import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Scramble from "@/components/Scramble";
 import Layout from "../Layout";
+import { useGtag } from "@/hooks/useGtag.hook";
 
 export default function Comingsoon() {
+  const { event } = useGtag();
+
+  React.useEffect(() => {
+    event("page_view", {
+      page_name: "coming_soon",
+    });
+  }, [event]);
+
   return (
     <Layout.Text>
       <TypeAnimation

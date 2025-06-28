@@ -7,9 +7,17 @@ import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import { useHome } from "../_hooks/useHome.hook";
 import { FirstRow, SecondRow } from "./HomeRow";
+import { useGtag } from "@/hooks/useGtag.hook";
 
 export default function Home() {
   const { list } = useHome();
+  const { event } = useGtag();
+
+  React.useEffect(() => {
+    event("page_view", {
+      page_name: "home",
+    });
+  }, [event]);
 
   return (
     <section className="pt-[100px] pb-[80px] min-h-dvh container mx-auto flex justify-center items-center">

@@ -9,7 +9,8 @@ import Layout from "@/components/Layout";
 
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
-import GoogleAnalytics from "@/components/Analytics";
+import AnalyticsScript from "@/components/Analytics/Script";
+import AnalyticsTrack from "@/components/Analytics/TrackPage";
 
 export default function RootLayout({
   children,
@@ -19,9 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="snap-y snap-mandatory scroll-smooth">
       <head>
-        <GoogleAnalytics />        
+        <AnalyticsScript />        
       </head>
       <body className="bg-black min-h-dvh font-roboto overflow-x-hidden">
+        <AnalyticsTrack />
         <Loader />
         <Layout.Main>{children}</Layout.Main>
         <Notification />

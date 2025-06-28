@@ -1,10 +1,10 @@
 import Script from "next/script";
 import React from "react";
 
-type Props = {};
-
-export default function GoogleAnalytics({}: Props) {
+export default function AnalyticsScript() {
   const gtagId = process.env.NEXT_PUBLIC_GOOGLE_TAG;
+
+  if (!gtagId) return null;
 
   return (
     <>

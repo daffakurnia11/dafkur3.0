@@ -5,8 +5,17 @@ import AboutBody from "./AboutBody";
 import AboutStatus from "./AboutStatus";
 import AboutPhoto from "./AboutPhoto";
 import AboutContribution from "./AboutContribution";
+import { useGtag } from "@/hooks/useGtag.hook";
 
 export default function About() {
+  const { event } = useGtag();
+
+  React.useEffect(() => {
+    event("page_view", {
+      page_name: "about",
+    });
+  }, [event]);
+
   return (
     <section className="pt-[100px] pb-[80px] min-h-dvh container mx-auto flex justify-center items-center">
       <div className="container xl:max-w-[1024px] mx-auto h-full flex-1 px-6">

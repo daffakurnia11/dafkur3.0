@@ -4,9 +4,18 @@ import React from "react";
 import ProjectDescription from "./ProjectDescription";
 import ProjectMockup from "./ProjectMockup";
 import { useProjectDetail } from "../_hooks/useProjectDetail.hook";
+import { useGtag } from "@/hooks/useGtag.hook";
 
 export default function ProjectDetail() {
   const { data } = useProjectDetail();
+  const { event } = useGtag();
+
+  React.useEffect(() => {
+    event("page_view", {
+      page_name: "project_detail",
+      project_name: data?.name || "unknown",
+    });
+  }, [event, data]);
 
   return (
     data && (

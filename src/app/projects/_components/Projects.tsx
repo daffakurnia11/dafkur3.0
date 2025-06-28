@@ -9,10 +9,18 @@ import ProjectCard from "./ProjectCard";
 import { useProject } from "../_hooks/useProject.hook";
 
 import projects from "@/data/projects.json";
+import { useGtag } from "@/hooks/useGtag.hook";
 
 export default function Projects() {
   const { isMobile } = useMobile();
   const { gridLayout, gridSize } = useProject();
+  const { event } = useGtag();
+
+  React.useEffect(() => {
+    event("page_view", {
+      page_name: "projects",
+    });
+  }, [event]);
 
   return (
     <section className="pt-[100px] pb-[80px] min-h-dvh flex justify-center items-center">
