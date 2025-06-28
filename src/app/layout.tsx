@@ -10,8 +10,6 @@ import Layout from "@/components/Layout";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 import AnalyticsScript from "@/components/Analytics/Script";
-import AnalyticsTrack from "@/components/Analytics/TrackPage";
-import { Suspense } from "react";
 
 export default function RootLayout({
   children,
@@ -24,9 +22,6 @@ export default function RootLayout({
         <AnalyticsScript />
       </head>
       <body className="bg-black min-h-dvh font-roboto overflow-x-hidden">
-        <Suspense fallback={null}>
-          <AnalyticsTrack />
-        </Suspense>
         <Loader />
         <Layout.Main>{children}</Layout.Main>
         <Notification />

@@ -1,9 +1,11 @@
 import { ContactDataType, ContactSendApi } from "@/axios/api";
+import { useGtag } from "@/hooks/useGtag.hook";
 import { notifContent } from "@/utils/atom";
 import { useSetAtom } from "jotai";
 import { useState } from "react";
 
 export const useFormContact = () => {
+  const { event } = useGtag();
   const [isCopied, setIsCopied] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
   const setNotif = useSetAtom(notifContent);
@@ -15,6 +17,11 @@ export const useFormContact = () => {
   });
 
   const handleCopy = () => {
+    event("button_click", {
+      page_name: "contact",
+      component_name: "form_contact",
+      button_name: "copy_email_button",
+    });
     setIsCopied(true);
     navigator.clipboard.writeText("daffakurniaf11@gmail.com");
     setInterval(() => {
@@ -37,6 +44,11 @@ export const useFormContact = () => {
       });
       return;
     }
+    event("button_click", {
+      page_name: "contact",
+      component_name: "form_contact",
+      button_name: "submit_contact_button",
+    });
 
     setLoading(true);
     await ContactSendApi({ ...formData, token }).then((resp: any) => {

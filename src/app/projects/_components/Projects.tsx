@@ -37,10 +37,30 @@ export default function Projects() {
           isResizable={false}
           isDraggable={!isMobile}
           draggableCancel=".non-draggable"
+          onDragStart={() => {
+            event("card_drag", {
+              page_name: "projects",
+              component_name: "project_grid",
+              action: "drag_start",
+            });
+          }}
+          onDragStop={() => {
+            event("card_drag", {
+              page_name: "projects",
+              component_name: "project_grid",
+              action: "drag_stop",
+            });
+          }}
         >
           {(projects.data as ProjectDataType[]).map(
             (data: ProjectDataType, index: number) => (
-              <div key={data.id}>
+              <div key={data.id} onClick={() => {
+                event("card_click", {
+                  page_name: "projects",
+                  component_name: "project_grid",
+                  card_name: `project_grid_click_${data.id}`,
+                });
+              }}>
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}

@@ -6,10 +6,19 @@ import Icon from "@/components/Icon";
 import Typography from "@/components/Typography";
 
 import skills from "@/data/skills.json";
+import { useGtag } from "@/hooks/useGtag.hook";
 
-type Props = {};
+export default function SkillsTechStack() {
+  const { event } = useGtag();
 
-export default function SkillsTechStack({}: Props) {
+  const tracking = (tracking: string) => {
+    event("button_hover", {
+      page_name: "skills",
+      component_name: "skills_tech_stack",
+      button_name: `skills_tech_stack_${tracking}`,
+    });
+  };
+  
   return (
     <>
       <div className="h-7 mt-5">
@@ -44,6 +53,7 @@ export default function SkillsTechStack({}: Props) {
                   icon={skill.icon}
                   size={40}
                   className="text-green-secondary group-hover:text-white transition duration-300"
+                  onMouseEnter={() => tracking(skill.tracking)}
                 />
                 <div className="absolute bottom-auto -top-3 sm:-bottom-3 sm:top-auto -translate-y-full sm:translate-y-full left-1/2 -translate-x-1/2 -z-[1] group-hover:z-20 bg-green-primary/50 py-1 sm:py-1.5 px-3 rounded-[30px] transition-all duration-300 opacity-0 group-hover:opacity-100 flex items-center backdrop-blur-sm w-fit">
                   <Typography.Paragraph

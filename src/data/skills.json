@@ -1,61 +1,73 @@
 [
   {
     "icon": "react",
+    "tracking": "react",
     "name": "React",
     "link": "https://react.dev/"
   },
   {
     "icon": "vue",
+    "tracking": "vue",
     "name": "Vue.js",
     "link": "https://vuejs.org/"
   },
   {
     "icon": "nextjs",
+    "tracking": "nextjs",
     "name": "Next.js",
     "link": "https://nextjs.org/"
   },
   {
     "icon": "nodejs",
+    "tracking": "nodejs",
     "name": "Node.js",
     "link": "https://nodejs.org/en/"
   },
   {
     "icon": "django",
+    "tracking": "django",
     "name": "Django",
     "link": "https://www.djangoproject.com/"
   },
   {
     "icon": "laravel",
+    "tracking": "laravel",
     "name": "Laravel",
     "link": "https://laravel.com/"
   },
   {
     "icon": "tailwind",
+    "tracking": "tailwind",
     "name": "Tailwind CSS",
     "link": "https://tailwindcss.com/"
   },
   {
     "icon": "bootstrap",
+    "tracking": "bootstrap",
     "name": "Bootstrap",
     "link": "https://getbootstrap.com/"
   },
   {
     "icon": "antd",
+    "tracking": "antd",
     "name": "AntDesign",
     "link": "https://ant.design/"
   },
   {
     "icon": "storybook",
+    "tracking": "storybook",
     "name": "Storybook",
     "link": "https://storybook.js.org/"
   },
   {
     "icon": "redux",
+    "tracking": "redux",
     "name": "Redux",
     "link": "https://redux.js.org/"
   },
   {
     "icon": "framer",
+    "tracking": "framer",
     "name": "Framer Motion",
     "link": "https://www.framer.com/motion/"
   }

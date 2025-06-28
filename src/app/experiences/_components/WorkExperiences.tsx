@@ -9,10 +9,20 @@ import Typography from "@/components/Typography";
 import { useExperiencesContext } from "../_context/ExperiencesProvider";
 
 import works from "@/data/works.json";
+import { useGtag } from "@/hooks/useGtag.hook";
 
 export default function WorkExperiences() {
   const { isMobile } = useMobile();
   const { nextView } = useExperiencesContext();
+  const { event } = useGtag();
+
+  const tracking = () => {
+    event("button_click", {
+      page_name: "experiences",
+      component_name: "work_experiences",
+      button_name: "see_others_button",
+    });
+  };
 
   return (
     <section className="container mx-auto snap-always snap-start max-w-[300px] sm:max-w-full sm:px-0">
@@ -43,9 +53,10 @@ export default function WorkExperiences() {
             >
               <button
                 className="w-fit flex flex-row sm:flex-col items-center justify-center gap-2 group"
-                onClick={() =>
-                  nextView.current?.scrollIntoView({ behavior: "smooth" })
-                }
+                onClick={() => {
+                  tracking();
+                  nextView.current?.scrollIntoView({ behavior: "smooth" });
+                }}
               >
                 <div className="w-7 h-7 rounded-full border border-solid border-green-primary bg-green-primary z-10 group-hover:bg-black transition duration-300 flex items-center justify-center">
                   <Icon

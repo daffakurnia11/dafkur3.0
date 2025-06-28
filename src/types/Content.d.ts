@@ -2,6 +2,7 @@ export interface MenuItemType {
   name: string;
   icon: string;
   pathname: string[];
+  tracking: string;
 }
 
 export interface PagesListType {
